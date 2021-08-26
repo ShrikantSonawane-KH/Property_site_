@@ -37,7 +37,7 @@
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="floatingInput"
 					placeholder="Enter email... " name="username"> <label
-					for="floatingInput">Username </label>
+					for="floatingInput">Username</label>
 			</div>
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="floatingPassword"
