@@ -1,50 +1,43 @@
 package property.pojo;
 
-import java.sql.Blob;
+
+import java.util.Arrays;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 
 @Embeddable
 public class Pro_image {
 
 	private String img_desc;
-	private Blob img;				// think of import
+	private byte[] image;				// think of import
 	public Pro_image() {
 		super();
-		
+		// TODO Auto-generated constructor stub
 	}
-	public Pro_image(int id, String img_desc, Blob img) {
-		super();
-		
-		this.img_desc = img_desc;
-		this.img = img;
-	}
-	public Pro_image(String img_desc, Blob img) {
+	public Pro_image(String img_desc, byte[] image) {
 		super();
 		this.img_desc = img_desc;
-		this.img = img;
+		this.image = image;
 	}
-	
 	public String getImg_desc() {
 		return img_desc;
 	}
 	public void setImg_desc(String img_desc) {
 		this.img_desc = img_desc;
 	}
-	public Blob getImg() {
-		return img;
+	public byte[] getImage() {
+		return image;
 	}
-	public void setImg(Blob img) {
-		this.img = img;
+	public void setImage(byte[] image) {
+		this.image = image;
 	}
 	@Override
 	public String toString() {
-		return "Pro_image [img_desc=" + img_desc + ", img=" + img + "]";
+		return "Pro_image [img_desc=" + img_desc + ", image=" + Arrays.toString(image) + "]";
 	}
+	
+	
 	
 	
 	
