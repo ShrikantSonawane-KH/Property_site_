@@ -15,10 +15,10 @@ public class Property {
 	
 
 	private String name;
-	Pro_address address;
-	Pro_Description description;
+	private Pro_address address;
+	private Pro_Description description;
 	private String pro_for;
-	Pro_image image; 
+	private Pro_image image; 
 	private float price;
 	private float deposite;
 	private String pro_type;
