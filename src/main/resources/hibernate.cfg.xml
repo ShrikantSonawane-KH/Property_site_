@@ -5,27 +5,27 @@
 <!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-	
+
 <hibernate-configuration>
 
 	<session-factory>
-		
+
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/advance_java</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/property</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">cdac</property>
-		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- giving the version info to hibernate --> 
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- giving the version info to hibernate -->
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>								<!-- console visibility -->
 		<property name="format_sql">true</property>
-		<mapping  class="property.entities.Pro_address"/>
-		<mapping  class="property.entities.Pro_Description"/>
-		<mapping  class="property.entities.Pro_image"/>
-		<mapping  class="property.entities.Pro_overview"/>
-		<mapping  class="property.entities.Property"/>
-		<mapping  class="property.entities.Renter"/>
-		<mapping  class="property.entities.User"/>
-		
+		<mapping class="property.pojo.Pro_address" />
+		<mapping class="property.pojo.Pro_Description" />
+		<mapping class="property.pojo.Pro_image" />
+		<mapping class="property.pojo.Pro_overview" />
+		<mapping class="property.pojo.Property" />
+		<mapping class="property.pojo.Renter" />
+		<mapping class="property.pojo.User" />
+
 	</session-factory>
 
 
