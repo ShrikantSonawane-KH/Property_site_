@@ -29,25 +29,24 @@
 	<div style="position: absolute; top: 0px; width: 100%"></div>
 	<main
 		class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
-		
-		
+
+
 		<form class="col-md-4" action="login_control" method="get">
 
-			<h1 class="h3 mb-3 fw-normal">Please Login here</h1>
+			<h1 class="h3 mb-3 fw-normal">Login here</h1>
 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="email"
-					placeholder="Enter email... " name="email"> <labelfor="floatingInput">Username </label>
+					placeholder="Enter email" name="email">
+				<label for="floatingInput">Username</label>
 			</div>
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="password"
 					placeholder="Password" name="password"> <label
 					for="floatingPassword">Password</label>
 			</div>
-
-
 			<a href="Register.jsp">New User?Sign up</a>
-			</div>
+			</div> <br/>
 
 			<button class="w-100 btn btn-lg btn-success" type="submit">Sign in</button>
 
