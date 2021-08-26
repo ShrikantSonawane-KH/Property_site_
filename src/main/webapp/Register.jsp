@@ -56,7 +56,7 @@
 
 			<button class="w-100 btn btn-lg btn-success" type="submit">Sign
 				Up</button>
-
+				
 		</form>
 	</main>
 	<div style="position: absolute; bottom: 0px; width: 100%"></div>
