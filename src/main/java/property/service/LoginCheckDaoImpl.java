@@ -11,6 +11,9 @@ import property.pojo.User;
 import property.util.SessionUtil;
 
 public class LoginCheckDaoImpl implements LoginCheckDao {
+	
+	private final String RENTER = "renter";
+	private final String TENANT = "tenant";
 
 	public String checkUser(String email, String password) {
 
@@ -20,17 +23,13 @@ public class LoginCheckDaoImpl implements LoginCheckDao {
 		String QueryString = "from User";
 		Query Query = session.createQuery(QueryString);
 		List<User> UserList = Query.getResultList();
-
-		for (User ul : UserList) {
-			String user_role = ul.getRole();
-			System.out.println("in service: "+user_role);
-
-			if (user_role==null) {
+		
+		for (User ul : UserList) {	
+			if (RENTER.equals(ul.getRole()) && email.equals(ul.getUsername()) && password.equals(ul.getPassword())) {
 				return "renter";
-			} else {
+			} else if(TENANT.equals(ul.getRole()) && email.equals(ul.getUsername()) && password.equals(ul.getPassword())) {
 				return "tenant";
 			}
-		
 		}
 		tx.commit();
 		session.close();
