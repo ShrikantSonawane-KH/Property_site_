@@ -29,16 +29,19 @@ public class login_control extends HttpServlet {
 		String password = request.getParameter("password");
 
 		if (email.equals(ADMIN_EMAIL) && password.equals(ADMIN_PASSWORD)) {
-			response.sendRedirect("##AdminPage.jsp");
+			//response.sendRedirect("##AdminPage.jsp");
+			System.out.println("Go to AdminPage");
 		} else if (email != null && password != null) {
 			String status = logincheckdao.checkUser(email, password);
 			
 			switch (status) {
 			case "renter":
-				response.sendRedirect("##RenterPage.jsp");
+				//response.sendRedirect("##RenterPage.jsp");
+				System.out.println("Go to RenterPage");
 				break;
 			case "tenant":
-				response.sendRedirect("##TenantPage.jsp");
+				//response.sendRedirect("##TenantPage.jsp");
+				System.out.println("Go to TenantPage");
 				break;
 			default:
 				response.sendRedirect("index.jsp?message=Sorry, Either username or password is incorrect.");
