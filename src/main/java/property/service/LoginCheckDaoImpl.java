@@ -23,8 +23,9 @@ public class LoginCheckDaoImpl implements LoginCheckDao {
 
 		for (User ul : UserList) {
 			String user_role = ul.getRole();
+			System.out.println("in service: "+user_role);
 
-			if (user_role.equals("renter")) {
+			if (user_role==null) {
 				return "renter";
 			} else {
 				return "tenant";
