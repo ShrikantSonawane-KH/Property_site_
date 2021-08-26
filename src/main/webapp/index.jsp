@@ -37,8 +37,8 @@
 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="email"
-					placeholder="Enter email" name="email">
-				<label for="floatingInput">Username</label>
+					placeholder="Enter email" name="email"> <label
+					for="floatingInput">Username</label>
 			</div>
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="password"
@@ -46,12 +46,29 @@
 					for="floatingPassword">Password</label>
 			</div>
 			<a href="Register.jsp">New User?Sign up</a>
-			</div> <br/>
+			</div>
+			<br />
 
-			<button class="w-100 btn btn-lg btn-success" type="submit">Sign in</button>
+			<button class="w-100 btn btn-lg btn-success" type="submit">Sign
+				in</button>
+			<div style="position: absolute; bottom: 0px; width: 100%"></div>
 
+
+			<%
+			out.print("<br/>");
+			out.print("<div style= text-align:left; >");
+			String message = request.getParameter("message");
+			if (message != null && !message.isEmpty()) {
+
+				out.print("<h6 style= color:red; >" + message + "</h6>");
+			}
+			out.print("</div>");
+			%>
+			
+			<a href="PropertyRegistration.jsp">sell/rent</a>
 		</form>
 	</main>
-	<div style="position: absolute; bottom: 0px; width: 100%"></div>
+
+	
 </body>
 </html>
