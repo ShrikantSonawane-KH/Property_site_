@@ -54,6 +54,8 @@
 </head>
 <body>
 
+
+
 	<h1 class="h3 mb-3 fw-normal">Please Register here</h1>
 
 	<form id="form" action="PropertyRegController" >
