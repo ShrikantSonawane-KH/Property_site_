@@ -13,7 +13,6 @@ import property.pojo.Pro_image;
 @Embeddable
 public class Property {
 	
-
 	private String name;
 	private Pro_address address;
 	private Pro_Description description;
@@ -25,7 +24,7 @@ public class Property {
 	private String category;
 	public Property() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public Property(int id, String name, Pro_address address, Pro_Description description, String pro_for,
 			Pro_image image, float price, float deposite, String pro_type, String category) {
@@ -55,6 +54,18 @@ public class Property {
 		this.category = category;
 	}
 	
+	public Property(String name, Pro_address address, Pro_Description description, String pro_for, float price,
+			float deposite, String pro_type, String category) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.description = description;
+		this.pro_for = pro_for;
+		this.price = price;
+		this.deposite = deposite;
+		this.pro_type = pro_type;
+		this.category = category;
+	}
 	public String getName() {
 		return name;
 	}
