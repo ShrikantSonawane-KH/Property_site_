@@ -2,14 +2,25 @@ package property.dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import property.pojo.Property;
+import property.util.SessionUtil;
 
 
 public class PropertyDaoImpl implements PropertyDao{
 
 	public Property insertion(Property property) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session = SessionUtil.getFactory().openSession();
+		Transaction tx = session.beginTransaction();
+		
+		session.save(property);
+		
+		tx.commit();
+		session.close();
+		
+		return property;
 	}
 
 	public Property deletion(int id) {
