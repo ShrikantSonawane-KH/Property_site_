@@ -13,6 +13,9 @@ public class Renter {
 	private int id;
 	
 	Property property;
+	
+	static String abc;
+	
 	public Renter() {
 		super();
 		// TODO Auto-generated constructor stub
