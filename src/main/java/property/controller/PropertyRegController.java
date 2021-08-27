@@ -6,9 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import property.dao.PropertyDao;
+import property.dao.PropertyDaoImpl;
 import property.pojo.Pro_Description;
 import property.pojo.Pro_address;
 import property.pojo.Pro_image;
+import property.pojo.Pro_overview;
+import property.pojo.Property;
 
 public class PropertyRegController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,24 +26,54 @@ public class PropertyRegController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	
-
-		Pro_image image; 
-		private float price;
-		private float deposite;
-		private String pro_type;
-		private String category;
+		PropertyDao propertydao = new PropertyDaoImpl();
 		
+//		property
 		String name = request.getParameter("name");
-		String address = request.getParameter("address");
-		String description = request.getParameter("description");
+		float price = Float.parseFloat(request.getParameter("price")); 
+		float deposite = Float.parseFloat(request.getParameter("deposite"));
+		String proType = request.getParameter("proType");
+		String proCategory = request.getParameter("proCategory");
 		String pro_for = request.getParameter("pro_for");
-		String name = request.getParameter("image");
-		String name = request.getParameter("name");
-		String name = request.getParameter("name");
+	
+		
+//		Address
+		String area = request.getParameter("area");
+		String lane = request.getParameter("lane");
+		String landmark = request.getParameter("landmark");
+		String city = request.getParameter("city");
+		String state = request.getParameter("state");
+		String country = request.getParameter("country");
+		String pincode = request.getParameter("pincode");
+		
+		Pro_address proAddress = new Pro_address(area,lane,landmark,city,state,country,pincode);
+//		image
+//		remain
+		
+//		Description
+		String furnish = request.getParameter("furnish");
+		String status = request.getParameter("status");
+		String highlights = request.getParameter("highlights");
+		
+//		Overview
+		String property_name = request.getParameter("property_name");
+		String security = request.getParameter("security");
+		float maintenance = Float.parseFloat(request.getParameter("maintenance"));
+		String build_area = request.getParameter("build_area");
+		int NoOfBathroom = Integer.parseInt(request.getParameter("NoOfBathroom"));
+		int NoOfBalcony = Integer.parseInt(request.getParameter("NoOfBalcony"));
+		String availableFrom = request.getParameter("availableFrom");
+		int NoOfFloor = Integer.parseInt(request.getParameter("NoOfFloor"));
+		String proAge = request.getParameter("proAge");
+		String parking = request.getParameter("parking");
+		String entrance = request.getParameter("entrance");
 
+		Pro_overview proOverview = new Pro_overview(property_name,security,maintenance,build_area,NoOfBathroom,NoOfBalcony,availableFrom,NoOfFloor,proAge,parking,entrance);
+		Pro_Description proDescription = new Pro_Description(furnish,status,highlights,proOverview);
+		Property property = new Property(name,proAddress,proDescription,pro_for,price,deposite,proType,proCategory);
 		
-		
+		Property property1 =  propertydao.insertion(property);
+		System.out.println(property1);
 	}
 
 }
