@@ -36,7 +36,7 @@ public class login_control extends HttpServlet {
 			
 			switch (status) {
 			case "renter":
-				response.sendRedirect("RenterHome.jsp");			//home page with property add autho
+				response.sendRedirect("RenterHome.jsp?useremail="+email);			//home page with property add autho
 				System.out.println("Go to RenterPage");					
 				break;
 			case "tenant":
