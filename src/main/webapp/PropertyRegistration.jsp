@@ -62,16 +62,16 @@
 		<t id="ti">
 		<h5>Name of Property</h5>
 		<input type="text" placeholder="Enter the name of property" id="name"
-			name="name" required />
+			name="name"  />
 		<h5>Area</h5>
 		<input type="text" placeholder="Enter the name of Area" id="area"
-			name="area" required />
+			name="area"  />
 		<h5>Lane</h5>
 		<input type="text" placeholder="Enter the name of Lane" id="lane"
-			name="lane" required />
+			name="lane"  />
 		<h5>LandMark</h5>
 		<input type="text" placeholder="Enter the name of LandMark"
-			id="landmark" name="landmark" required />
+			id="landmark" name="landmark"  />
 		<h5>City</h5>
 		<select id="city" name="city" required>
 			<option value="mumbai">Mumbai</option>
@@ -80,14 +80,14 @@
 		</select>
 		<h5>State</h5>
 		<input type="text" placeholder="Enter the name of State" id="state"
-			name="state" required />
+			name="state"  />
 		<h5>Country</h5>
 		<select id="country" name="country">
 			<option value="india">India</option>
 		</select>
 		<h5>Pincode</h5>
 		<input type="text" placeholder="Enter Pincode" id="pincode"
-			name="pincode" required /></t>
+			name="pincode"  /></t>
 		</br>
 		
 		<!-- propery desc -->
@@ -96,19 +96,19 @@
 		</br>
 		<f id="fi">
 		<h5>Furnished</h5>
-		<select id="furnish" name="furnish" required>
+		<select id="furnish" name="furnish" >
 			<option value="mumbai">Furnished</option>
 			<option value="pune">Semi-Furnished</option>
 			<option value="nashik">Non-Furnished</option>
 		</select>
 		<h5>Property Status</h5>
-		<select id="status" name="status" required>
+		<select id="status" name="status" >
 			<option value="possession">Ready Possession</option>
 			<option value="construction">Under Construction</option>
 		</select>
 		<h5>Special Highlights</h5>
 		<input type="textarea" placeholder="Highlights" id="highlights" name="highlights"
-			required /> </f>
+			 /> </f>
 			
 			
 			
@@ -118,38 +118,43 @@
 		<g id="gi">
 		<h5>Property Name</h5>
 		<input type="text" placeholder="enter property name" id="property"
-			name="property_name" required />
+			name="property_name"  />
 		<h5>Security</h5>
 		<input type="text" placeholder="Security" id="security"
 			name="security" />
 		<h5>Maintenance</h5>
 		<input type="text" placeholder="Maintenance" id="maintenance"
-			name="maintenance" required />
+			name="maintenance"  />
 		<h5>Build Area</h5>
 		<input type="text" placeholder="Build Area" id="build" name="build_area"
 			required />
 		<h5>Bathrooms</h5>
-		<input type="text" placeholder="No. of Bathrooms" id="bathroom"
-			name="NoOfBathroom" required />
+		<select id="bathroom" name="NoOfBathroom" >
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>	
+		
 			
-		<select id="balcony" name="NoOfBalcony"  required>
-			<option value="one">1</option>
-			<option value="two">2</option>
-			<option value="three">3</option>
+		<h5>balcony</h5>	
+		<select id="balcony" name="NoOfBalcony">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
 		</select>	
 			
 		<h5>Available from</h5>
 		<input type="text" placeholder="Available from..." id="available"
-			name="availableFrom" required />
+			name="availableFrom"  />
 		<h5>Floor Number</h5>
 		
-		<select id="floor" name="NoOfFloor" required>
-			<option value="one">1</option>
-			<option value="two">2</option>
-			<option value="three">3</option>
-			<option value="four">4</option>
-			<option value="five">5</option>
-			<option value="above">Above Five</option>
+		<select id="floor" name="NoOfFloor" >
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">Above Five</option>
 		</select>
 		<h5>Property Age</h5>
 		<input type="text" placeholder="age of property" id="age" name="proAge"
@@ -158,7 +163,7 @@
 		<input type="radio" name="parking" value="yes"> Yes </br>
 		<input type="radio" name="parking" value="no"> No </br>
 		<h5>Entrance Facing</h5>
-		<select id="entrance" name="entrance" required>
+		<select id="entrance" name="entrance" >
 			<option>Select</option>
 			<option value="East">East</option>
 			<option value="West">West</option>
@@ -167,7 +172,7 @@
 		</select>
 
 		<h5>Property For</h5>
-		<select id="pro_for" name="pro_for" required>
+		<select id="pro_for" name="pro_for" >
 			<option>Select</option>
 			<option value="Rent">Rent</option>
 			<option value="Sell">Sell</option>
@@ -177,27 +182,27 @@
 		
 		
 		
-		<button type="button" id="formButton3" required>Images</button>
+		<button type="button" id="formButton3" >Images</button>
 		<l id="mi"> <input type="text"
 			placeholder="Enter image description" id="imgdesc" name="imgdesc" />
 		<br>
 		<h5>Upload Images</h5>
 		<label for="file">Select files:</label> <input type="file" id="file"
-			name="image" multiple onchange="return fileValidation()" required>
+			name="image" multiple onchange="return fileValidation()" >
 		<br>
 		</l>
 		
 		
 		
 		<br> <br>
-		<button type="button" id="formButton4" required>Other Details</button>
+		<button type="button" id="formButton4" >Other Details</button>
 		<h5>Price</h5> 
 		<u id="csk">
-			<input type="text" placeholder="Enter Price" id="price" name="price" required />
-			<h5>Deposite</h5> <input type="text" placeholder="Enter Deposite" id="deposite" name="deposite" required />
+			<input type="text" placeholder="Enter Price" id="price" name="price"  />
+			<h5>Deposite</h5> <input type="text" placeholder="Enter Deposite" id="deposite" name="deposite"  />
 			<h5>Property Type</h5> 
 			
-			<select id="type" name="proType" required>
+			<select id="type" name="proType" >
 				<option>Select</option>
 				<option value="apartment">Apartment</option>
 				<option value="villa">Villa</option>
@@ -206,7 +211,7 @@
 				<option value="bunglow">Bunglow</option>
 				<option value="villa">Villa</option>
 		</select>
-			<h5>Category</h5> <select id="category" name="proCategory" required>
+			<h5>Category</h5> <select id="category" name="proCategory" >
 				<option>Select</option>
 				<option value="1rk">1RK</option>
 				<option value="1bhk">1BHK</option>
