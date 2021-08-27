@@ -180,8 +180,6 @@
 		<br> </br>
 		
 		
-		
-		
 		<button type="button" id="formButton3" >Images</button>
 		<l id="mi"> <input type="text"
 			placeholder="Enter image description" id="imgdesc" name="imgdesc" />
