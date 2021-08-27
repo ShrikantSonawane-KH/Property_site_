@@ -8,11 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import property.dao.PropertyDao;
 import property.dao.PropertyDaoImpl;
+import property.dao.RenterDao;
+import property.dao.RenterDaoImpl;
 import property.pojo.Pro_Description;
 import property.pojo.Pro_address;
 import property.pojo.Pro_image;
 import property.pojo.Pro_overview;
 import property.pojo.Property;
+import property.pojo.Renter;
 
 public class PropertyRegController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -26,7 +29,7 @@ public class PropertyRegController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		PropertyDao propertydao = new PropertyDaoImpl();
+		RenterDao renterdao = new RenterDaoImpl();
 		
 //		property
 		String name = request.getParameter("name");
@@ -71,9 +74,12 @@ public class PropertyRegController extends HttpServlet {
 		Pro_overview proOverview = new Pro_overview(property_name,security,maintenance,build_area,NoOfBathroom,NoOfBalcony,availableFrom,NoOfFloor,proAge,parking,entrance);
 		Pro_Description proDescription = new Pro_Description(furnish,status,highlights,proOverview);
 		Property property = new Property(name,proAddress,proDescription,pro_for,price,deposite,proType,proCategory);
+				
+		 Renter renter = new Renter(property);
+		 
+		 renterdao.insertion(renter);
 		
-		Property property1 =  propertydao.insertion(property);
-		System.out.println(property1);
+		 
 	}
 
 }
