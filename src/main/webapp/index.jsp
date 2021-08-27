@@ -66,6 +66,7 @@
 			%>
 			
 			<a href="PropertyRegistration.jsp">sell/rent</a>
+			<a href="PropertyRegistration.jsp">sell/rent</a>
 		</form>
 	</main>
 
