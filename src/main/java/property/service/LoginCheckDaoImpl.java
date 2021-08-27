@@ -26,8 +26,10 @@ public class LoginCheckDaoImpl implements LoginCheckDao {
 		
 		for (User ul : UserList) {	
 			if (RENTER.equals(ul.getRole()) && email.equals(ul.getUsername()) && password.equals(ul.getPassword())) {
+			
 				return "renter";
 			} else if(TENANT.equals(ul.getRole()) && email.equals(ul.getUsername()) && password.equals(ul.getPassword())) {
+				
 				return "tenant";
 			}
 		}
