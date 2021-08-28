@@ -77,9 +77,13 @@ public class PropertyRegController extends HttpServlet {
 				
 		 Renter renter = new Renter(property);
 		 
+		 String validRenterEmail = renter.getValidRenterEmail();
+		 Renter.setValidRenterEmail(validRenterEmail);
+		 
+		 System.out.println(validRenterEmail);
 		 renterdao.insertion(renter);
 		
-		 
+		 response.sendRedirect("PropertyRegistration.jsp?message=Property added successfully..!");
 	}
 
 }
