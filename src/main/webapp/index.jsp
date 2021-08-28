@@ -37,7 +37,7 @@
 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="email"
-					placeholder="Enter email" name="email"> <label
+					placeholder="Email" name="email"> <label
 					for="floatingInput">Username</label>
 			</div>
 			<div class="form-floating mt-2">
@@ -63,11 +63,16 @@
 				out.print("<h6 style= color:red; >" + message + "</h6>");
 			}
 			out.print("</div>");
+			
+			
 			%>
 			
-			<a href="PropertyRegistration.jsp">sell/rent</a>
+			
+			
+			
 			
 		</form>
+
 	</main>
 
 	
