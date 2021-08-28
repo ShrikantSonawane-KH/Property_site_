@@ -124,12 +124,13 @@
 		<h5>Security</h5>
 		<input type="text" placeholder="Security" id="security"
 			name="security" />
+			
 		<h5>Maintenance</h5>
 		<input type="text" placeholder="Maintenance" id="maintenance"
 			name="maintenance"  />
 		<h5>Build Area</h5>
 		<input type="text" placeholder="Build Area" id="build" name="build_area"
-			required />
+			 />
 		<h5>Bathrooms</h5>
 		<select id="bathroom" name="NoOfBathroom" >
 			<option value="1">1</option>
@@ -223,5 +224,17 @@
 		</u> <br><br>
 		<button type="submit">Sign Up</button>
 	</form>
+	<%
+			out.print("<br/>");
+			out.print("<div style= text-align:left; >");
+			String message = request.getParameter("message");
+			if (message != null && !message.isEmpty()) {
+
+				out.print("<h6 style= color:blue; >" + message + "</h6>");
+			}
+			out.print("</div>");
+			%>
+	
+	
 </body>
 </html>
