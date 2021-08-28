@@ -14,11 +14,14 @@ public class Renter {
 	
 	Property property;
 	
-	static String abc;
+	static String validRenterEmail;
 	
-	public Renter() {
-		super();
-		// TODO Auto-generated constructor stub
+	
+	public static String getValidRenterEmail() {
+		return validRenterEmail;
+	}
+	public static void setValidRenterEmail(String validRenterEmail) {
+		Renter.validRenterEmail = validRenterEmail;
 	}
 	public Renter(int id, Property property) {
 		super();
