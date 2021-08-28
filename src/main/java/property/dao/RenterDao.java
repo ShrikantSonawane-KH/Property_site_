@@ -11,4 +11,7 @@ public interface RenterDao {
 	public Renter deletion(int id);
 	public Renter updation(Renter renter);
 	public List<Renter> showAll();
+	public List<Renter> showByCity(String city);
+	public List<Renter> getAllPropertiesByCategory(String price);
+	
 }
