@@ -1,8 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </script>
@@ -47,184 +59,284 @@
 	}
 </script>
 
+<Style>
+body {
+	background-image: url(bg.jpg);
+	width: fit-content;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-<meta charset="ISO-8859-1">
+#h1 {
+	color: royalblue;
+	font-family: monton;
+}
 
-<title>Form</title>
+label {
+	font-weight: bold;
+	color: black;
+	font-family: monton;
+}
+
+span {
+	color: red;
+}
+</Style>
 </head>
-<body>
+<body
+	style="background-image: url(bank4.jpg); width: 100%; height: auto;">
+
+	<div
+		class=" d-flex justify-content-center align-items-center container-fluid">
+
+		<div class="card      w-50 justify-items-center align-items-center ;">
+			<h1 style="margin: 30px 50px;" id="h1">Please Register Your
+				Property here</h1>
 
 
+			<form action="PropertyRegController" name="myForm"
+			
+				onsubmit="return validateForm()" method="post" enctype="multipart/form-data" >
 
-	<h1 class="h3 mb-3 fw-normal">Please Register here</h1>
+				<div style="margin: 50px 100px;">
+					<button type="button" class="btn btn-dark" id="formButton">Address
+						Details</button>
 
-	<form id="form" action="PropertyRegController" >
-		<button type="button" id="formButton">Address Details</button>
-		</br>
-		<t id="ti">
-		<h5>Name of Property</h5>
-		<input type="text" placeholder="Enter the name of property" id="name"
-			name="name"  />
-		<h5>Area</h5>
-		<input type="text" placeholder="Enter the name of Area" id="area"
-			name="area"  />
-		<h5>Lane</h5>
-		<input type="text" placeholder="Enter the name of Lane" id="lane"
-			name="lane"  />
-		<h5>LandMark</h5>
-		<input type="text" placeholder="Enter the name of LandMark"
-			id="landmark" name="landmark"  />
-		<h5>City</h5>
-		<select id="city" name="city" required>
-			<option value="mumbai">Mumbai</option>
-			<option value="pune">Pune</option>
-			<option value="nashik">Nashik</option>
-		</select>
-		<h5>State</h5>
-		<input type="text" placeholder="Enter the name of State" id="state"
-			name="state"  />
-		<h5>Country</h5>
-		<select id="country" name="country">
-			<option value="india">India</option>
-		</select>
-		<h5>Pincode</h5>
-		<input type="text" placeholder="Enter Pincode" id="pincode"
-			name="pincode"  /></t>
-		</br>
-		
-		<!-- propery desc -->
-		
-		<button type="button" id="formButton1">Property Description</button>
-		</br>
-		<f id="fi">
-		<h5>Furnished</h5>
-		<select id="furnish" name="furnish" >
-			<option value="mumbai">Furnished</option>
-			<option value="pune">Semi-Furnished</option>
-			<option value="nashik">Non-Furnished</option>
-		</select>
-		<h5>Property Status</h5>
-		<select id="status" name="status" >
-			<option value="possession">Ready Possession</option>
-			<option value="construction">Under Construction</option>
-		</select>
-		<h5>Special Highlights</h5>
-		<input type="textarea" placeholder="Highlights" id="highlights" name="highlights"
-			 /> </f>
-			
-			
-			
-			
-		</br>
-		<button type="button" id="formButton2">Property Overview</button>
-		<g id="gi">
-		<h5>Property Name</h5>
-		<input type="text" placeholder="enter property name" id="property"
-			name="property_name"  />
-		<h5>Security</h5>
-		<input type="text" placeholder="Security" id="security"
-			name="security" />
-			
-		<h5>Maintenance</h5>
-		<input type="text" placeholder="Maintenance" id="maintenance"
-			name="maintenance"  />
-		<h5>Build Area</h5>
-		<input type="text" placeholder="Build Area" id="build" name="build_area"
-			 />
-		<h5>Bathrooms</h5>
-		<select id="bathroom" name="NoOfBathroom" >
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-		</select>	
-		
-			
-		<h5>balcony</h5>	
-		<select id="balcony" name="NoOfBalcony">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-		</select>	
-			
-		<h5>Available from</h5>
-		<input type="text" placeholder="Available from..." id="available"
-			name="availableFrom"  />
-		<h5>Floor Number</h5>
-		
-		<select id="floor" name="NoOfFloor" >
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">Above Five</option>
-		</select>
-		<h5>Property Age</h5>
-		<input type="text" placeholder="age of property" id="age" name="proAge"
-			required />
-		<h5>Parking</h5>
-		<input type="radio" name="parking" value="yes"> Yes </br>
-		<input type="radio" name="parking" value="no"> No </br>
-		<h5>Entrance Facing</h5>
-		<select id="entrance" name="entrance" >
-			<option>Select</option>
-			<option value="East">East</option>
-			<option value="West">West</option>
-			<option value="North">North</option>
-			<option value="South">South</option>
-		</select>
+					<t id="ti">
+					<div class="form-group" id="namev">
+						<label for="name">Name of Property</label> <input type="text"
+							class="form-control" name="name" aria-describedby="sicustid"
+							placeholder="Enter your Property Name "
+							oninvalid="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="areav">
+						<label for="area">Area</label> <input type="text"
+							class="form-control" name="area" aria-describedby="sicustid"
+							placeholder="Enter your Property Area"
+							oninvalid="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="lanev">
+						<label for="lane">Lane</label> <input type="text"
+							class="form-control" name="lane" aria-describedby="sicustid"
+							placeholder="Enter Lane " onkeyup="return validateForm()">
+						<span class="formerror"></span>
+					</div>
+					<div class="form-group" id="landmarkv">
+						<label for="landmark">Landmark</label> <input type="text"
+							class="form-control" name="landmark" aria-describedby="sicustid"
+							placeholder="Enter Landmark" oninvalid="return validateForm()">
+						<span class="formerror"></span>
+					</div>
+					<div class="form-group" id="cityv">
+						<label for="city">City</label> <select id="city"
+							class="form-control" name="city" aria-describedby="sicustid">
+							<option value="mumbai">Mumbai</option>
+							<option value="pune">Pune</option>
+							<option value="nashik">Nashik</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="state">
+						<label for="state">State</label> <select id="state"
+							class="form-control" name="state" aria-describedby="sicustid">
+							<option value="maha">Maharashtra</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="country">
+						<label for="country">Country</label> <select id="country"
+							class="form-control" name="country" aria-describedby="sicustid">
+							<option value="india">India</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="pincodev">
+						<label for="pincode">Pincode</label> <input type="number"
+							class="form-control" name="pincode" aria-describedby="sicustid"
+							placeholder="Enter your pincode" onkeyup="return validateForm()">
+						<span class="formerror"></span>
+					</div>
+					</t>
+					<button type="button" class="btn btn-dark" id="formButton1">Property
+						Description</button>
+					<f id="fi">
+					<div class="form-group" id="furnishv">
+						<label for="furnish">Furnished</label> <select id="furnish"
+							class="form-control" name="furnish" aria-describedby="sicustid">
+							<option value="yes">Furnished</option>
+							<option value="semi">Semi-Furnished</option>
+							<option value="no">Non-Furnished</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="possessionv">
+						<label for="status">Property Status</label> <select id="status"
+							class="form-control" name="status" aria-describedby="sicustid">
+							<option value="possession">Ready Possession</option>
+							<option value="construction">Under Construction</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="heighlightv">
+						<label for="highlights">Special Heighlight</label> <input
+							type="textarea" class="form-control" name="highlights"
+							aria-describedby="sicustid"
+							placeholder="Enter Special Heighlights"
+							onkeyup="return validateForm()"> <span class="formerror"></span>
+					</div>
+					</f>
+					<button type="button" class="btn btn-dark" id="formButton2">Property
+						Overview</button>
+					<g id="gi">
+					<div class="form-group" id="securityv">
+						<label for="security">Security</label> <input type="text"
+							class="form-control" name="security" aria-describedby="sicustid"
+							placeholder="Enter Security Details"
+							oninvalid="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="maintenancev">
+						<label for="maintenance">Maintenance</label> <input type="number"
+							class="form-control" name="maintenance"
+							aria-describedby="sicustid"
+							placeholder="Enter maintenance charges"
+							onkeyup="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="buildareav">
+						<label for="build_area">Build Area</label> <input type="text"
+							class="form-control" name="build_area"
+							aria-describedby="sicustid"
+							placeholder="Enter build area in Sq.feet "
+							onkeyup="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="bathv">
+						<label for="NoOfBathroom">No. of Bathrooms</label> <select
+							id="NoOfBathroom" class="form-control" name="NoOfBathroom"
+							aria-describedby="sicustid">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							
+						</select> <span class="formerror"></span>
+					</div>
 
-		<h5>Property For</h5>
-		<select id="pro_for" name="pro_for" >
-			<option>Select</option>
-			<option value="Rent">Rent</option>
-			<option value="Sell">Sell</option>
-		</select> </g>
-		<br> </br>
-		
-		
-		<button type="button" id="formButton3" >Images</button>
-		<l id="mi"> <input type="text"
-			placeholder="Enter image description" id="imgdesc" name="imgdesc" />
-		<br>
-		<h5>Upload Images</h5>
-		<label for="file">Select files:</label> <input type="file" id="file"
-			name="image" multiple onchange="return fileValidation()" >
-		<br>
-		</l>
-		
-		
-		
-		<br> <br>
-		<button type="button" id="formButton4" >Other Details</button>
-		<h5>Price</h5> 
-		<u id="csk">
-			<input type="text" placeholder="Enter Price" id="price" name="price"  />
-			<h5>Deposite</h5> <input type="text" placeholder="Enter Deposite" id="deposite" name="deposite"  />
-			<h5>Property Type</h5> 
+					<div class="form-group" id="balconyv">
+						<label for="NoOfBalcony">No. of Balconies</label> <select
+							id="NoOfBalcony" class="form-control" name="NoOfBalcony"
+							aria-describedby="sicustid">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="avv">
+						<label for="availableFrom">Avaialable from</label> <input
+							type="text" class="form-control" name="availableFrom"
+							aria-describedby="sicustid" placeholder="Avaialable from"
+							onkeyup="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="floorv">
+						<label for="NoOfFloor">Floor Number</label> <select id="NoOfFloor"
+							class="form-control" name="NoOfFloor" aria-describedby="sicustid">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="agev">
+						<label for="proAge">Age of Property</label> <input type="text"
+							class="form-control" name="proAge" aria-describedby="sicustid"
+							placeholder="Enter age of propery "
+							onkeyup="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="parkv">
+						<label for="parking">Parking</label> <select id="parking"
+							class="form-control" name="parking" aria-describedby="sicustid">
+							<option value="yes">Yes</option>
+							<option value="no">No</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="facingv">
+						<label for="entrance">Entrance Facing</label> <select
+							id="entrance" class="form-control" name="entrance"
+							aria-describedby="sicustid">
+							<option value="north">North</option>
+							<option value="south">South</option>
+							<option value="east">East</option>
+							<option value="west">West</option>
+						</select> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="forv">
+						<label for="pro_for">Property For</label> <select id="pro_for"
+							class="form-control" name="pro_for" aria-describedby="sicustid">
+							<option value="rent">Rent</option>
+							<option value="sell">Sell</option>
+						</select> <span class="formerror"></span>
+					</div>
+					</g>
+					<br>
+					<br>
+					<button type="button" class="btn btn-dark" id="formButton3">Images</button>
+					<l id="mi">
+					<div class="form-group" id="descv">
+						<label for="imagedesc">Image Desc</label> <input type="text"
+							class="form-control" name="imagedesc" aria-describedby="sicustid"
+							placeholder="Enter description of an Image "
+							onkeyup="return validateForm()"> <span class="formerror"></span>
+					</div>
+					<div class="form-group" id="filev">
+						<label for="image">Upload Image</label> <input type="file"
+							class="form-control" name="image" id="file"
+							aria-describedby="sicustid" multiple
+							onchange="return fileValidation()"> <span
+							class="formerror"></span>
+					</div>
+					</l>
+
+					<button type="button" class="btn btn-dark" id="formButton4">Other
+						Details</button>
+					<u id="csk">
+						<div class="form-group" id="pricev">
+							<label for="price">Price</label> <input type="number"
+								class="form-control" name="price" aria-describedby="sicustid"
+								placeholder="Enter price " onkeyup="return validateForm()">
+							<span class="formerror"></span>
+						</div>
+						<div class="form-group" id="depov">
+							<label for="deposite">Deposite</label> <input type="number"
+								class="form-control" name="deposite" aria-describedby="sicustid"
+								placeholder="Enter deposite amout"
+								onkeyup="return validateForm()"> <span class="formerror"></span>
+						</div>
+						<div class="form-group" id="typev">
+							<label for="proType">Property Type</label> <select id="proType"
+								class="form-control" name="proType" aria-describedby="sicustid">
+								<option value="apartment">Apartment</option>
+								<option value="villa">Villa</option>
+								<option value="indfloor">Independent Floor</option>
+								<option value="penthouse">Penthouse</option>
+								<option value="bunglow">Bunglow</option>
+							</select> <span class="formerror"></span>
+						</div>
+						<div class="form-group" id="categoryv">
+							<label for="proCategory">Category</label> <select id="proCategory"
+								class="form-control" name="proCategory"
+								aria-describedby="sicustid">
+								<option value="1rk">1RK</option>
+								<option value="1bhk">1BHK</option>
+								<option value="2bhk">2BHK</option>
+								<option value="3bhk">3BHK</option>
+								<option value="4bhk">4BHK</option>
+								<option value="5bhk">5BHK</option>
+							</select> <span class="formerror"></span>
+						</div>
+					</u> <br> <br>
+										
+					<button type="submit" class="btn btn-primary btn-lg btn-block"
+						value="Submit">Submit</button>
+			</form>
 			
-			<select id="type" name="proType" >
-				<option>Select</option>
-				<option value="apartment">Apartment</option>
-				<option value="villa">Villa</option>
-				<option value="floor">Independent Floor</option>
-				<option value="penthouse">Penthouse</option>
-				<option value="bunglow">Bunglow</option>
-				<option value="villa">Villa</option>
-		</select>
-			<h5>Category</h5> <select id="category" name="proCategory" >
-				<option>Select</option>
-				<option value="1rk">1RK</option>
-				<option value="1bhk">1BHK</option>
-				<option value="2bhk">2BHK</option>
-				<option value="3bhk">3BHK</option>
-				<option value="4bhk">4BHK</option>
-				<option value="5bhk">5BHK</option>
-		</select>
-		</u> <br><br>
-		<button type="submit">Sign Up</button>
-	</form>
-	<%
+			<%
 			out.print("<br/>");
 			out.print("<div style= text-align:left; >");
 			String message = request.getParameter("message");
@@ -234,7 +346,30 @@
 			}
 			out.print("</div>");
 			%>
-	
-	
+
+
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+				integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+				integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+				crossorigin="anonymous"></script>
+
+
+		</div>
+
+		<!-- JavaScript Link -->
+		<script src="validation.js"></script>
+	</div>
+	</div>
 </body>
+
+
 </html>
