@@ -15,39 +15,54 @@ public class Renter {
 	Property property;
 	
 	static String validRenterEmail;
-	
-	
-	public static String getValidRenterEmail() {
-		return validRenterEmail;
+
+	public Renter() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	public static void setValidRenterEmail(String validRenterEmail) {
-		Renter.validRenterEmail = validRenterEmail;
-	}
+
 	public Renter(int id, Property property) {
 		super();
 		this.id = id;
 		this.property = property;
 	}
+
 	public Renter(Property property) {
 		super();
 		this.property = property;
 	}
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public Property getProperty() {
 		return property;
 	}
+
 	public void setProperty(Property property) {
 		this.property = property;
 	}
+
+	public static String getValidRenterEmail() {
+		return validRenterEmail;
+	}
+
+	public static void setValidRenterEmail(String validRenterEmail) {
+		Renter.validRenterEmail = validRenterEmail;
+	}
+
 	@Override
 	public String toString() {
 		return "Renter [id=" + id + ", property=" + property + "]";
 	}
 	
+	
+	
+
 	
 }
