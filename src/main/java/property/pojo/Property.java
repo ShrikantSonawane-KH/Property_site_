@@ -24,21 +24,7 @@ public class Property {
 	private String category;
 	public Property() {
 		super();
-		
-	}
-	public Property(int id, String name, Pro_address address, Pro_Description description, String pro_for,
-			Pro_image image, float price, float deposite, String pro_type, String category) {
-		super();
-	
-		this.name = name;
-		this.address = address;
-		this.description = description;
-		this.pro_for = pro_for;
-		this.image = image;
-		this.price = price;
-		this.deposite = deposite;
-		this.pro_type = pro_type;
-		this.category = category;
+		// TODO Auto-generated constructor stub
 	}
 	public Property(String name, Pro_address address, Pro_Description description, String pro_for, Pro_image image,
 			float price, float deposite, String pro_type, String category) {
@@ -48,19 +34,6 @@ public class Property {
 		this.description = description;
 		this.pro_for = pro_for;
 		this.image = image;
-		this.price = price;
-		this.deposite = deposite;
-		this.pro_type = pro_type;
-		this.category = category;
-	}
-	
-	public Property(String name, Pro_address address, Pro_Description description, String pro_for, float price,
-			float deposite, String pro_type, String category) {
-		super();
-		this.name = name;
-		this.address = address;
-		this.description = description;
-		this.pro_for = pro_for;
 		this.price = price;
 		this.deposite = deposite;
 		this.pro_type = pro_type;
@@ -122,10 +95,11 @@ public class Property {
 	}
 	@Override
 	public String toString() {
-		return "Property [name=" + name + ", address=" + address + ", description=" + description
-				+ ", pro_for=" + pro_for + ", image=" + image + ", price=" + price + ", deposite=" + deposite
-				+ ", pro_type=" + pro_type + ", category=" + category + "]";
+		return "Property [name=" + name + ", address=" + address + ", description=" + description + ", pro_for="
+				+ pro_for + ", image=" + image + ", price=" + price + ", deposite=" + deposite + ", pro_type="
+				+ pro_type + ", category=" + category + "]";
 	}
+	
 	
 	
 	
