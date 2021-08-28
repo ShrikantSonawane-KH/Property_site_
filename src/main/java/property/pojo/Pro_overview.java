@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Embeddable
 public class Pro_overview {
 
-	private String pro_name;
+
 	private String security;
 	private float maintenance;
 	private String build_area;
@@ -20,47 +20,24 @@ public class Pro_overview {
 	private String parking;
 	private String entrance_facing;
 	
+	
+	public Pro_overview(String security, float maintenance, String build_area, int bathroom, int balcony,
+			String available_from, int floor_no, String pro_age, String parking, String entrance_facing) {
+		super();
+		this.security = security;
+		this.maintenance = maintenance;
+		this.build_area = build_area;
+		this.bathroom = bathroom;
+		this.balcony = balcony;
+		this.available_from = available_from;
+		this.floor_no = floor_no;
+		this.pro_age = pro_age;
+		this.parking = parking;
+		this.entrance_facing = entrance_facing;
+	}
 	public Pro_overview() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public Pro_overview(int id, String pro_name, String security, float maintenance, String build_area, int bathroom,
-			int balcony, String available_from, int floor_no, String pro_age, String parking, String entrance_facing) {
-		super();
-		
-		this.pro_name = pro_name;
-		this.security = security;
-		this.maintenance = maintenance;
-		this.build_area = build_area;
-		this.bathroom = bathroom;
-		this.balcony = balcony;
-		this.available_from = available_from;
-		this.floor_no = floor_no;
-		this.pro_age = pro_age;
-		this.parking = parking;
-		this.entrance_facing = entrance_facing;
-	}
-	public Pro_overview(String pro_name, String security, float maintenance, String build_area, int bathroom,
-			int balcony, String available_from, int floor_no, String pro_age, String parking, String entrance_facing) {
-		super();
-		this.pro_name = pro_name;
-		this.security = security;
-		this.maintenance = maintenance;
-		this.build_area = build_area;
-		this.bathroom = bathroom;
-		this.balcony = balcony;
-		this.available_from = available_from;
-		this.floor_no = floor_no;
-		this.pro_age = pro_age;
-		this.parking = parking;
-		this.entrance_facing = entrance_facing;
-	}
-
-	public String getPro_name() {
-		return pro_name;
-	}
-	public void setPro_name(String pro_name) {
-		this.pro_name = pro_name;
 	}
 	public String getSecurity() {
 		return security;
@@ -124,13 +101,12 @@ public class Pro_overview {
 	}
 	@Override
 	public String toString() {
-		return "Pro_overview [pro_name=" + pro_name + ", security=" + security + ", maintenance="
-				+ maintenance + ", build_area=" + build_area + ", bathroom=" + bathroom + ", balcony=" + balcony
-				+ ", available_from=" + available_from + ", floor_no=" + floor_no + ", pro_age=" + pro_age
-				+ ", parking=" + parking + ", entrance_facing=" + entrance_facing + "]";
+		return "Pro_overview [security=" + security + ", maintenance=" + maintenance + ", build_area=" + build_area
+				+ ", bathroom=" + bathroom + ", balcony=" + balcony + ", available_from=" + available_from
+				+ ", floor_no=" + floor_no + ", pro_age=" + pro_age + ", parking=" + parking + ", entrance_facing="
+				+ entrance_facing + "]";
 	}
-
-
+	
 
 
 }
