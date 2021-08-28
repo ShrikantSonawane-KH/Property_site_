@@ -2,6 +2,8 @@ package property.dao;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -34,8 +36,16 @@ public class PropertyDaoImpl implements PropertyDao{
 	}
 
 	public List<Property> showAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Session session = SessionUtil.getFactory().openSession();
+
+		String QueryString = "from Property";
+		Query Query = session.createQuery(QueryString);
+		List<Property> property = Query.getResultList();
+		
+		session.close();
+		return property;
+
 	}
 	
 }
