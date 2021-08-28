@@ -71,7 +71,7 @@ public class PropertyRegController extends HttpServlet {
 		String parking = request.getParameter("parking");
 		String entrance = request.getParameter("entrance");
 
-		Pro_overview proOverview = new Pro_overview(property_name,security,maintenance,build_area,NoOfBathroom,NoOfBalcony,availableFrom,NoOfFloor,proAge,parking,entrance);
+		Pro_overview proOverview = new Pro_overview(security,maintenance,build_area,NoOfBathroom,NoOfBalcony,availableFrom,NoOfFloor,proAge,parking,entrance);
 		Pro_Description proDescription = new Pro_Description(furnish,status,highlights,proOverview);
 		Property property = new Property(name,proAddress,proDescription,pro_for,price,deposite,proType,proCategory);
 				
