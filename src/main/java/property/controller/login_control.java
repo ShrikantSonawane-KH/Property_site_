@@ -28,6 +28,7 @@ public class login_control extends HttpServlet {
 		//////////
 		RenterDao renterdao = new RenterDaoImpl();
 		renterdao.showByCity("pune");
+		renterdao.getCategoriesProType();
 		/////////
 		
 		LoginCheckDao logincheckdao = new LoginCheckDaoImpl();
