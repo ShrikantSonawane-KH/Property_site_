@@ -10,95 +10,135 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/style.css">
+<%@include file="components/common_css_js.jsp"%>
 </head>
 <body>
 
+	<%-- <div class="container-fluid">
+		<div class="row mt-3 mx-2">
+			<!--show categories-->
+			<div class="col-md-2">
+				<div class="list-group mt-4">
+
+					<a href="index.jsp?category=all"
+						class="list-group-item list-group-item-action active"> All
+						Products </a>
+					<%
+					for (Category c : clist) {
+					%>
+					<a href="index.jsp?category=<%=c.getCategoryId()%>"
+						class="list-group-item list-group-item-action"><%=c.getCategoryTitle()%></a>
+					<%
+					}
+					%>
+				</div>
+			</div>
+			<%
+			String catPrice = request.getParameter("category");
+
+			RenterDao renterdao = new RenterDaoImpl();
+			List<Renter> list = null;
+
+			if (cat == null || cat.trim().equals("all")) {
+				list = renterdao.showAll();
+
+			} else {
+
+				list = getAllPropertiesByCategory(catPrice);
+
+			}
+
+			CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
+			List<Category> clist = cdao.getCategories();
+			%>
+
+			<div class="col-md-10">
+				<!--row-->
+				<div class="row mt-4">
+					<!--col:12-->
+					<div class="col-md-12">
+						<div class="card-columns">
+							<%
+							for (Renter r : list) {
+							%>
+							<!--product card-->
+							<div class="card product-card">
+
+								<div class="container text-center">
+									<img
+										src="img/products/<%=r.getProperty().getImage().getImage()%>"
+										style="max-height: 200px; max-width: 100%; width: auto;"
+										class="card-img-top m-2" alt="...">
+								</div>
+								<div class="card-body">
+
+									<h5 class="card-title"><%=r.getProperty().getName()%></h5>
+
+								</div>
+							</div>
+							<%
+							}
+							%>
 
 
-	<%
-	for (Renter c : ) {
-	%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-	<a href="demo.jsp?category=<%= %>"
-		class="list-group-item list-group-item-action"><%=c.getCategoryTitle()%></a>
+ --%>
 
 
-	<%
-	}
-	%>
+		<div class="container-fluid">
+			<div class="row mt-3 mx-2">
+
+			<%
+			/* float catPrice = Float.parseFloat(request.getParameter("category")); */
+			String cat = request.getParameter("category");
+			
+			RenterDao renterdao = new RenterDaoImpl();
+			List<Renter> list = null;
+
+			if (cat == null || cat.trim().equals("all") ) {				
+				list = renterdao.showAll();
+
+			} else {
+				
+				list = renterdao.getAllPropertiesByCategory(cat);
+				
+			}
+			
+			/* Category List  */
+
+			List<String> clist = renterdao.getCategoriesProType();
+			
+			%>
 
 
 
-	<%
-	String catPrice = request.getParameter("category");
-	
-	
-	RenterDao renterdao = new RenterDaoImpl();
-	List<Renter> list = null;
-	
-	
-    if (cat == null || cat.trim().equals("all")) {
-    	list = renterdao.showAll();
-
-    } else {
-
-      
-        list = getAllPropertiesByCategory(catPrice);
-
-    }
-
-    CategoryDao cdao = new CategoryDao(FactoryProvider.getFactory());
-    List<Category> clist = cdao.getCategories();
-
-	
-	
-	
-	
-	
-	%>
+				<!--show categories-->
+			<div class="col-md-2">
 
 
-	<div class="col-md-10">
+				<div class="list-group mt-4">
 
+					<a href="index.jsp?category=all"
+						class="list-group-item list-group-item-action active"> All
+						Products </a>
 
-		<!--row-->
-		<div class="row mt-4">
-
-			<!--col:12-->
-			<div class="col-md-12">
-
-				<div class="card-columns">
 
 
 
 					<%
-					for (Renter r : list) {
+					for (Category c : clist) {
 					%>
 
 
-					<!--product card-->
-					<div class="card product-card">
 
-						<div class="container text-center">
-							<img
-								src="img/products/<%=r.getProperty().getImage().getImage()%>"
-								style="max-height: 200px; max-width: 100%; width: auto;"
-								class="card-img-top m-2" alt="...">
-
-						</div>
-
-						<div class="card-body">
-
-							<h5 class="card-title"><%=r.getProperty().getName()%></h5>
-
-
-
-						</div>
-
-
-					</div>
-
+					<a href="index.jsp?category=<%=c.getCategoryId()%>"
+						class="list-group-item list-group-item-action"><%=c.getCategoryTitle()%></a>
 
 
 					<%
@@ -106,18 +146,72 @@
 					%>
 
 
-				</div>
 
+				</div>
 
 
 			</div>
 
+				<!--show products-->
+				<div class="col-md-10">
+
+					<!--row-->
+					<div class="row mt-4">
+
+						<!--col:12-->
+						<div class="col-md-12">
+
+							<div class="card-columns">
+
+
+
+								<%
+								for (Renter r : list) {
+								%>
+
+
+								<!--product card-->
+								<div class="card product-card">
+
+									<div class="container text-center">
+										<img
+											src="img/products/<%=r.getProperty().getImage().getImage()%>"
+											style="max-height: 200px; max-width: 100%; width: auto;"
+											class="card-img-top m-2" alt="...">
+
+									</div>
+
+									<div class="card-body">
+
+										<h5 class="card-title"><%=r.getProperty().getName()%></h5>
+
+
+
+									</div>
+
+
+								</div>
+
+
+
+								<%
+								}
+								%>
+
+
+							</div>
+
+
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+			</div>
 		</div>
-
-
-
-	</div>
-
-
 </body>
 </html>
