@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ page import="property.dao.RenterDao"%>
+<%@ page import="property.dao.RenterDaoImpl"%>
 	
 <!DOCTYPE html>
 <html>
@@ -23,10 +25,26 @@
 <div class="container-fluid">
 
  <%@include file="components/navbar.jsp"%>
-
-<h3> Property Overview :  </h3>
+ 
+ <div>
+	<h3> Property Details :  </h3>
+	<%@include file="components/tables/property.jsp"%>
+</div>
+ 
+<div>
+	<h3> Property Overview :  </h3>
 	<%@include file="components/tables/overview.jsp"%>
+</div>
+	
+<div>
+	<h3> Property Address :  </h3>
+	<%@include file="components/tables/address.jsp"%>
+</div>
 
+<div>
+	<h3> Property Description :  </h3>
+	<%@include file="components/tables/description.jsp"%>
+</div>
 
 <%@include file="components/footer.jsp"%>
 	</div>
