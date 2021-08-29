@@ -119,7 +119,7 @@
 							for (Renter r : list) {
 							%>
 
-							<!--product card-->
+							<!--proprty card-->
 							<div class="card product-card">
 
 								<div class="container text-center">
