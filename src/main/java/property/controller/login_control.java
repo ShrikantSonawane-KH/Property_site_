@@ -25,11 +25,7 @@ public class login_control extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		//////////
-		RenterDao renterdao = new RenterDaoImpl();
-		renterdao.showByCity("pune");
-		renterdao.getCategoriesProType();
-		/////////
+		
 		
 		LoginCheckDao logincheckdao = new LoginCheckDaoImpl();
 
