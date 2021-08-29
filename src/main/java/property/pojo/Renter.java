@@ -12,24 +12,33 @@ public class Renter {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	Property property;
+	private Property property;
 	
-	static String validRenterEmail;
+	private  String validRenterEmail;
+	
+	private static String renterEmail;
 
 	public Renter() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Renter(int id, Property property) {
-		super();
-		this.id = id;
-		this.property = property;
-	}
-
 	public Renter(Property property) {
 		super();
 		this.property = property;
+	}
+
+	public Renter(int id, Property property, String validRenterEmail) {
+		super();
+		this.id = id;
+		this.property = property;
+		this.validRenterEmail = validRenterEmail;
+	}
+
+	public Renter(Property property, String validRenterEmail) {
+		super();
+		this.property = property;
+		this.validRenterEmail = validRenterEmail;
 	}
 
 	public int getId() {
@@ -48,19 +57,29 @@ public class Renter {
 		this.property = property;
 	}
 
-	public static String getValidRenterEmail() {
+	public String getValidRenterEmail() {
 		return validRenterEmail;
 	}
 
-	public static void setValidRenterEmail(String validRenterEmail) {
-		Renter.validRenterEmail = validRenterEmail;
+	public void setValidRenterEmail(String validRenterEmail) {
+		this.validRenterEmail = validRenterEmail;
+	}
+
+	public static String getRenterEmail() {
+		return renterEmail;
+	}
+
+	public static void setRenterEmail(String renterEmail) {
+		Renter.renterEmail = renterEmail;
 	}
 
 	@Override
 	public String toString() {
-		return "Renter [id=" + id + ", property=" + property + "]";
+		return "Renter [id=" + id + ", property=" + property + ", validRenterEmail=" + validRenterEmail + "]";
 	}
 
+	
+	
 	
 
 	
