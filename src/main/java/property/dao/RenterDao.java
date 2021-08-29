@@ -17,5 +17,9 @@ public interface RenterDao {
 	
 	public List<Renter> getAllPropertiesByBothCatergory(String pro_type,String pro_cat);
 	
+	public Renter showById(int id);
+	
+	public List<Renter> getPropertyByRenter(String emailID);
+	
 	
 }
