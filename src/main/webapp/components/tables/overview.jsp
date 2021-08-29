@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+	<%@ page import="property.dao.RenterDao"%>
+<%@ page import="property.dao.RenterDaoImpl"%>
 <%@ page import="property.pojo.Renter"%>
 <!DOCTYPE html>
 <html>
@@ -12,11 +13,16 @@
 
 <table class="table table-success table-striped table-hover" >
 
-<% Renter r = new Renter();  %>
+<%
+	RenterDao renterdao1 = new RenterDaoImpl();
 
+	int id1 = Integer.parseInt(request.getParameter("id"));
 
+	Renter r1 = renterdao1.showById(id1);
+%>
 		<thead>
 			<tr>
+				<th scope="col">Sr. No.</th>
 				<th scope="col">Build Area</th>
 				<th scope="col">Floor Number</th>
 				<th scope="col">Available from</th>
@@ -31,17 +37,17 @@
 		</thead>
 		<tbody>
 			<tr>
-				<th scope="row">1</th>
-				<td><%=r.getProperty().getDescription().getOverview().getBuild_area() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getFloor_no() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getAvailable_from() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getBathroom() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getBalcony() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getSecurity() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getMaintenance() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getPro_age() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getParking() %></td>
-				<td><%=r.getProperty().getDescription().getOverview().getEntrance_facing() %></td>
+				<td>1</td>
+				<td><%=r1.getProperty().getDescription().getOverview().getBuild_area() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getFloor_no() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getAvailable_from() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getBathroom() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getBalcony() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getSecurity() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getMaintenance() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getPro_age() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getParking() %></td>
+				<td><%=r1.getProperty().getDescription().getOverview().getEntrance_facing() %></td>
 			</tr>
 		</tbody>
 	</table>
