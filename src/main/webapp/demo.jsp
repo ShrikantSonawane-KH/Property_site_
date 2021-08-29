@@ -25,6 +25,7 @@
 </head>
 <body>
 
+	<%@include file="components/navbar.jsp"%>
 	
 	<div class="container">
 		<div class="row">
@@ -72,8 +73,6 @@
 		</div>
 	</div>
 
-
-
 	<div class="container-fluid">
 		<div class="row mt-3 mx-2">
 
@@ -93,7 +92,7 @@
 
 			} 
 		
-			
+			/* 
 			if (cat_cat == null || cat_cat.trim().equals("all")) {
 				list = renterdao.showAll();
 
@@ -101,9 +100,7 @@
 
 				list = renterdao.getAllPropertiesByCat(cat_cat);
 
-			}
-			
-		
+			} */
 			
 			%>
 			
@@ -135,35 +132,28 @@
 
 								<div class="card-body">
 
-									<h5 class="card-title"><%=r.getProperty().getName()%></h5>
-
-
-
+									<h5 class="card-title">  <strong><%=r.getProperty().getName()%></strong>  </h5>
+									<h6 class="card-title"> <mark>Rs.<%=r.getProperty().getPrice() %></mark>  </h6>
+									<h6 class="card-title">For : <%=r.getProperty().getPro_for()%> </h6>
+									<%-- <h6 class="card-title">For : <%=r.getProperty().getPro_for()%> </h6> --%>
+									<h6 class="card-title">id : <%=r.getId() %> </h6>
+									
+									<button type="button" class="btn btn-info" > <a href="propertyData.jsp?id=<%=r.getId() %>" style="color:white" > <strong>click for more</strong> </a> </button>
+									
 								</div>
-
-
 							</div>
-
-
-
 							<%
 							}
 							%>
-
-
 						</div>
 
-
-
 					</div>
-
 				</div>
-
-
-
 			</div>
-
 		</div>
 	</div>
+	
+	<%@include file="components/footer.jsp"%>
+	
 </body>
 </html>
