@@ -12,8 +12,10 @@ public interface RenterDao {
 	public Renter updation(Renter renter);
 	public List<Renter> showAll();
 	public List<Renter> showByCity(String city);
-	public List<Renter> getAllPropertiesByCategory(String pro_type);
-	public List<Renter> getCategoriesProType();
+	public List<Renter> getAllPropertiesByType(String pro_type);
+	public List<Renter> getAllPropertiesByCat(String pro_cat);
+	
+	public List<Renter> getAllPropertiesByBothCatergory(String pro_type,String pro_cat);
 	
 	
 }
