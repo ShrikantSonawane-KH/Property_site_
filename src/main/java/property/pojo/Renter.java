@@ -60,8 +60,7 @@ public class Renter {
 	public String toString() {
 		return "Renter [id=" + id + ", property=" + property + "]";
 	}
-	
-	
+
 	
 
 	
