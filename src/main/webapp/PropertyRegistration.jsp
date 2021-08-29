@@ -336,8 +336,7 @@ span {
 						value="Submit">Submit</button>
 				
 			</form>
-			<button class="btn btn-primary btn-lg btn-block" 
-						value="Submit"> <a href="##showPropertyByRenter.jsp" > <div style="color:white;">Show Property</div>  </a> </button>
+			
 			
 			<%
 			out.print("<br/>");
@@ -372,6 +371,14 @@ span {
 		<script src="validation.js"></script>
 	</div>
 	</div>
+	
+	
+	
+	<button class="btn btn-primary btn-lg btn-block" 
+						value="Submit"> <a href="showPropertyByRenter.jsp" > <div style="color:white;">Show Property</div>  </a> </button>
+	
+	
+	
 </body>
 
 
