@@ -107,11 +107,12 @@ public class PropertyRegController extends HttpServlet {
     		Property property = new Property(name,proAddress,proDescription,pro_for,img,price,deposite,proType,proCategory);
     				
     		 Renter renter = new Renter(property);
-    		 
-    		 String validRenterEmail = renter.getValidRenterEmail();
-    		 Renter.setValidRenterEmail(validRenterEmail);
+    	
+    		 String validRenterEmail = Renter.getRenterEmail();
+    		 renter.setValidRenterEmail(validRenterEmail);
     		 
     		 System.out.println(validRenterEmail);
+    		 
     		 renterdao.insertion(renter);
     		
     		 //response.sendRedirect("PropertyRegistration.jsp?message=Property added successfully..!");
@@ -150,8 +151,6 @@ public class PropertyRegController extends HttpServlet {
                 httpSession.setAttribute("message", "property is added successfully..");
                
                 return;
-
-          
         }
     }
     
