@@ -70,27 +70,42 @@ public class RenterDaoImpl implements RenterDao{
 	}
 
 	@Override
-	public List<Renter> getAllPropertiesByCategory(String price) {
+	public List<Renter> getAllPropertiesByCategory(String pro_type) {
 		
-		// working on --remain
-		
+
 		Session session = SessionUtil.getFactory().openSession();
 
-		Query Query = session.createQuery("from Renter where price =: p");
-		Query.setParameter("c", price);
-		List<Renter> renterList = Query.getResultList();
+		Query Query = session.createQuery("from Renter where pro_type =: p");
+		Query.setParameter("p", pro_type);
+		List<Renter> renterListByProType = Query.getResultList();
 		
-		for(Renter rList : renterList) {
+		for(Renter rList : renterListByProType) {
 	
 		System.out.println(rList);
 		}
 		session.close();
-		return renterList;
+		return renterListByProType;
 		
 
+	
+	}
+
+	@Override
+	public List<Renter> getCategoriesProType() {
+		Session session = SessionUtil.getFactory().openSession();
+
+		String QueryString = "from Renter";
+		Query Query = session.createQuery(QueryString);
+		List<Renter> renter = Query.getResultList();
 		
 		
-		return null;
+		
+		
+		session.close();
+		return renter;
+		
 	}
 
 }
+
+
