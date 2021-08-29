@@ -7,7 +7,6 @@ import javax.persistence.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import property.pojo.Property;
 import property.pojo.Renter;
 import property.util.SessionUtil;
 
@@ -70,7 +69,7 @@ public class RenterDaoImpl implements RenterDao{
 	}
 
 	@Override
-	public List<Renter> getAllPropertiesByCategory(String pro_type) {
+	public List<Renter> getAllPropertiesByType(String pro_type) {
 		
 
 		Session session = SessionUtil.getFactory().openSession();
@@ -84,27 +83,54 @@ public class RenterDaoImpl implements RenterDao{
 		System.out.println(rList);
 		}
 		session.close();
-		return renterListByProType;
 		
-
+		return renterListByProType;
+	
 	
 	}
 
 	@Override
-	public List<Renter> getCategoriesProType() {
+	public List<Renter> getAllPropertiesByCat(String pro_cat) {
+		
 		Session session = SessionUtil.getFactory().openSession();
 
-		String QueryString = "from Renter";
-		Query Query = session.createQuery(QueryString);
-		List<Renter> renter = Query.getResultList();
+		Query Query = session.createQuery("from Renter where category =: p");
+		Query.setParameter("p", pro_cat);
+		List<Renter> renterListByProCat = Query.getResultList();
 		
-		
-		
-		
+		for(Renter rList : renterListByProCat) {
+	
+		System.out.println(rList);
+		}
 		session.close();
-		return renter;
 		
+		return renterListByProCat;
+	
 	}
+
+	@Override
+	public List<Renter> getAllPropertiesByBothCatergory(String pro_type, String pro_cat) {
+		
+		Session session = SessionUtil.getFactory().openSession();
+
+		Query Query = session.createQuery("from Renter where category =: p and  pro_type =: q");
+		Query.setParameter("p", pro_type);
+		Query.setParameter("q", pro_cat);
+		List<Renter> renterListByProCat = Query.getResultList();
+		
+		for(Renter rList : renterListByProCat) {
+	
+		System.out.println(rList);
+		}
+		session.close();
+		
+		System.out.println(pro_type);
+		System.out.println(pro_cat);
+		
+		return renterListByProCat;
+
+	}
+
 
 }
 
