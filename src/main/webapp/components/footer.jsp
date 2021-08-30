@@ -5,6 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>footer</title>
+
+
 </head>
 <body>
 
@@ -12,140 +14,75 @@
 
 	<!-- FOOTER -->
 
-	<!-- till not finalize -->
+	
+<section class="my-2" id="footer">
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center text-md-start">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Our Aim</h5>
 
-	<footer class=" bg-dark page-footer font-small mdb-color pt-4">
+                        <p>
+                            We are TWILIGHT EVENTS,Our amazing and top quality event twilight event management services
+                            is the reason clients are referred to us directly or through word-of-mouth.Whether you need
+                            an twilight event management system for simplehigh school reunions, a massive multi-day
+                            festival,
+                            twilight event is the best event management system on the market. We look forward to working
+                            with you.
+                        </p>
+                    </div>
+                    <!--Grid column-->
 
-		<!-- Footer Links -->
-		<div class="container text-center text-md-left">
+                    <!--Grid column-->
+                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <!-- <h5 class="text-uppercase">Links</h5>
 
-			<!-- Footer links -->
-			<div class="row text-center text-md-left mt-3 pb-3">
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">YouTube</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Facebook</a>
+                            </li>
+                        </ul>
+ -->                    </div>
+                     <!--Grid column-->
 
-				<!-- Grid column -->
-				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-					<h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-					<p>Here you can use rows and columns to organize your footer
-						content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				</div>
-				<!-- Grid column -->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        
 
-				<hr class="w-100 clearfix d-md-none">
+                        <h3>Contact Us</h3>
+                       <h4>email:residena@gmail.com</h4>
+                       <h4>Phone No:034562</h4>
+                       <h4>Address:Kharghar</h4>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
 
-				<!-- Grid column -->
-				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-					<h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-					<p>
-						<a href="#!">MDBootstrap</a>
-					</p>
-					<p>
-						<a href="#!">MDWordPress</a>
-					</p>
-					<p>
-						<a href="#!">BrandFlow</a>
-					</p>
-					<p>
-						<a href="#!">Bootstrap Angular</a>
-					</p>
-				</div>
-				<!-- Grid column -->
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+                © 2021 Copyright:
+                <a class="text-white" href="#">Residena.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
 
-				<hr class="w-100 clearfix d-md-none">
-
-				<!-- Grid column -->
-				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-					<h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-					<p>
-						<a href="#!">Your Account</a>
-					</p>
-					<p>
-						<a href="#!">Become an Affiliate</a>
-					</p>
-					<p>
-						<a href="#!">Shipping Rates</a>
-					</p>
-					<p>
-						<a href="#!">Help</a>
-					</p>
-				</div>
-
-				<!-- Grid column -->
-				<hr class="w-100 clearfix d-md-none">
-
-				<!-- Grid column -->
-				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-					<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-					<p>
-						<i class="fas fa-home mr-3"></i> New York, NY 10012, US
-					</p>
-					<p>
-						<i class="fas fa-envelope mr-3"></i> info@gmail.com
-					</p>
-					<p>
-						<i class="fas fa-phone mr-3"></i> + 01 234 567 88
-					</p>
-					<p>
-						<i class="fas fa-print mr-3"></i> + 01 234 567 89
-					</p>
-				</div>
-				<!-- Grid column -->
-
-			</div>
-			<!-- Footer links -->
-
-			<hr>
-
-			<!-- Grid row -->
-			<div class="row d-flex align-items-center">
-
-				<!-- Grid column -->
-				<div class="col-md-7 col-lg-8">
-
-					<!--Copyright-->
-					<p class="text-center text-md-left">
-						© 2020 Copyright: <a href="https://mdbootstrap.com/"> <strong>
-								MDBootstrap.com</strong>
-						</a>
-					</p>
-
-				</div>
-				<!-- Grid column -->
-
-				<!-- Grid column -->
-				<div class="col-md-5 col-lg-4 ml-lg-0">
-
-					<!-- Social buttons -->
-					<div class="text-center text-md-right">
-						<ul class="list-unstyled list-inline">
-							<li class="list-inline-item"><a
-								class="btn-floating btn-sm rgba-white-slight mx-1"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a
-								class="btn-floating btn-sm rgba-white-slight mx-1"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a
-								class="btn-floating btn-sm rgba-white-slight mx-1"> <i
-									class="fab fa-google-plus-g"></i>
-							</a></li>
-							<li class="list-inline-item"><a
-								class="btn-floating btn-sm rgba-white-slight mx-1"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-
-				</div>
-				<!-- Grid column -->
-
-			</div>
-			<!-- Grid row -->
-
-		</div>
-		<!-- Footer Links -->
-
-	</footer>
 
 	<!-- FOOTER END -->
 </body>
