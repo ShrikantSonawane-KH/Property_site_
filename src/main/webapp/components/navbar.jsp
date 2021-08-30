@@ -12,7 +12,7 @@
 
 <!-- HEADER -->
 	<div class="row">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-secondary m-0">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">Residena.com</a>
 				<button class="navbar-toggler" type="button"
@@ -27,23 +27,28 @@
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="event.html">Home</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="about.html">About</a>
+						<li class="nav-item"><a class="nav-link" href="#footer">About</a>
 						</li>
 
-						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+						<li class="nav-item"><a class="nav-link" href="#footer">Contact</a>
+						
+						
 						</li>
-					
+						
+						<li class="nav-item"><a class="nav-link" href="#review">Review</a>
+						</li>
+	
 					</ul>
 
 
 				</div>
 				<!--Login Button-->
-				<a href="login1.html" class="btn btn-danger" role="button">logout</a>
+				<a href="login1.html" class="btn btn-secondary" role="button" id="login">Logout</a>
 
 			</div>
 		</nav>
 
-	</div> <br>
+	</div>
 	<!-- HEADER END -->
 
 </body>
