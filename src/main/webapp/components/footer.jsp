@@ -15,6 +15,7 @@
 	<!-- FOOTER -->
 
 	
+
 <section class="my-2" id="footer">
         <!-- Footer -->
         <footer class="bg-dark text-white text-center text-md-start">
@@ -24,48 +25,38 @@
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Our Aim</h5>
+                        <h3 class="text-uppercase">Our Motto</h3>
 
                         <p>
-                            We are TWILIGHT EVENTS,Our amazing and top quality event twilight event management services
-                            is the reason clients are referred to us directly or through word-of-mouth.Whether you need
-                            an twilight event management system for simplehigh school reunions, a massive multi-day
-                            festival,
-                            twilight event is the best event management system on the market. We look forward to working
-                            with you.
+                             We are provides the fastest growing webside in the online real estate space. Born out of the need to simplify the search for a home,
+                             free of fake listings and endless site visits, we created a unique property search platform that filled the gaps 
+                             left by others in the market. Led by passionate problem-solvers, and backed by top investors from around the world, 
+                             we are poised to become the most trusted place to find a home in India.
                         </p>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
                      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <!-- <h5 class="text-uppercase">Links</h5>
-
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#!" class="text-white">YouTube</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white">Instagram</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white">LinkedIn</a>
-                            </li>
-                            <li>
-                                <a href="#!" class="text-white">Facebook</a>
-                            </li>
-                        </ul>
- -->                    </div>
+                        
+                        
+                        <h3 class="text-uppercase">ABOUT US</h3>
+                         <p>
+                             We are provides the webside which makes your work easy to search your dream home in the online real estate space. 
+                             We follow a transparent pricing policy on all our domains so that you can purchase with confidence
+                        </p>
+                    </div>
                      <!--Grid column-->
 
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         
 
-                        <h3>Contact Us</h3>
-                       <h4>email:residena@gmail.com</h4>
-                       <h4>Phone No:034562</h4>
-                       <h4>Address:Kharghar</h4>
+                        <h3>CONTACT US</h3>
+                       <p>email:residena@gmail.com</p>
+                          <p>Phone No:+917845343276</p>
+                         <p> Address:Kharghar
+                          </p>
                     </div>
                     <!--Grid column-->
                 </div>
@@ -76,7 +67,8 @@
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
                 © 2021 Copyright:
-                <a class="text-white" href="#">Residena.com</a>
+                <a class="text-white" href="#">Residena.com</a><br>
+                 <a class="text-blue" href="#">privacy policies</a>
             </div>
             <!-- Copyright -->
         </footer>
