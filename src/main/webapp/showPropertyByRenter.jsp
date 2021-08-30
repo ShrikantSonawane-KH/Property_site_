@@ -21,6 +21,7 @@
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 	crossorigin="anonymous"></script>
 
+
 </head>
 <body>
 
@@ -72,7 +73,7 @@
 			<td><%=renter.getProperty().getDescription().getOverview().getBuild_area()%></td>
 			<td><%=renter.getValidRenterEmail()%></td>
 
-			<td><a href="editRenterById.jsp?id=<%=renter.getId()%>"
+			<td><a href="EditProperty.jsp?id=<%=renter.getId()%>"
 				class="btn btn-primary">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
 				href="deletRenterController?id=<%=renter.getId()%>"
 				class="btn btn-danger">Delete</a></td>
