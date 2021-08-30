@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ page import="property.dao.RenterDao"%>
+<%@ page import="property.dao.RenterDao"%>
 <%@ page import="property.dao.RenterDaoImpl"%>
-	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,31 +22,52 @@
 </head>
 <body>
 
-<div class="container-fluid">
+	<div class="container-fluid">
 
- <%@include file="components/navbar.jsp"%>
- 
- <div>
-	<h3> Property Details :  </h3>
-	<%@include file="components/tables/property.jsp"%>
-</div>
- 
-<div>
-	<h3> Property Overview :  </h3>
-	<%@include file="components/tables/overview.jsp"%>
-</div>
-	
-<div>
-	<h3> Property Address :  </h3>
-	<%@include file="components/tables/address.jsp"%>
-</div>
+		<%@include file="components/navbar.jsp"%>
 
-<div>
-	<h3> Property Description :  </h3>
-	<%@include file="components/tables/description.jsp"%>
-</div>
+		<div>
+			<h3>Property Details :</h3>
+			<%@include file="components/tables/property.jsp"%>
+		</div>
 
-<%@include file="components/footer.jsp"%>
+		<div>
+			<h3>Property Overview :</h3>
+			<%@include file="components/tables/overview.jsp"%>
+		</div>
+
+		<div>
+			<h3>Property Address :</h3>
+			<%@include file="components/tables/address.jsp"%>
+		</div>
+
+		<div>
+			<h3>Property Description :</h3>
+			<%@include file="components/tables/description.jsp"%>
+		</div>
+
+
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<button class="btn btn-secondary" type="button">
+
+				<a href="demo.jsp">
+					<div style="color: white;">Back</div>
+				</a>
+
+			</button>
+		</div>
+		
+		<br>
+			<div class="d-grid gap-2 col-6 mx-auto">
+			<button class="btn btn-secondary" type="button">
+				<a href="##">
+					<div style="color: white;">Buy</div>
+				</a>
+
+			</button>
+		</div>
+		
+		<%@include file="components/footer.jsp"%>
 	</div>
 </body>
 </html>
