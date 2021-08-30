@@ -57,6 +57,7 @@ public class RenterDaoImpl implements RenterDao {
 
 	@Override
 	public List<Renter> showByCity(String city) {
+		
 		Session session = SessionUtil.getFactory().openSession();
 
 		Query Query = session.createQuery("from Renter where city =: c");
