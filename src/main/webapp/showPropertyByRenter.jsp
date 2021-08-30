@@ -10,15 +10,34 @@
 <meta charset="ISO-8859-1">
 <title>Property by Renter</title>
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
+
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+
 </head>
 <body>
 
+	<%@include file="components/navbar.jsp"%>
 
+	<%
+	out.print("<br/>");
+	out.print("<div style= text-align:center; >");
+	String message = request.getParameter("message");
+	if (message != null && !message.isEmpty()) {
 
+		out.print("<h6 style= color:red; >" + message + "</h6>");
+	}
+	out.print("</div>");
+	%>
+
+	<br>
 	<table class="table table-success table-striped table-hover">
 		<tr>
 			<th>Property Name</th>
@@ -53,28 +72,30 @@
 			<td><%=renter.getProperty().getDescription().getOverview().getBuild_area()%></td>
 			<td><%=renter.getValidRenterEmail()%></td>
 
-			<td><a href="edit.jsp?id=<%=renter.getId()%>"
+			<td><a href="editRenterById.jsp?id=<%=renter.getId()%>"
 				class="btn btn-primary">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
-				href="delete?id=<%=renter.getId()%>" class="btn btn-danger">Delete</a></td>
-
+				href="deletRenterController?id=<%=renter.getId()%>"
+				class="btn btn-danger">Delete</a></td>
 		</tr>
-
 		<%
 		}
 		%>
 
 	</table>
+	<br>
 
+	<!-- back button -->
 
+	<div class="d-grid gap-2 col-6 mx-auto">
+		<button class="btn btn-primary" type="button">
 
+			<a href="RenterHome.jsp">
+				<div style="color: white;">back</div>
+			</a>
 
+		</button>
 
-
-
-
-
-
-
+	</div>
 
 
 </body>
