@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import property.pojo.Property;
+import property.pojo.Renter;
 import property.util.SessionUtil;
 
 
@@ -26,7 +27,8 @@ public class PropertyDaoImpl implements PropertyDao{
 	}
 
 	public Property deletion(int id) {
-		// TODO Auto-generated method stub
+		
+	
 		return null;
 	}
 
