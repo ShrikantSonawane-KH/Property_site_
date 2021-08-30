@@ -57,13 +57,13 @@
 								aria-expanded="true"> Category </a>
 
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=all">all</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=1rk">1RK</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=1bhk">1BHK</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=2bhk">2BHK</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=3bhk">3BHK</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=4bhk">4BHK</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?cat_category=5bhk">5BHK</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=all">all</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=1rk">1RK</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=1bhk">1BHK</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=2bhk">2BHK</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=3bhk">3BHK</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=4bhk">4BHK</a></li>
+								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=5bhk">5BHK</a></li>
 							</ul>
 						</div>
 
@@ -78,7 +78,7 @@
 
 			<%
 			String type_cat = request.getParameter("type_category");
-			String cat_cat = request.getParameter("cat_category");
+			
 			
 			RenterDao renterdao = new RenterDaoImpl();
 			List<Renter> list = null;
@@ -92,15 +92,6 @@
 
 			} 
 		
-			/* 
-			if (cat_cat == null || cat_cat.trim().equals("all")) {
-				list = renterdao.showAll();
-
-			} else {
-
-				list = renterdao.getAllPropertiesByCat(cat_cat);
-
-			} */
 			
 			%>
 			
