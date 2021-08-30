@@ -25,15 +25,14 @@ public class login_control extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		
-		
+	
 		LoginCheckDao logincheckdao = new LoginCheckDaoImpl();
 
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 
 		if (email.equals(ADMIN_EMAIL) && password.equals(ADMIN_PASSWORD)) {
-			//response.sendRedirect("##AdminPage.jsp");
+			response.sendRedirect("AdminPage.jsp");
 			System.out.println("Go to AdminPage");
 		} else if (email != null && password != null) {
 			String status = logincheckdao.checkUser(email, password);
