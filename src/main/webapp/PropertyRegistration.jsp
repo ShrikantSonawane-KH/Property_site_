@@ -92,6 +92,26 @@ span {
 }
 </Style>
 </head>
+<div><%@include file="components/navbar.jsp"%></div>
+
+<br>
+
+
+	<div class="d-grid gap-2 col-6 mx-auto">
+		<button class="btn btn-secondary" type="button">
+
+			<a href="showPropertyByRenter.jsp">
+				<div style="color: white; text-decoration:none;">Your Property</div> 
+			</a>
+
+		</button>
+
+	</div>
+
+<br>
+
+
+
 <body
 	style="background-image: url(bank4.jpg); width: 100%; height: auto;">
 
@@ -343,14 +363,9 @@ span {
 
 
 					<div class="d-grid gap-2 col-6 mx-auto">
-						<button class="btn btn-primary" type="submit" value="Submit">Submit	</button>
+						<button class="btn btn-secondary" type="submit" value="Submit">Submit</button>
 					</div>
 
-
-
-<!-- 
-					<button type="submit" class="btn btn-primary btn-lg btn-block"
-						value="Submit">Submit</button> -->
 			</form>
 
 
@@ -389,21 +404,10 @@ span {
 	</div>
 	<br>
 
-	<div class="d-grid gap-2 col-6 mx-auto">
-		<button class="btn btn-primary" type="button">
-
-			<a href="showPropertyByRenter.jsp">
-				<div style="color: white;">Show Property</div>
-			</a>
-
-		</button>
-
-	</div>
-
-
 	<br>
 	<br>
 
+<%@include file="components/footer.jsp"%>
 
 </body>
 
