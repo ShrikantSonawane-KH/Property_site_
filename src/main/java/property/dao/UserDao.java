@@ -10,4 +10,8 @@ public interface UserDao {
 	public User deletion(int id);
 	public User updation(User user);
 	public List<User> showAll();
+	public User showById(int id);
+	
+	
+	
 }
