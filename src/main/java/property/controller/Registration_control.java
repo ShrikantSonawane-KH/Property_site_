@@ -27,21 +27,29 @@ public class Registration_control extends HttpServlet {
 
 		UserDao userdao = new UserDaoImpl();
 
+		String name = request.getParameter("name");
 		String email = request.getParameter("username");
 		String password = request.getParameter("password");
 		String role = request.getParameter("role");
+		String mobile = request.getParameter("mobile");
 
 		boolean validEmail = registrationvalidationdao.checkForRegistration(email);
 
 		if (validEmail) {
-			User user = new User(email, password, role);
+			
+			
+			User user = new User(name,email,password,role,mobile);
 
 			userdao.insertion(user);
+			response.sendRedirect("login.jsp?");
 
 		} else {
+			
 			response.sendRedirect("Register.jsp?message= User already registered..!");
 		}
 
+		
+		
 	}
 
 }
