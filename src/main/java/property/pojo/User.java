@@ -12,32 +12,44 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	
+	private String name;
 	@Column(nullable = false,unique = true)
 	private String username;
 	private String password;
 	private String role;
+	private String mobile;
 	public User() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	public User(int id, String username, String password, String role) {
+	public User(int id, String name, String username, String password, String role, String mobile) {
 		super();
 		this.id = id;
+		this.name = name;
 		this.username = username;
 		this.password = password;
 		this.role = role;
+		this.mobile = mobile;
 	}
-	public User(String username, String password, String role) {
+	public User(String name, String username, String password, String role, String mobile) {
 		super();
+		this.name = name;
 		this.username = username;
 		this.password = password;
 		this.role = role;
+		this.mobile = mobile;
 	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getUsername() {
 		return username;
@@ -51,18 +63,26 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-
 	public String getRole() {
 		return role;
 	}
 	public void setRole(String role) {
 		this.role = role;
 	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", role=" + role + "]";
+		return "User [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password + ", role="
+				+ role + ", mobile=" + mobile + "]";
 	}
+	
+	
+	
 
 }
 
