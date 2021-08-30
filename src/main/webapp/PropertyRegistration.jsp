@@ -10,10 +10,17 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
+
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -97,8 +104,8 @@ span {
 
 
 			<form action="PropertyRegController" name="myForm"
-			
-				onsubmit="return validateForm()" method="post" enctype="multipart/form-data" >
+				onsubmit="return validateForm()" method="post"
+				enctype="multipart/form-data">
 
 				<div style="margin: 50px 100px;">
 					<button type="button" class="btn btn-dark" id="formButton">Address
@@ -109,13 +116,15 @@ span {
 						<label for="name">Name of Property</label> <input type="text"
 							class="form-control" name="name" aria-describedby="sicustid"
 							placeholder="Enter your Property Name "
-							oninvalid="return validateForm()"> <span class="formerror"></span>
+							oninvalid="return validateForm()"> <span
+							class="formerror"></span>
 					</div>
 					<div class="form-group" id="areav">
 						<label for="area">Area</label> <input type="text"
 							class="form-control" name="area" aria-describedby="sicustid"
 							placeholder="Enter your Property Area"
-							oninvalid="return validateForm()"> <span class="formerror"></span>
+							oninvalid="return validateForm()"> <span
+							class="formerror"></span>
 					</div>
 					<div class="form-group" id="lanev">
 						<label for="lane">Lane</label> <input type="text"
@@ -189,7 +198,8 @@ span {
 						<label for="security">Security</label> <input type="text"
 							class="form-control" name="security" aria-describedby="sicustid"
 							placeholder="Enter Security Details"
-							oninvalid="return validateForm()"> <span class="formerror"></span>
+							oninvalid="return validateForm()"> <span
+							class="formerror"></span>
 					</div>
 					<div class="form-group" id="maintenancev">
 						<label for="maintenance">Maintenance</label> <input type="number"
@@ -213,7 +223,7 @@ span {
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
-							
+
 						</select> <span class="formerror"></span>
 					</div>
 
@@ -224,7 +234,7 @@ span {
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
-						
+
 						</select> <span class="formerror"></span>
 					</div>
 					<div class="form-group" id="avv">
@@ -274,8 +284,7 @@ span {
 						</select> <span class="formerror"></span>
 					</div>
 					</g>
-					<br>
-					<br>
+					<br> <br>
 					<button type="button" class="btn btn-dark" id="formButton3">Images</button>
 					<l id="mi">
 					<div class="form-group" id="descv">
@@ -319,8 +328,8 @@ span {
 							</select> <span class="formerror"></span>
 						</div>
 						<div class="form-group" id="categoryv">
-							<label for="proCategory">Category</label> <select id="proCategory"
-								class="form-control" name="proCategory"
+							<label for="proCategory">Category</label> <select
+								id="proCategory" class="form-control" name="proCategory"
 								aria-describedby="sicustid">
 								<option value="1rk">1RK</option>
 								<option value="1bhk">1BHK</option>
@@ -331,13 +340,20 @@ span {
 							</select> <span class="formerror"></span>
 						</div>
 					</u> <br> <br>
-										
+
+
+					<div class="d-grid gap-2 col-6 mx-auto">
+						<button class="btn btn-primary" type="submit" value="Submit">Submit	</button>
+					</div>
+
+
+
+<!-- 
 					<button type="submit" class="btn btn-primary btn-lg btn-block"
-						value="Submit">Submit</button>
-				
+						value="Submit">Submit</button> -->
 			</form>
-			
-			
+
+
 			<%
 			out.print("<br/>");
 			out.print("<div style= text-align:left; >");
@@ -371,14 +387,24 @@ span {
 		<script src="validation.js"></script>
 	</div>
 	</div>
-	
-	
-	
-	<button class="btn btn-primary btn-lg btn-block" 
-						value="Submit"> <a href="showPropertyByRenter.jsp" > <div style="color:white;">Show Property</div>  </a> </button>
-	
-	
-	
+	<br>
+
+	<div class="d-grid gap-2 col-6 mx-auto">
+		<button class="btn btn-primary" type="button">
+
+			<a href="showPropertyByRenter.jsp">
+				<div style="color: white;">Show Property</div>
+			</a>
+
+		</button>
+
+	</div>
+
+
+	<br>
+	<br>
+
+
 </body>
 
 
