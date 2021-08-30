@@ -29,7 +29,7 @@
 	<div style="position: absolute; top: 0px; width: 100%"></div>
 	<main
 		class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
-		
+
 		<form class="col-md-4" action="Registration_control">
 
 			<h1 class="h3 mb-3 fw-normal">Please Register here</h1>
@@ -51,12 +51,20 @@
 
 			</select>
 
-
-			</div>
-
 			<button class="w-100 btn btn-lg btn-success" type="submit">Sign
 				Up</button>
-				
+
+			<%
+			out.print("<br/>");
+			out.print("<div style= text-align:center;>");
+			String message = request.getParameter("message");
+			if (message != null && !message.isEmpty()) {
+
+				out.print("<h5 style= color:red; >" + message + "</h5>");
+			}
+			out.print("</div>");
+			%>
+
 		</form>
 	</main>
 	<div style="position: absolute; bottom: 0px; width: 100%"></div>
