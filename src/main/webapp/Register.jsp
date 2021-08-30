@@ -17,39 +17,48 @@
 </head>
 <body>
 
-	<header>
-		<nav class="navbar navbar-expand-md navbar-dark"
-			style="background-color: blue">
-			<div>
-				<a href="index.jsp" class="navbar-brand"> </a>
-			</div>
-
-		</nav>
-	</header>
+		<%@include file="components/navbar.jsp"%>
+		
 	<div style="position: absolute; top: 0px; width: 100%"></div>
 	<main
 		class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
 
 		<form class="col-md-4" action="Registration_control">
 
-			<h1 class="h3 mb-3 fw-normal">Please Register here</h1>
+			<h1 class="h3 mb-3 fw-normal">Register here</h1>
+
+			<div class="form-floating mt-2">
+				<input type="text" class="form-control" id="floatingPassword"
+					placeholder="name" name="name" required> <label
+					for="floatingPassword">Name</label>
+			</div>
 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="floatingInput"
-					placeholder="Enter email... " name="username"> <label
-					for="floatingInput">Username</label>
+					placeholder="Enter email... " name="username" required> <label
+					for="floatingInput">Email</label>
 			</div>
+			
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="floatingPassword"
-					placeholder="Password" name="password"> <label
+					placeholder="Password" name="password" required> <label
 					for="floatingPassword">Password</label>
 			</div>
-			<h4>Register as</h4>
-			<select name="role">
+			
+			<div class="form-floating mt-2">
+				<input type="text" class="form-control" id="floatingPassword"
+					placeholder="Mobile" name="mobile" required> <label
+					for="floatingPassword">Mobile</label>
+			</div>
+			
+
+			<div> <strong>Register as</strong> </div>
+			<select name="role" style="background-color:#009900;">
 				<option value="renter">Renter</option>
 				<option value="tenant">Tenant</option>
 
 			</select>
+			<br> 
 
 			<button class="w-100 btn btn-lg btn-success" type="submit">Sign
 				Up</button>
@@ -67,6 +76,7 @@
 
 		</form>
 	</main>
-	<div style="position: absolute; bottom: 0px; width: 100%"></div>
+	
+	<%@include file="components/footer.jsp"%>
 </body>
 </html>
