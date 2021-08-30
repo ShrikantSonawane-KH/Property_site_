@@ -25,8 +25,16 @@ public class RenterDaoImpl implements RenterDao {
 	}
 
 	public Renter deletion(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Session session = SessionUtil.getFactory().openSession();
+		Transaction tx = session.beginTransaction();
+		
+		Renter renter = session.get(Renter.class, id);
+		session.delete(renter);
+	
+		tx.commit();
+		session.close();
+		return renter;
 	}
 
 	public Renter updation(Renter renter) {
