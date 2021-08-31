@@ -55,9 +55,6 @@
 	crossorigin="anonymous"></script>
 
 
-
-
-
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js">
 	
 </script>
@@ -101,83 +98,23 @@
 </head>
 <body>
 
-	<div class="row">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-secondary m-0">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Residena.com</a>
-				<button class="navbar-toggler" type="button"
-					data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav">
-
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="event.html">Home</a></li>
-
-						<li class="nav-item"><a class="nav-link" href="#footer">About</a>
-						</li>
-
-						<li class="nav-item"><a class="nav-link" href="#footer">Contact</a>
-						
-						
-						</li>
-						
-						<li class="nav-item"><a class="nav-link" href="#review">Review</a>
-						</li>
-						
-						
-						<!-- <li class="nav-item dropdown"><a
-							class="nav-link dropdown-toggle" href="services.html"
-							id="navbarDropdownMenuLink" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false"> City </a>
-							<ul class="dropdown-menu"
-								aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="#">Mumbai</a></li>
-								<li><a class="dropdown-item" href="#">Pune</a></li>
-								<li><a class="dropdown-item" href="#">Nashik</a></li>
-							</ul></li>
- -->
-
-
-						<!-- <li class="nav-item"> -->
-						<!--Login Button-->
-						<!-- <a href="login1.html" class="btn btn-primary" role="button">Login</a>
-                        </li> -->
-					</ul>
-
-
-				</div>
-				<!--Login Button-->
-				<a href="login.jsp" class="btn btn-secondary" role="button" id="login">Login</a>
-
-			</div>
-		</nav>
-
-	</div>
-
-
-
+	<%@include file="components/indexNav.jsp"%>
+	
+	
 	<div class="bbbootstrap">
 		<div class="container">
 			<div class=row>
-				<form>
+
+
+<form>
 	
-					<br>		
-					<div>
-
-
-
-
+<br>		
+<div>
 
 <h1 id="xyz" style="color:white; margin-left:20%"> <strong>Welcome To Residena</strong> </h1>
 <h3 id="demo" style="color:white; margin-left:35%"> <strong> </strong> </h3>
 
 <br>
-
-
 <script>
 function test(city) {
 	  document.getElementById("demo").innerHTML = "Properties  in"+" "+city;
@@ -195,8 +132,8 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Properties For Sell";
   }
  
-
 </script>
+
 <div class="bbbootstrap1">
 
 						<div class="row">
@@ -210,8 +147,7 @@ function myFunction() {
 								<a href="login.jsp" button onclick="myFunction2()" class="btn btn-secondary btn-sm" role="button">Sell</a>
 							</div>
 							<div class="col-2">
-								<a href="login.jsp" class="btn btn-secondary btn-sm" role="button">Edit
-									Renter</a>
+								<a href="login.jsp" class="btn btn-secondary btn-sm" role="button">Administration</a>
 							</div>
 						</div> <br>
 						<div class="row">
@@ -456,78 +392,7 @@ function myFunction() {
 		<!-- Custom Script -->
 		<script src="slider.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-<!-- --------------------------------------------------------------------Footer------------------------------------------------ -->
-
-
-<section class="my-2" id="footer">
-        <!-- Footer -->
-        <footer class="bg-dark text-white text-center text-md-start">
-            <!-- Grid container -->
-            <div class="container p-4">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h3 class="text-uppercase">Our Motto</h3>
-
-                        <p>
-                             We are provides the fastest growing webside in the online real estate space. Born out of the need to simplify the search for a home,
-                             free of fake listings and endless site visits, we created a unique property search platform that filled the gaps 
-                             left by others in the market. Led by passionate problem-solvers, and backed by top investors from around the world, 
-                             we are poised to become the most trusted place to find a home in India.
-                        </p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        
-                        
-                        <h3 class="text-uppercase">ABOUT US</h3>
-                         <p>
-                             We are provides the webside which makes your work easy to search your dream home in the online real estate space. 
-                             We follow a transparent pricing policy on all our domains so that you can purchase with confidence
-                        </p>
-                    </div>
-                     <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        
-
-                        <h3>CONTACT US</h3>
-                       <p>email:residena@gmail.com</p>
-                          <p>Phone No:+917845343276</p>
-                         <p> Address:Kharghar
-                          </p>
-                    </div>
-                    <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </div>
-            <!-- Grid container -->
-
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
-                © 2021 Copyright:
-                <a class="text-white" href="#">Residena.com</a><br>
-                 <a class="text-blue" href="#">privacy policies</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
-    </section>
-
+<%@include file="components/footer.jsp"%>
 
 </body>
 </html>
