@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import property.dao.RenterDao;
 import property.dao.RenterDaoImpl;
@@ -32,17 +33,34 @@ public class login_control extends HttpServlet {
 		String password = request.getParameter("password");
 
 		if (email.equals(ADMIN_EMAIL) && password.equals(ADMIN_PASSWORD)) {
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("username", email);
+			session.setAttribute("password", password);
+			
 			response.sendRedirect("AdminPage.jsp");
 			System.out.println("Go to AdminPage");
 		} else if (email != null && password != null) {
 			String status = logincheckdao.checkUser(email, password);
 			
 			switch (status) {
+			
 			case "renter":
+				
+				HttpSession session = request.getSession();
+				session.setAttribute("username", email);
+				session.setAttribute("password", password);
+				
 				response.sendRedirect("RenterHome.jsp?useremail="+email);			//home page with property add autho
 				System.out.println("Go to RenterPage");					
 				break;
+				
 			case "tenant":
+				
+				HttpSession session1 = request.getSession();
+				session1.setAttribute("username", email);
+				session1.setAttribute("password", password);
+				
 				response.sendRedirect("TenantHome.jsp");			//home page with  buy and rent autho
 				System.out.println("Go to TenantPage");
 				break;
