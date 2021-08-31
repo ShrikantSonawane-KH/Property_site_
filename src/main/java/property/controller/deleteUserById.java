@@ -28,10 +28,10 @@ public class deleteUserById extends HttpServlet {
 			int id = Integer.parseInt(request.getParameter("id"));
 			User user = userdao.deletion(id);
 			
-			String UserName =user.getUsername();
+			String Name =user.getName();
 			String UserRole =user.getRole();
 			
-			response.sendRedirect("editRenter.jsp?message= Successfully removed user"+ " "+UserName +" "+"of role"+" "+UserRole+" "+"...!");
+			response.sendRedirect("editRenter.jsp?message= Successfully removed user"+ " "+Name +" "+"of role"+" "+UserRole+" "+"...!");
 	
 
 	}
