@@ -17,8 +17,8 @@
 </head>
 <body>
 
-		<%@include file="components/navbar.jsp"%>
-		
+	<%@include file="components/navbar.jsp"%>
+
 	<div style="position: absolute; top: 0px; width: 100%"></div>
 	<main
 		class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
@@ -38,27 +38,28 @@
 					placeholder="Enter email... " name="username" required> <label
 					for="floatingInput">Email</label>
 			</div>
-			
+
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="floatingPassword"
 					placeholder="Password" name="password" required> <label
 					for="floatingPassword">Password</label>
 			</div>
-			
+
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="floatingPassword"
 					placeholder="Mobile" name="mobile" required> <label
 					for="floatingPassword">Mobile</label>
 			</div>
-			
 
-			<div> <strong>Register as</strong> </div>
-			<select name="role" style="background-color:#009900;">
+
+			<div>
+				<strong>Register as</strong>
+			</div>
+			<select name="role" style="background-color: #009900;">
 				<option value="renter">Renter</option>
 				<option value="tenant">Tenant</option>
 
-			</select>
-			<br> 
+			</select> <br>
 
 			<button class="w-100 btn btn-lg btn-success" type="submit">Sign
 				Up</button>
@@ -76,7 +77,7 @@
 
 		</form>
 	</main>
-	
+
 	<%@include file="components/footer.jsp"%>
 </body>
 </html>
