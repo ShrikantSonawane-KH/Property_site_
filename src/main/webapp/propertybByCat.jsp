@@ -26,7 +26,6 @@
 <body>
 
 	<%@include file="components/navbar.jsp"%>
-
 	
 	<div class="container">
 		
@@ -68,7 +67,6 @@
 								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=5bhk">5BHK</a></li>
 							</ul>
 						</div>
-
 					</div>
 				</div>
 			</div>
