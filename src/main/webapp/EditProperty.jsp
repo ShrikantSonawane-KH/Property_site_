@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ page import="property.pojo.Renter"%>
-	<%@ page import="property.dao.RenterDao"%>
+<%@ page import="property.pojo.Renter"%>
+<%@ page import="property.dao.RenterDao"%>
 <%@ page import="property.dao.RenterDaoImpl"%>
 <%@ page import="java.util.List"%>
 <!doctype html>
@@ -98,26 +98,35 @@ span {
 </head>
 <body
 	style="background-image: url(bank4.jpg); width: 100%; height: auto;">
-	
+
 	<%
 	RenterDao renterdao = new RenterDaoImpl();
 	int id = Integer.parseInt(request.getParameter("id"));
-	
+
 	Renter renter = renterdao.showById(id);
-		
 	%>
-	
+
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		response.sendRedirect("login.jsp");
+	}
+	%>
+
+
 
 	<div
 		class=" d-flex justify-content-center align-items-center container-fluid">
 
 		<div class="card      w-50 justify-items-center align-items-center ;">
-			<h1 style="margin: 30px 50px;" id="h1">Please Edit Your
-				Property </h1>
+			<h1 style="margin: 30px 50px;" id="h1">Please Edit Your Property
+			</h1>
 
 
-			<form action="PropertyUpdationController?id=<%=renter.getId() %>" name="myForm"
-				onsubmit="return validateForm()" method="post"
+			<form action="PropertyUpdationController?id=<%=renter.getId()%>"
+				name="myForm" onsubmit="return validateForm()" method="post"
 				enctype="multipart/form-data">
 
 				<div style="margin: 50px 100px;">
@@ -128,26 +137,30 @@ span {
 					<div class="form-group" id="namev">
 						<label for="name">Name of Property</label> <input type="text"
 							class="form-control" name="name" aria-describedby="sicustid"
-							placeholder="Enter your Property Name " value="<%=renter.getProperty().getName() %>"
+							placeholder="Enter your Property Name "
+							value="<%=renter.getProperty().getName()%>"
 							oninvalid="return validateForm()"> <span
 							class="formerror"></span>
 					</div>
 					<div class="form-group" id="areav">
 						<label for="area">Area</label> <input type="text"
 							class="form-control" name="area" aria-describedby="sicustid"
-							placeholder="Enter your Property Area" value="<%=renter.getProperty().getAddress().getArea() %>"
+							placeholder="Enter your Property Area"
+							value="<%=renter.getProperty().getAddress().getArea()%>"
 							oninvalid="return validateForm()"> <span
 							class="formerror"></span>
 					</div>
 					<div class="form-group" id="lanev">
 						<label for="lane">Lane</label> <input type="text"
-							class="form-control" name="lane" aria-describedby="sicustid" value="<%=renter.getProperty().getAddress().getLane() %>"
+							class="form-control" name="lane" aria-describedby="sicustid"
+							value="<%=renter.getProperty().getAddress().getLane()%>"
 							placeholder="Enter Lane " onkeyup="return validateForm()">
 						<span class="formerror"></span>
 					</div>
 					<div class="form-group" id="landmarkv">
 						<label for="landmark">Landmark</label> <input type="text"
-							class="form-control" name="landmark" aria-describedby="sicustid" value="<%=renter.getProperty().getAddress().getLandmark() %>"
+							class="form-control" name="landmark" aria-describedby="sicustid"
+							value="<%=renter.getProperty().getAddress().getLandmark()%>"
 							placeholder="Enter Landmark" oninvalid="return validateForm()">
 						<span class="formerror"></span>
 					</div>
@@ -173,7 +186,8 @@ span {
 					</div>
 					<div class="form-group" id="pincodev">
 						<label for="pincode">Pincode</label> <input type="number"
-							class="form-control" name="pincode" aria-describedby="sicustid" value="<%=renter.getProperty().getAddress().getPincode() %>"
+							class="form-control" name="pincode" aria-describedby="sicustid"
+							value="<%=renter.getProperty().getAddress().getPincode()%>"
 							placeholder="Enter your pincode" onkeyup="return validateForm()">
 						<span class="formerror"></span>
 					</div>
@@ -200,7 +214,8 @@ span {
 						<label for="highlights">Special Heighlight</label> <input
 							type="textarea" class="form-control" name="highlights"
 							aria-describedby="sicustid"
-							placeholder="Enter Special Heighlights" value="<%=renter.getProperty().getDescription().getSpecial_highlights() %>"
+							placeholder="Enter Special Heighlights"
+							value="<%=renter.getProperty().getDescription().getSpecial_highlights()%>"
 							onkeyup="return validateForm()"> <span class="formerror"></span>
 					</div>
 					</f>
@@ -210,7 +225,8 @@ span {
 					<div class="form-group" id="securityv">
 						<label for="security">Security</label> <input type="text"
 							class="form-control" name="security" aria-describedby="sicustid"
-							placeholder="Enter Security Details" value="<%=renter.getProperty().getDescription().getOverview().getSecurity() %>"
+							placeholder="Enter Security Details"
+							value="<%=renter.getProperty().getDescription().getOverview().getSecurity()%>"
 							oninvalid="return validateForm()"> <span
 							class="formerror"></span>
 					</div>
@@ -218,19 +234,21 @@ span {
 						<label for="maintenance">Maintenance</label> <input type="number"
 							class="form-control" name="maintenance"
 							aria-describedby="sicustid"
-							placeholder="Enter maintenance charges" value="<%=renter.getProperty().getDescription().getOverview().getMaintenance()%>"
+							placeholder="Enter maintenance charges"
+							value="<%=renter.getProperty().getDescription().getOverview().getMaintenance()%>"
 							onkeyup="return validateForm()"> <span class="formerror"></span>
 					</div>
 					<div class="form-group" id="buildareav">
 						<label for="build_area">Build Area</label> <input type="text"
 							class="form-control" name="build_area"
 							aria-describedby="sicustid"
-							placeholder="Enter build area in Sq.feet " value="<%=renter.getProperty().getDescription().getOverview().getBuild_area() %>"
+							placeholder="Enter build area in Sq.feet "
+							value="<%=renter.getProperty().getDescription().getOverview().getBuild_area()%>"
 							onkeyup="return validateForm()"> <span class="formerror"></span>
 					</div>
 					<div class="form-group" id="bathv">
 						<label for="NoOfBathroom">No. of Bathrooms</label> <select
-							id="NoOfBathroom" class="form-control" name="NoOfBathroom" 
+							id="NoOfBathroom" class="form-control" name="NoOfBathroom"
 							aria-describedby="sicustid">
 							<option value="0">0</option>
 							<option value="1">1</option>
@@ -253,7 +271,8 @@ span {
 					<div class="form-group" id="avv">
 						<label for="availableFrom">Avaialable from</label> <input
 							type="text" class="form-control" name="availableFrom"
-							aria-describedby="sicustid" placeholder="Avaialable from" value="<%=renter.getProperty().getDescription().getOverview().getAvailable_from() %>"
+							aria-describedby="sicustid" placeholder="Avaialable from"
+							value="<%=renter.getProperty().getDescription().getOverview().getAvailable_from()%>"
 							onkeyup="return validateForm()"> <span class="formerror"></span>
 					</div>
 					<div class="form-group" id="floorv">
@@ -269,7 +288,8 @@ span {
 					<div class="form-group" id="agev">
 						<label for="proAge">Age of Property</label> <input type="text"
 							class="form-control" name="proAge" aria-describedby="sicustid"
-							placeholder="Enter age of propery " value="<%=renter.getProperty().getDescription().getOverview().getPro_age() %>"
+							placeholder="Enter age of propery "
+							value="<%=renter.getProperty().getDescription().getOverview().getPro_age()%>"
 							onkeyup="return validateForm()"> <span class="formerror"></span>
 					</div>
 					<div class="form-group" id="parkv">
@@ -303,12 +323,13 @@ span {
 					<div class="form-group" id="descv">
 						<label for="imagedesc">Image Desc</label> <input type="text"
 							class="form-control" name="imagedesc" aria-describedby="sicustid"
-							placeholder="Enter description of an Image " value="<%=renter.getProperty().getImage().getImg_desc() %>"
+							placeholder="Enter description of an Image "
+							value="<%=renter.getProperty().getImage().getImg_desc()%>"
 							onkeyup="return validateForm()"> <span class="formerror"></span>
 					</div>
 					<div class="form-group" id="filev">
 						<label for="image">Upload Image</label> <input type="file"
-							class="form-control" name="image" id="file" 
+							class="form-control" name="image" id="file"
 							aria-describedby="sicustid" multiple
 							onchange="return fileValidation()"> <span
 							class="formerror"></span>
@@ -320,12 +341,14 @@ span {
 					<u id="csk">
 						<div class="form-group" id="pricev">
 							<label for="price">Price</label> <input type="number"
-								class="form-control" name="price" aria-describedby="sicustid" value="<%=renter.getProperty().getPrice() %>"
+								class="form-control" name="price" aria-describedby="sicustid"
+								value="<%=renter.getProperty().getPrice()%>"
 								placeholder="Enter price " onkeyup="return validateForm()">
 							<span class="formerror"></span>
 						</div>
 						<div class="form-group" id="depov">
-							<label for="deposite">Deposite</label> <input type="number" value="<%=renter.getProperty().getDeposite() %>"
+							<label for="deposite">Deposite</label> <input type="number"
+								value="<%=renter.getProperty().getDeposite()%>"
 								class="form-control" name="deposite" aria-describedby="sicustid"
 								placeholder="Enter deposite amout"
 								onkeyup="return validateForm()"> <span class="formerror"></span>
@@ -356,12 +379,13 @@ span {
 
 
 					<div class="d-grid gap-2 col-6 mx-auto">
-						<button class="btn btn-primary" type="submit" value="Submit">Submit	</button>
+						<button class="btn btn-primary" type="submit" value="Submit">Submit
+						</button>
 					</div>
 
 
 
-<!-- 
+					<!-- 
 					<button type="submit" class="btn btn-primary btn-lg btn-block"
 						value="Submit">Submit</button> -->
 			</form>
@@ -405,7 +429,7 @@ span {
 	<div class="d-grid gap-2 col-6 mx-auto">
 		<button class="btn btn-primary" type="button">
 
-			<a href="showPropertyByRenter.jsp" style="text-decoration:none">
+			<a href="showPropertyByRenter.jsp" style="text-decoration: none">
 				<div style="color: white;">Show Property</div>
 			</a>
 
