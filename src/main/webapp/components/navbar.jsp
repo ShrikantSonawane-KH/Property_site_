@@ -43,7 +43,7 @@
 
 				</div>
 				<!--Login Button-->
-				<a href="login1.html" class="btn btn-secondary" role="button" id="login">Logout</a>
+				<a href="logOutController" class="btn btn-secondary" role="button" id="login">Logout</a>
 
 			</div>
 		</nav>
