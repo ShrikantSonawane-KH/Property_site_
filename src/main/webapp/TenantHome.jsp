@@ -113,6 +113,17 @@ Renter.setRenterEmail(Renteremail);
 	<%@include file="components/navbar.jsp"%>
 
 
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		request.setAttribute("Error", "Session has ended.  Please login.");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+	%>
+
 
 	<div class="bbbootstrap">
 		<div class="container">
@@ -129,15 +140,11 @@ Renter.setRenterEmail(Renteremail);
 <br>
 
 
-
-
 <script>
 function test(city) {
 	  document.getElementById("demo").innerHTML = "Properties  in"+" "+city;
 
 	  }
-
-
 
 function myFunction() {
   document.getElementById("demo").innerHTML = "Properties For Buy";
@@ -229,12 +236,6 @@ function myFunction() {
 
 
 
-
-
-
-
-
-
 <!-- ------------------------------------------------Cards-------------------------- -->
 
 	<div class="container">
@@ -253,9 +254,6 @@ function myFunction() {
 				</div>
 			</div>
 
-
-
-
 			<div class="col-sm-4">
 				<div class="card box-shadow">
 					<img src="image/2.jpg" class="card-img-top" alt="...">
@@ -267,8 +265,6 @@ function myFunction() {
 				</div>
 			</div>
 
-
-
 			<div class="col-sm-4">
 				<div class="card box-shadow">
 					<img src="image/6.jpg" class="card-img-top" alt="...">
@@ -279,7 +275,6 @@ function myFunction() {
 					</div>
 				</div>
 			</div>
-
 
 			<div class="col-sm-4">
 				<div class="card box-shadow">
