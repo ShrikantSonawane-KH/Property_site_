@@ -405,7 +405,7 @@ span {
 	<div class="d-grid gap-2 col-6 mx-auto">
 		<button class="btn btn-primary" type="button">
 
-			<a href="showPropertyByRenter.jsp">
+			<a href="showPropertyByRenter.jsp" style="text-decoration:none">
 				<div style="color: white;">Show Property</div>
 			</a>
 
