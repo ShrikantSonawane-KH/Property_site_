@@ -100,8 +100,8 @@ span {
 	<div class="d-grid gap-2 col-6 mx-auto">
 		<button class="btn btn-secondary" type="button">
 
-			<a href="showPropertyByRenter.jsp">
-				<div style="color: white; text-decoration:none;">Your Property</div> 
+			<a href="showPropertyByRenter.jsp" style=" text-decoration:none;">
+				<div style="color: white;">Your Property</div> 
 			</a>
 
 		</button>
@@ -114,6 +114,20 @@ span {
 
 <body
 	style="background-image: url(bank4.jpg); width: 100%; height: auto;">
+	
+	
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		request.setAttribute("Error", "Session has ended.  Please login.");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+	%>
+	
+	
 
 	<div
 		class=" d-flex justify-content-center align-items-center container-fluid">
