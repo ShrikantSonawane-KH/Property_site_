@@ -27,22 +27,22 @@
 		<%@include file="components/navbar.jsp"%>
 
 		<div>
-			<h3>Property Details :</h3>
+			<h3> <strong>Property Details :</strong> </h3>
 			<%@include file="components/tables/property.jsp"%>
 		</div>
 
 		<div>
-			<h3>Property Overview :</h3>
+			<h3> <strong>Property Overview :</strong> </h3>
 			<%@include file="components/tables/overview.jsp"%>
 		</div>
 
 		<div>
-			<h3>Property Address :</h3>
+			<h3> <strong>Property Address :</strong> </h3>
 			<%@include file="components/tables/address.jsp"%>
 		</div>
 
 		<div>
-			<h3>Property Description :</h3>
+			<h3> <strong>Property Description :</strong> </h3>
 			<%@include file="components/tables/description.jsp"%>
 		</div>
 
@@ -50,7 +50,7 @@
 		<div class="d-grid gap-2 col-6 mx-auto">
 			<button class="btn btn-secondary" type="button">
 
-				<a href="demo.jsp">
+				<a href="demo.jsp" style="text-decoration:none">
 					<div style="color: white;">Back</div>
 				</a>
 
@@ -60,7 +60,7 @@
 		<br>
 			<div class="d-grid gap-2 col-6 mx-auto">
 			<button class="btn btn-secondary" type="button">
-				<a href="##">
+				<a href="##" style="text-decoration:none">
 					<div style="color: white;">Buy</div>
 				</a>
 
