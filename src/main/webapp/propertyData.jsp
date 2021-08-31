@@ -26,23 +26,45 @@
 
 		<%@include file="components/navbar.jsp"%>
 
+		<%
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("pragma", "no-cache");
+		response.setDateHeader("Expires", 0);
+		if (session.getAttribute("username") == null) {
+			request.setAttribute("Error", "Session has ended.  Please login.");
+			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			rd.forward(request, response);
+		}
+		%>
+
+
+
+
 		<div>
-			<h3> <strong>Property Details :</strong> </h3>
+			<h3>
+				<strong>Property Details :</strong>
+			</h3>
 			<%@include file="components/tables/property.jsp"%>
 		</div>
 
 		<div>
-			<h3> <strong>Property Overview :</strong> </h3>
+			<h3>
+				<strong>Property Overview :</strong>
+			</h3>
 			<%@include file="components/tables/overview.jsp"%>
 		</div>
 
 		<div>
-			<h3> <strong>Property Address :</strong> </h3>
+			<h3>
+				<strong>Property Address :</strong>
+			</h3>
 			<%@include file="components/tables/address.jsp"%>
 		</div>
 
 		<div>
-			<h3> <strong>Property Description :</strong> </h3>
+			<h3>
+				<strong>Property Description :</strong>
+			</h3>
 			<%@include file="components/tables/description.jsp"%>
 		</div>
 
@@ -50,23 +72,23 @@
 		<div class="d-grid gap-2 col-6 mx-auto">
 			<button class="btn btn-secondary" type="button">
 
-				<a href="demo.jsp" style="text-decoration:none">
+				<a href="demo.jsp" style="text-decoration: none">
 					<div style="color: white;">Back</div>
 				</a>
 
 			</button>
 		</div>
-		
+
 		<br>
-			<div class="d-grid gap-2 col-6 mx-auto">
+		<div class="d-grid gap-2 col-6 mx-auto">
 			<button class="btn btn-secondary" type="button">
-				<a href="##" style="text-decoration:none">
+				<a href="##" style="text-decoration: none">
 					<div style="color: white;">Buy</div>
 				</a>
 
 			</button>
 		</div>
-		
+
 		<%@include file="components/footer.jsp"%>
 	</div>
 </body>
