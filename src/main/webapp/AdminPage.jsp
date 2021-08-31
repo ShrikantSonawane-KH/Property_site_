@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,94 +96,114 @@
 
 <%@include file="components/navbar.jsp"%>
 
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		request.setAttribute("Error", "Session has ended.  Please login.");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+	%>
+
+
 	<div class="bbbootstrap">
 		<div class="container">
 			<div class=row>
 				<form>
-	
-					<br>		
+
+					<br>
 					<div>
 
-<h1 id="xyz" style="color:white; margin-left:20%"> <strong>Welcome To Residena</strong> </h1>
-<h3 id="demo" style="color:white; margin-left:35%"> <strong> </strong> </h3>
+						<h1 id="xyz" style="color: white; margin-left: 20%">
+							<strong>Welcome To Residena</strong>
+						</h1>
+						<h3 id="demo" style="color: white; margin-left: 35%">
+							<strong> </strong>
+						</h3>
 
-<br>
+						<br>
 
-<script>
-function test(city) {
-	  document.getElementById("demo").innerHTML = "Properties  in"+" "+city;
+						<script>
+							function test(city) {
+								document.getElementById("demo").innerHTML = "Properties  in"
+										+ " " + city;
 
-	  }
+							}
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Properties For Buy";
+							function myFunction() {
+								document.getElementById("demo").innerHTML = "Properties For Buy";
 
-  }
-  function myFunction1() {
-  document.getElementById("demo").innerHTML = "Properties For Rent";
-  }
-  function myFunction2() {
-  document.getElementById("demo").innerHTML = "Properties For Sell";
-  }
- 
-
-</script>
+							}
+							function myFunction1() {
+								document.getElementById("demo").innerHTML = "Properties For Rent";
+							}
+							function myFunction2() {
+								document.getElementById("demo").innerHTML = "Properties For Sell";
+							}
+						</script>
 
 
-<!-- ---------------------------------------------------Header---------------------------------------------------------- -->
+						<!-- ---------------------------------------------------Header---------------------------------------------------------- -->
 
-<div class="bbbootstrap1">
+						<div class="bbbootstrap1">
 
-						<div class="row">
-							<div class="col-2">
-								<a href="demo.jsp"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
+							<div class="row">
+								<div class="col-2">
+									<a href="demo.jsp" button onclick="myFunction()"
+										class="btn btn-secondary btn-sm" role="button">Buy</a>
+								</div>
+								<div class="col-2">
+									<a href="demo.jsp" button onclick="myFunction1()"
+										class="btn btn-secondary btn-sm" role="button">Rent</a>
+								</div>
+								<div class="col-2">
+									<a href="AdminPage.jsp" button onclick="myFunction2()"
+										class="btn btn-secondary btn-sm" role="button">Sell</a>
+								</div>
+								<div class="col-2">
+									<a href="editRenter.jsp" class="btn btn-secondary btn-sm"
+										role="button">Administration</a>
+								</div>
 							</div>
-							<div class="col-2">
-								<a href="demo.jsp" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
-							</div>
-							<div class="col-2">
-								<a href="AdminPage.jsp" button onclick="myFunction2()" class="btn btn-secondary btn-sm" role="button">Sell</a>
-							</div>
-							<div class="col-2">
-								<a href="editRenter.jsp" class="btn btn-secondary btn-sm" role="button">Edit
-									Renter</a>
-							</div>
-						</div> <br>
-						<div class="row">
-							<div class="col-2">
+							<br>
+							<div class="row">
+								<div class="col-2">
 
 
-								<div class="dropdown show"   >
-									<a class="btn btn-secondary dropdown-toggle" href="#"
-										role="button" id="dropdownMenuLink" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">  City
-									</a>
-									
-									<script>var a="mumbai"
-												var b="pune"
-													var c="nashik"
-											</script>
-									
+									<div class="dropdown show">
+										<a class="btn btn-secondary dropdown-toggle" href="#"
+											role="button" id="dropdownMenuLink" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false"> City </a>
 
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-										<a class="dropdown-item" value="Mumbai" href="#" onclick='test(a)'>Mumbai</a> 
-										<a class="dropdown-item" value="Pune" href="#" onclick='test(b)'>Pune</a> <a
-											class="dropdown-item" value="Nasik" href="#" onclick='test(c)'>Nasik</a>
+										<script>
+											var a = "mumbai"
+											var b = "pune"
+											var c = "nashik"
+										</script>
+
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+											<a class="dropdown-item" value="Mumbai" href="#"
+												onclick='test(a)'>Mumbai</a> <a class="dropdown-item"
+												value="Pune" href="#" onclick='test(b)'>Pune</a> <a
+												class="dropdown-item" value="Nasik" href="#"
+												onclick='test(c)'>Nasik</a>
+										</div>
 									</div>
+
 								</div>
 
-							</div>
-							
-							<div class="col-10">
-								<div class="form-inline my-2 my-lg-0">
-									<input class="form-control mr-lg-10" type="search"
-										placeholder="Search" aria-label="Search" class="largesearch">
-									<button class="btn btn-secondary my-2 my-sm-0"
-										type="submit">Search</button>
-								</div>
+								<div class="col-10">
+									<div class="form-inline my-2 my-lg-0">
+										<input class="form-control mr-lg-10" type="search"
+											placeholder="Search" aria-label="Search" class="largesearch">
+										<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+									</div>
 
+								</div>
 							</div>
-						</div>
 
 						</div>
 						<!--       
@@ -202,7 +222,7 @@ function myFunction() {
 	</div>
 	<br>
 
-<!-- ------------------------------------------------Cards-------------------------- -->
+	<!-- ------------------------------------------------Cards-------------------------- -->
 
 	<div class="container">
 		<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
@@ -211,10 +231,11 @@ function myFunction() {
 
 					<img src="image/15.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title"><strong>VILLA</strong></h5>
-						<p class="card-text">The style of Villa  is one of  features of the architecture 
-						of the Gallura.Villa is reside in Goa.
-							</p>
+						<h5 class="card-title">
+							<strong>VILLA</strong>
+						</h5>
+						<p class="card-text">The style of Villa is one of features of
+							the architecture of the Gallura.Villa is reside in Goa.</p>
 
 					</div>
 				</div>
@@ -224,8 +245,11 @@ function myFunction() {
 				<div class="card box-shadow">
 					<img src="image/2.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title "><strong>VILLA</strong></h5>
-						<p class="card-text">This is most beautiful Villa in Mumbai. Available for rent.</p>
+						<h5 class="card-title ">
+							<strong>VILLA</strong>
+						</h5>
+						<p class="card-text">This is most beautiful Villa in Mumbai.
+							Available for rent.</p>
 
 					</div>
 				</div>
@@ -237,8 +261,11 @@ function myFunction() {
 				<div class="card box-shadow">
 					<img src="image/6.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title"><strong>APARTMENT</strong></h5>
-						<p class="card-text">This is most beautiful apartment in Pune which have 2 bedrooms with balcony.</p>
+						<h5 class="card-title">
+							<strong>APARTMENT</strong>
+						</h5>
+						<p class="card-text">This is most beautiful apartment in Pune
+							which have 2 bedrooms with balcony.</p>
 
 					</div>
 				</div>
@@ -249,8 +276,11 @@ function myFunction() {
 				<div class="card box-shadow">
 					<img src="image/9.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title"><strong>VILLA</strong></h5>
-						<p class="card-text">This villa is reside Nashik.this villa have swimming pool with beautiful garden </p>
+						<h5 class="card-title">
+							<strong>VILLA</strong>
+						</h5>
+						<p class="card-text">This villa is reside Nashik.this villa
+							have swimming pool with beautiful garden</p>
 
 					</div>
 				</div>
@@ -260,10 +290,12 @@ function myFunction() {
 				<div class="card box-shadow">
 					<img src="image/14.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title"><strong>BEUTIFUL VILLA</strong></h5>
-						<p class="card-text">Premium private villa is located on the top of the mountain. 
-                                  Villa has air conditioning and seating area
-                          </p>
+						<h5 class="card-title">
+							<strong>BEUTIFUL VILLA</strong>
+						</h5>
+						<p class="card-text">Premium private villa is located on the
+							top of the mountain. Villa has air conditioning and seating area
+						</p>
 
 					</div>
 				</div>
@@ -273,8 +305,11 @@ function myFunction() {
 				<div class="card box-shadow">
 					<img src="image/17.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title"><strong>APARTMENT</strong></h5>
-						<p class="card-text">This is apartment available in kharghar with 3 bedrooms.</p>
+						<h5 class="card-title">
+							<strong>APARTMENT</strong>
+						</h5>
+						<p class="card-text">This is apartment available in kharghar
+							with 3 bedrooms.</p>
 
 					</div>
 				</div>
@@ -287,95 +322,104 @@ function myFunction() {
 
 
 
-<!-- ----------------------Google map----------------------------------------------- -->
+	<!-- ----------------------Google map----------------------------------------------- -->
 	<div id="map-container-google-3" class="z-depth-1-half map-container-3">
 		<iframe
 			src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed"
 			frameborder="0" style="border: 0" allowfullscreen></iframe>
 	</div>
-<br><br>
-<!-- ----------------------------------Review-------------------------------------- -->
-<!-- Post Slider -->
-		<div class="post-slider" >
-			<h1 class="slider-title " id="review">Review</h1>
-			<i class="fas fa-chevron-left prev"></i> <i
-				class="fas fa-chevron-right next"></i>
+	<br>
+	<br>
+	<!-- ----------------------------------Review-------------------------------------- -->
+	<!-- Post Slider -->
+	<div class="post-slider">
+		<h1 class="slider-title " id="review">Review</h1>
+		<i class="fas fa-chevron-left prev"></i> <i
+			class="fas fa-chevron-right next"></i>
 
-			<div class="post-wrapper">
+		<div class="post-wrapper">
 
-				<div class="post">
-					 <img src="image/51.jpg" alt="" class="slider-image"> 
-					<div class="post-info">
-						
-						<h6> I was on house hunt since a long time and because of Residena.com that search
-						 came to end. With amazing house options they also provided us with the movers packers service and an 
-						 option for online rent agreement.</h6> 
+			<div class="post">
+				<img src="image/51.jpg" alt="" class="slider-image">
+				<div class="post-info">
 
- <i
-							class="far fa-calendar"> June 10, 2021</i>
-					</div>
+					<h6>I was on house hunt since a long time and because of
+						Residena.com that search came to end. With amazing house options
+						they also provided us with the movers packers service and an
+						option for online rent agreement.</h6>
+
+					<i class="far fa-calendar"> June 10, 2021</i>
 				</div>
+			</div>
 
-				<div class="post">
-					<img src="image/57.jpg" alt="" class="slider-image">
-					<div class="post-info">
-						
-						<h6>A very well managed site with great options for rented accommodation , with full information about property 
-						and real time pictures of the property .
-						The website content is also managed well, even my father used it easily</h6>
+			<div class="post">
+				<img src="image/57.jpg" alt="" class="slider-image">
+				<div class="post-info">
+
+					<h6>A very well managed site with great options for rented
+						accommodation , with full information about property and real time
+						pictures of the property . The website content is also managed
+						well, even my father used it easily</h6>
 
 
-							<i class="far fa-calendar"> July 23, 2021</i>
-					</div>
+					<i class="far fa-calendar"> July 23, 2021</i>
 				</div>
+			</div>
 
-				<div class="post">
-					 <img src="image/34.jpg" alt="" class="slider-image"> 
-					<div class="post-info">
-						
-							
-					<h6>Residena.com is one of the best service providers for those who are looking for rented accommodation,
-					 I rented my place with their help. Mr. Alok sharma helped me im getting a great solution.Residena makes our life easy.
-					</h6> 
-  
-							<i class="far fa-calendar"> May 8, 2021</i>
-					</div>
+			<div class="post">
+				<img src="image/34.jpg" alt="" class="slider-image">
+				<div class="post-info">
+
+
+					<h6>Residena.com is one of the best service providers for
+						those who are looking for rented accommodation, I rented my place
+						with their help. Mr. Alok sharma helped me im getting a great
+						solution.Residena makes our life easy.</h6>
+
+					<i class="far fa-calendar"> May 8, 2021</i>
 				</div>
+			</div>
 
-				<div class="post">
-					 <img src="image/55.jpg" alt="" class="slider-image"> 
-					<div class="post-info">
-						
-						<h6>I listed my property on Residena.com and within a few months my property was filled with tenants. I purchased a paid package and Mr. Ashok Fitniss helped me alot while getting the tenants. Overall it was a satisfying experience</h6>  
-						<i class="far fa-calendar"> Mar 10, 2021</i>
-					</div>
+			<div class="post">
+				<img src="image/55.jpg" alt="" class="slider-image">
+				<div class="post-info">
+
+					<h6>I listed my property on Residena.com and within a few
+						months my property was filled with tenants. I purchased a paid
+						package and Mr. Ashok Fitniss helped me alot while getting the
+						tenants. Overall it was a satisfying experience</h6>
+					<i class="far fa-calendar"> Mar 10, 2021</i>
 				</div>
+			</div>
 
-				<div class="post">
-				 	<img src="image/54.jpg" alt="" class="slider-image"> 
-					<div class="post-info">
-						
-						<h6> Looking for an accomodation for myself landed me to this amazing website, where is found many renting options and that too in my budget. Amazing renting options of residena new gives a facility to smooth search.</h6>
+			<div class="post">
+				<img src="image/54.jpg" alt="" class="slider-image">
+				<div class="post-info">
 
-				 <i class="far fa-calendar"> Mar 8, 2021</i>
-					</div>
+					<h6>Looking for an accomodation for myself landed me to this
+						amazing website, where is found many renting options and that too
+						in my budget. Amazing renting options of residena new gives a
+						facility to smooth search.</h6>
+
+					<i class="far fa-calendar"> Mar 8, 2021</i>
 				</div>
-
 			</div>
 
 		</div>
-		<!-- JQuery -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!-- Slick Carousel -->
-		<script type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	</div>
+	<!-- JQuery -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!-- Custom Script -->
-		<script src="slider.js"></script>
+	<!-- Slick Carousel -->
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<%@include file="components/footer.jsp"%>
+	<!-- Custom Script -->
+	<script src="slider.js"></script>
+
+	<%@include file="components/footer.jsp"%>
 
 </body>
 </html>
