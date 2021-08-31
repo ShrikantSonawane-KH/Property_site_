@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="components/loginNav.jsp"%>
 	
 	
 	<div style="position: absolute; top: 0px; width: 100%"></div>
