@@ -30,7 +30,16 @@
 
 	<%@include file="components/navbar.jsp"%>
 
-<!-- User Table -->
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		response.sendRedirect("login.jsp");
+	}
+	%>
+
+	<!-- User Table -->
 
 	<%
 	out.print("<br/>");
@@ -43,27 +52,28 @@
 	out.print("</div>");
 	%>
 
-	<h3> <strong>User Data :</strong>  </h3>
+	<h3>
+		<strong>User Data :</strong>
+	</h3>
 
 	<table class="table table-success table-striped table-hover">
 		<tr>
 			<th>Id</th>
 			<th>Name</th>
 			<th>Mobile</th>
-			<th>Email </th>
+			<th>Email</th>
 			<th>Role</th>
 			<th>@@########@@</th>
 			<th>@@########@@</th>
 			<th>@@########@@</th>
 			<th>@@########@@</th>
-		
+
 			<th>Action</th>
 		</tr>
 		<%
-		
 		UserDao userdao = new UserDaoImpl();
 
-		List<User> uList=userdao.showAll();
+		List<User> uList = userdao.showAll();
 
 		for (User user : uList) {
 		%>
@@ -77,28 +87,30 @@
 			<td>-</td>
 			<td>-</td>
 			<td>-</td>
-		
-		
-			
 
-			<td>
-				<a href="deleteUserById?id=<%=user.getId()%>" class="btn btn-danger">Delete</a></td>
+
+
+
+			<td><a href="deleteUserById?id=<%=user.getId()%>"
+				class="btn btn-danger">Delete</a></td>
 
 		</tr>
 		<%
 		}
 		%>
 	</table>
-	<br>	
+	<br>
 
-<!-- Renter Table -->
+	<!-- Renter Table -->
 
-	<h3> <strong>Property Data :</strong> </h3>
-	
+	<h3>
+		<strong>Property Data :</strong>
+	</h3>
+
 	<table class="table table-success table-striped table-hover">
 		<tr>
 			<th>Property Id</th>
-			<th>Property Name</th>	
+			<th>Property Name</th>
 			<th>Property Category</th>
 			<th>Property Type</th>
 			<th>Price</th>
@@ -131,8 +143,7 @@
 			<td><%=renter.getProperty().getDescription().getOverview().getBuild_area()%></td>
 			<td><%=renter.getValidRenterEmail()%></td>
 
-			<td>
-				<a href="deleteRenterByAdmin?id=<%=renter.getId()%>"
+			<td><a href="deleteRenterByAdmin?id=<%=renter.getId()%>"
 				class="btn btn-danger">Delete</a></td>
 		</tr>
 		<%
@@ -147,13 +158,15 @@
 	<div class="d-grid gap-2 col-6 mx-auto">
 		<button class="btn btn-secondary" type="button">
 
-			<a href="AdminPage.jsp" style="text-decoration:none">
+			<a href="AdminPage.jsp" style="text-decoration: none">
 				<div style="color: white;">back</div>
 			</a>
 
 		</button>
 
-	</div> <br><br>
+	</div>
+	<br>
+	<br>
 
 </body>
 </html>
@@ -168,7 +181,7 @@
 
 
 
-	
+
 
 
 
