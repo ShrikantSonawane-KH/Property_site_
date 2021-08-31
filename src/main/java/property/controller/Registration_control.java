@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import property.dao.UserDao;
 import property.dao.UserDaoImpl;
+import property.login.confirmation.EmailConfirmation;
 import property.pojo.User;
 import property.service.RegistrationValidationDao;
 import property.service.RegistrationValidationDaoImpl;
@@ -34,9 +35,13 @@ public class Registration_control extends HttpServlet {
 		String mobile = request.getParameter("mobile");
 
 		boolean validEmail = registrationvalidationdao.checkForRegistration(email);
+		
+		/*
+		 * EmailConfirmation sendEmailConfirmation = new EmailConfirmation();
+		 * sendEmailConfirmation.sendEmail(name,email,password);
+		 */
 
 		if (validEmail) {
-			
 			
 			User user = new User(name,email,password,role,mobile);
 
@@ -48,8 +53,6 @@ public class Registration_control extends HttpServlet {
 			response.sendRedirect("Register.jsp?message= User already registered..!");
 		}
 
-		
-		
 	}
 
 }
