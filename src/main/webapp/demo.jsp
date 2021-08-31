@@ -66,13 +66,13 @@
 								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=5bhk">5BHK</a></li>
 							</ul>
 						</div>
-
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
+	
 	<div class="container-fluid">
 		<div class="row mt-3 mx-2">
 
@@ -92,7 +92,7 @@
 
 			} 
 		
-			
+	
 			%>
 			
 			<!--show products-->
@@ -102,7 +102,7 @@
 				<div class="row mt-4">
 
 					<!--col:12-->
-					<div class="col-md-12">
+					<div class="col-md-12 ">
 
 						<div class="card-columns">
 
@@ -118,7 +118,6 @@
 										src="img/products/<%=r.getProperty().getImage().getImage()%>"
 										style="max-height: 200px; max-width: 100%; width: auto;"
 										class="card-img-top m-2" alt="...">
-
 								</div>
 
 								<div class="card-body">
@@ -143,7 +142,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<%@include file="components/footer.jsp"%>
 	
 </body>
