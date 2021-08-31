@@ -27,6 +27,19 @@
 
 	<%@include file="components/navbar.jsp"%>
 	
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		request.setAttribute("Error", "Session has ended.  Please login.");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+	%>
+	
+	
+	
 	<div class="container">
 		
 		<div class="row">
