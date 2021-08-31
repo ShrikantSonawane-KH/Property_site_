@@ -26,6 +26,19 @@
 <body>
 
 	<%@include file="components/navbar.jsp"%>
+	
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		request.setAttribute("Error", "Session has ended.  Please login.");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+	%>
+	
+	
 
 	<%
 	out.print("<br/>");
@@ -88,9 +101,9 @@
 	<!-- back button -->
 
 	<div class="d-grid gap-2 col-6 mx-auto">
-		<button class="btn btn-primary" type="button">
+		<button class="btn btn-secondary" type="button">
 
-			<a href="RenterHome.jsp">
+			<a href="RenterHome.jsp" style=" text-decoration:none;">
 				<div style="color: white;">back</div>
 			</a>
 
