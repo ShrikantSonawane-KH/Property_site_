@@ -115,6 +115,19 @@ Renter.setRenterEmail(Renteremail);
 <%@include file="components/navbar.jsp"%>
 
 
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (session.getAttribute("username") == null) {
+		request.setAttribute("Error", "Session has ended.  Please login.");
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+	%>
+
+
+
 
 	<div class="bbbootstrap">
 		<div class="container">
@@ -173,8 +186,7 @@ function myFunction() {
 								<a href="PropertyRegistration.jsp" button onclick="myFunction2()" class="btn btn-secondary btn-sm" role="button">Sell</a>
 							</div>
 							<div class="col-2">
-								<a href="RenterHome.jsp" class="btn btn-secondary btn-sm" role="button">Edit
-									Renter</a>
+								<a href="RenterHome.jsp" class="btn btn-secondary btn-sm" role="button">Administration</a>
 							</div>
 						</div> <br>
 						<div class="row">
@@ -191,8 +203,7 @@ function myFunction() {
 												var b="pune"
 													var c="nashik"
 											</script>
-									
-
+							
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 										<a class="dropdown-item" value="Mumbai" href="#" onclick='test(a)'>Mumbai</a> 
 										<a class="dropdown-item" value="Pune" href="#" onclick='test(b)'>Pune</a> <a
@@ -200,9 +211,7 @@ function myFunction() {
 									</div>
 								</div>
 
-
 							</div>
-							
 							<div class="col-10">
 								<div class="form-inline my-2 my-lg-0">
 									<input class="form-control mr-lg-10" type="search"
@@ -253,13 +262,9 @@ function myFunction() {
 						<p class="card-text">The style of Villa  is one of  features of the architecture 
 						of the Gallura. Villa is reside in Goa.
 							</p>
-
 					</div>
 				</div>
 			</div>
-
-
-
 
 			<div class="col-sm-4">
 				<div class="card box-shadow">
@@ -271,7 +276,6 @@ function myFunction() {
 					</div>
 				</div>
 			</div>
-
 
 
 			<div class="col-sm-4">
