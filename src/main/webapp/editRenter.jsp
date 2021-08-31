@@ -38,7 +38,7 @@
 	String message = request.getParameter("message");
 	if (message != null && !message.isEmpty()) {
 
-		out.print("<h6 style= color:red; >" + message + "</h6>");
+		out.print("<h5 style= color:red; >" + message + "</h5>");
 	}
 	out.print("</div>");
 	%>
@@ -132,7 +132,7 @@
 			<td><%=renter.getValidRenterEmail()%></td>
 
 			<td>
-				<a href="deletRenterByAdmin?id=<%=renter.getId()%>"
+				<a href="deleteRenterByAdmin?id=<%=renter.getId()%>"
 				class="btn btn-danger">Delete</a></td>
 		</tr>
 		<%
@@ -145,16 +145,15 @@
 	<!-- back button -->
 
 	<div class="d-grid gap-2 col-6 mx-auto">
-		<button class="btn btn-primary" type="button">
+		<button class="btn btn-secondary" type="button">
 
-			<a href="AdminPage.jsp">
+			<a href="AdminPage.jsp" style="text-decoration:none">
 				<div style="color: white;">back</div>
 			</a>
 
 		</button>
 
-	</div>
-
+	</div> <br><br>
 
 </body>
 </html>
