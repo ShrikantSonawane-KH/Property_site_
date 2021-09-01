@@ -115,8 +115,8 @@ public class PropertyRegController extends HttpServlet {
     		 
     		 renterdao.insertion(renter);
     		
-    		 //response.sendRedirect("PropertyRegistration.jsp?message=Property added successfully..!");
-    		 response.sendRedirect("demo.jsp");
+    		 response.sendRedirect("PropertyRegistration.jsp?message=Property added successfully..!");
+    		 //response.sendRedirect("demo.jsp?user=renter");
     		 ////////////////////
 
               
