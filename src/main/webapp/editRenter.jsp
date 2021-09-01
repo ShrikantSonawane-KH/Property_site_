@@ -28,7 +28,7 @@
 </head>
 <body>
 
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="components/adminNav.jsp"%>
 
 	<%
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
