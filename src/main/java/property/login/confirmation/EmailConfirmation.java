@@ -20,7 +20,7 @@ public class EmailConfirmation {
 		System.out.println("preparing to send message ...");
 		String message = "Hello "+name+", Welcome to Residena...!\n You Have Registered Successfully.\n"
 				+ "Username : "+email+" Password : "+password+" \n Please save your credential for further login.";
-		String subject = "CodersArea : Confirmation";
+		String subject = "Residena Registration Confirmation.";
 		String to = email;
 		String from = "residena12@gmail.com";
 		
@@ -73,7 +73,7 @@ public class EmailConfirmation {
 				//attachement..
 				
 				//file path
-				String path="C:\\Users\\Sharimila\\Desktop\\ResidenaLogo.jpg";
+				String path="C:\\Shrikant_CDAC\\Final_Project\\UML_DIA\\ResidenaLogo.jpg";
 				
 				MimeMultipart mimeMultipart = new MimeMultipart();
 				//text
