@@ -21,5 +21,11 @@ public interface RenterDao {
 	
 	public List<Renter> getPropertyByRenter(String emailID);
 	
+	public List<Renter> getOnlyBuyProperty(String buy);
+	
+	public List<Renter> getAllPropertiesByTypeAndSell(String pro_for,String pro_type);
+	
+	public List<Renter> getAllPropertiesByCatAndSell(String pro_for,String category);
+	
 	
 }
