@@ -37,8 +37,6 @@ if(session.getAttribute("username") == null){
 	
 %>
 
-
-
 	<%@include file="components/navbar.jsp"%>
 	
 	<div class="container">
