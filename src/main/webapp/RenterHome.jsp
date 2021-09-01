@@ -112,7 +112,7 @@ String Renteremail = request.getParameter("useremail");
 Renter.setRenterEmail(Renteremail);
 %>
 
-<%@include file="components/navbar.jsp"%>
+<%@include file="components/RenterNav.jsp"%>
 
 
 	<%
