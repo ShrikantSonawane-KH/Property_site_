@@ -217,7 +217,7 @@ function myFunction() {
 					<div class="card-body">
 						<h5 class="card-title"><strong>VILLA</strong></h5>
 						<p class="card-text">The style of Villa  is one of  features of the architecture 
-						of the Gallura.This Villa is reside in Goa.
+						of the Gallura.Villa is reside in Goa.
 							</p>
 
 					</div>
@@ -370,7 +370,7 @@ function myFunction() {
 				 	<img src="image/54.jpg" alt="" class="slider-image"> 
 					<div class="post-info">
 						
-						<h6> Looking for an accomodation for myself landed me to this amazing website, where is found many renting options and that too in my budget. Amazing renting options of residena  gives a facility to smooth search.</h6>
+						<h6> Looking for an accomodation for myself landed me to this amazing website, where is found many renting options and that too in my budget. Amazing renting options of residena  gives a new facility to smooth search.</h6>
 
  <i
 							class="far fa-calendar"> Mar 8, 2021</i>
