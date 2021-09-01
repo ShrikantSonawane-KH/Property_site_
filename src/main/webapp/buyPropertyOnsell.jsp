@@ -158,7 +158,7 @@
 							<!--proprty card-->
 							<div class="card product-card">
 
-								<div class="container text-center">
+								<div class="container text-center" style="padding-right: 10%;">
 									<img
 										src="img/products/<%=r.getProperty().getImage().getImage()%>"
 										style="max-height: 200px; max-width: 100%; width: auto;"
