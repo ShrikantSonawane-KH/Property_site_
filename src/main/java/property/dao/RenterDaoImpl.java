@@ -168,4 +168,59 @@ public class RenterDaoImpl implements RenterDao {
 
 	}
 
+	@Override
+	public List<Renter> getOnlyBuyProperty(String sell) {
+		
+		Session session = SessionUtil.getFactory().openSession();
+
+		Query Query = session.createQuery("from Renter where pro_for =: b");
+		Query.setParameter("b", sell);
+		List<Renter> renterList = Query.getResultList();
+
+		for (Renter rList : renterList) {
+
+			System.out.println(rList);
+		}
+		session.close();
+		return renterList;
+		
+	}
+
+	@Override
+	public List<Renter> getAllPropertiesByTypeAndSell(String pro_for, String pro_type) {
+		Session session = SessionUtil.getFactory().openSession();
+
+		Query Query = session.createQuery("from Renter where pro_for =: p and pro_type =: q");
+		Query.setParameter("p", pro_for);
+		Query.setParameter("q", pro_type);
+		List<Renter> renterList = Query.getResultList();
+
+		for (Renter rList : renterList) {
+
+			System.out.println(rList);
+		}
+		session.close();
+		return renterList;
+	}
+
+	@Override
+	public List<Renter> getAllPropertiesByCatAndSell(String pro_for, String category) {
+		Session session = SessionUtil.getFactory().openSession();
+
+		Query Query = session.createQuery("from Renter where pro_for =: p and category =: q");
+		Query.setParameter("p", pro_for);
+		Query.setParameter("q", category);
+		List<Renter> renterList = Query.getResultList();
+
+		for (Renter rList : renterList) {
+
+			System.out.println(rList);
+		}
+		session.close();
+		return renterList;
+	}
+
+
+
+	
 }
