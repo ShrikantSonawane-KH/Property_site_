@@ -1,3 +1,4 @@
+<%@page import="property.pojo.Renter"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -8,7 +9,7 @@
 </head>
 <body>
 <%--  <%@include file="components/navbar.jsp"%>  --%>
-
+<% String useremail = Renter.getRenterEmail(); %>
 
 <!-- HEADER -->
 	<div class="row">
@@ -25,7 +26,7 @@
 					<ul class="navbar-nav">
 
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="RenterHome.jsp">Home</a></li>
+							aria-current="page" href="RenterHome.jsp?useremail=<%=useremail%>">Home</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="#footer">About</a>
 						</li>
