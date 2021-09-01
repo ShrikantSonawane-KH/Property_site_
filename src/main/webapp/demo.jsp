@@ -37,6 +37,12 @@ if(session.getAttribute("username") == null){
 	
 %>
 
+	<% 
+	
+		String user = request.getParameter("");
+	
+	%>
+
 	<%@include file="components/navbar.jsp"%>
 	
 	<div class="container">
