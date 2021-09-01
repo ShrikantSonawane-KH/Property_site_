@@ -94,7 +94,7 @@
 </head>
 <body>
 
-<%@include file="components/navbar.jsp"%>
+<%@include file="components/adminNav.jsp"%>
 
 	<%
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
@@ -151,11 +151,11 @@
 
 							<div class="row">
 								<div class="col-2">
-									<a href="demo.jsp" button onclick="myFunction()"
+									<a href="demo.jsp?user=admin" button onclick="myFunction()"
 										class="btn btn-secondary btn-sm" role="button">Buy</a>
 								</div>
 								<div class="col-2">
-									<a href="demo.jsp" button onclick="myFunction1()"
+									<a href="demo.jsp?user=admin" button onclick="myFunction1()"
 										class="btn btn-secondary btn-sm" role="button">Rent</a>
 								</div>
 								<div class="col-2">
