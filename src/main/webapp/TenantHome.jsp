@@ -110,7 +110,7 @@ Renter.setRenterEmail(Renteremail);
 %>
 
 
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="components/tenantNav.jsp"%>
 
 
 	<%
@@ -166,17 +166,16 @@ function myFunction() {
 
 						<div class="row">
 							<div class="col-2">
-								<a href="demo.jsp"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
+								<a href="demo.jsp?user=tenant"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
 							</div>
 							<div class="col-2">
-								<a href="demo.jsp" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
+								<a href="demo.jsp?user=tenant" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
 							</div>
 							<div class="col-2">
 								<a href="TenantHome.jsp" button onclick="myFunction2()" class="btn btn-secondary btn-sm" role="button">Sell</a>
 							</div>
 							<div class="col-2">
-								<a href="TenantHome.jsp" class="btn btn-secondary btn-sm" role="button">Edit
-									Renter</a>
+								<a href="TenantHome.jsp" class="btn btn-secondary btn-sm" role="button">Administration</a>
 							</div>
 						</div> <br>
 						<div class="row">
