@@ -103,7 +103,7 @@
 	<div class="d-grid gap-2 col-6 mx-auto">
 		<button class="btn btn-secondary" type="button">
 
-			<a href="RenterHome.jsp" style=" text-decoration:none;">
+			<a href="RenterHome.jsp?useremail=<%=emailID %>" style=" text-decoration:none;">
 				<div style="color: white;">back</div>
 			</a>
 
