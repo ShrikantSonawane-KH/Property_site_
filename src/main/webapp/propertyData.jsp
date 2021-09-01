@@ -24,7 +24,22 @@
 
 	<div class="container-fluid">
 
-		<%@include file="components/navbar.jsp"%>
+		<%
+		String user = request.getParameter("user");
+		if (user.equals("admin")) {
+		%>
+		<%@include file="components/adminNav.jsp"%>
+		<%
+		} else if (user.equals("tenant")) {
+		%>
+		<%@include file="components/tenantNav.jsp"%>
+		<%
+		} else {
+		%>
+		<%@include file="components/RenterNav.jsp"%>
+		<%
+		}
+		%>
 
 		<%
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
@@ -36,8 +51,6 @@
 			rd.forward(request, response);
 		}
 		%>
-
-
 
 
 		<div>
@@ -72,7 +85,7 @@
 		<div class="d-grid gap-2 col-6 mx-auto">
 			<button class="btn btn-secondary" type="button">
 
-				<a href="demo.jsp" style="text-decoration: none">
+				<a href="demo.jsp?user=<%=user%>" style="text-decoration: none">
 					<div style="color: white;">Back</div>
 				</a>
 
