@@ -151,12 +151,17 @@
 
 							<div class="row">
 								<div class="col-2">
-									<a href="demo.jsp?user=admin" button onclick="myFunction()"
+
+										<a href="buyProperty.jsp?user=admin&property=sell" button onclick="myFunction()"
 										class="btn btn-secondary btn-sm" role="button">Buy</a>
+										
+										
 								</div>
 								<div class="col-2">
-									<a href="demo.jsp?user=admin" button onclick="myFunction1()"
+									
+										<a href="buyProperty.jsp?user=admin&property=rent" button onclick="myFunction()"
 										class="btn btn-secondary btn-sm" role="button">Rent</a>
+										
 								</div>
 								<div class="col-2">
 									<a href="AdminPage.jsp" button onclick="myFunction2()"
@@ -170,7 +175,6 @@
 							<br>
 							<div class="row">
 								<div class="col-2">
-
 
 									<div class="dropdown show">
 										<a class="btn btn-secondary dropdown-toggle" href="#"
