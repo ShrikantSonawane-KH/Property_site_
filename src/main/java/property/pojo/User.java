@@ -13,7 +13,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
-	@Column(nullable = false,unique = true)
+	@Column(nullable = false) /* ,unique = true */
 	private String username;
 	private String password;
 	private String role;
@@ -75,11 +75,13 @@ public class User {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password + ", role="
 				+ role + ", mobile=" + mobile + "]";
 	}
+	
 	
 	
 	
