@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>nav</title>
+<title>Residena.com</title>
 </head>
 <body>
 <%--  <%@include file="components/navbar.jsp"%>  --%>
 
+<!-- Tenant Navbar -->
 
 <!-- HEADER -->
 	<div class="row">
@@ -25,7 +26,7 @@
 					<ul class="navbar-nav">
 
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="event.html">Home</a></li>
+							aria-current="page" href="TenantHome.jsp">Home</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="#footer">About</a>
 						</li>
@@ -39,7 +40,6 @@
 						</li>
 	
 					</ul>
-
 
 				</div>
 				<!--Login Button-->
