@@ -92,7 +92,7 @@ span {
 }
 </Style>
 </head>
-<div><%@include file="components/navbar.jsp"%></div>
+<div><%@include file="components/RenterNav.jsp"%></div>
 
 <br>
 
