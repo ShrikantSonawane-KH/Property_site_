@@ -25,7 +25,7 @@
 </head>
 <body>
 
-	<%@include file="components/navbar.jsp"%>
+	<%@include file="components/indexNav.jsp"%>
 
 <div>	
 	<div class="container">
