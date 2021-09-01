@@ -61,10 +61,6 @@
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 	crossorigin="anonymous"></script>
 
-
-
-
-
 <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js">
 	
 </script>
@@ -175,10 +171,10 @@ function myFunction() {
 
 						<div class="row">
 							<div class="col-2">
-								<a href="demo.jsp"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
+								<a href="demo.jsp?user=renter"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
 							</div>
 							<div class="col-2">
-								<a href="demo.jsp" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
+								<a href="demo.jsp?user=renter" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
 							</div>
 							<div class="col-2">
 								<a href="PropertyRegistration.jsp" button onclick="myFunction2()" class="btn btn-secondary btn-sm" role="button">Sell</a>
