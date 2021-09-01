@@ -12,7 +12,7 @@ import property.util.SessionUtil;
 
 public class RegistrationValidationDaoImpl implements RegistrationValidationDao {
 
-	@Override
+	
 	public boolean checkForRegistration(String email) {
 		
 		
@@ -34,7 +34,6 @@ public class RegistrationValidationDaoImpl implements RegistrationValidationDao 
 
 		tx.commit();
 		session.close();
-		
 		
 		return true;
 	}
