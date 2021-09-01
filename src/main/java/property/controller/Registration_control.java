@@ -36,6 +36,15 @@ public class Registration_control extends HttpServlet {
 
 		boolean validEmail = registrationvalidationdao.checkForRegistration(email);
 		
+		
+		try {
+			
+			
+			
+		} catch (Exception e) {
+			
+		}
+		
 		if (validEmail) {
 			
 			User user = new User(name,email,password,role,mobile);
@@ -47,6 +56,8 @@ public class Registration_control extends HttpServlet {
 			response.sendRedirect("login.jsp?");
 
 		} else {
+			
+		
 			
 			response.sendRedirect("Register.jsp?message= User already registered..!");
 		}
