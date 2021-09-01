@@ -166,10 +166,10 @@ function myFunction() {
 
 						<div class="row">
 							<div class="col-2">
-								<a href="buyProperty.jsp?user=admin&property=sell"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
+								<a href="buyProperty.jsp?user=tenant&property=sell"  button onclick="myFunction()"class="btn btn-secondary btn-sm" role="button">Buy</a>
 							</div>
 							<div class="col-2">
-								<a href="buyProperty.jsp?user=admin&property=rent" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
+								<a href="buyProperty.jsp?user=tenant&property=rent" button onclick="myFunction1()" class="btn btn-secondary btn-sm" role="button">Rent</a>
 							</div>
 							<div class="col-2">
 								<a href="TenantHome.jsp" button onclick="myFunction2()" class="btn btn-secondary btn-sm" role="button">Sell</a>
@@ -181,7 +181,6 @@ function myFunction() {
 						<div class="row">
 							<div class="col-2">
 
-
 								<div class="dropdown show"   >
 									<a class="btn btn-secondary dropdown-toggle" href="#"
 										role="button" id="dropdownMenuLink" data-toggle="dropdown"
@@ -192,8 +191,7 @@ function myFunction() {
 												var b="pune"
 													var c="nashik"
 											</script>
-									
-
+								
 									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 										<a class="dropdown-item" value="Mumbai" href="#" onclick='test(a)'>Mumbai</a> 
 										<a class="dropdown-item" value="Pune" href="#" onclick='test(b)'>Pune</a> <a
@@ -201,9 +199,7 @@ function myFunction() {
 									</div>
 								</div>
 
-
 							</div>
-							
 							<div class="col-10">
 								<div class="form-inline my-2 my-lg-0">
 									<input class="form-control mr-lg-10" type="search"
