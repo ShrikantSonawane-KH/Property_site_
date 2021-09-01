@@ -1,5 +1,11 @@
+<%@page import="org.hibernate.internal.build.AllowSysOut"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="property.dao.RenterDao"%>
+<%@ page import="property.dao.RenterDaoImpl"%>
+<%@ page import="java.util.List"%>
+<%@ page import="property.pojo.Renter"%>
+	
 <!doctype html>
 <html lang="en">
 
@@ -96,17 +102,35 @@ span {
 
 <br>
 
+<%
+	out.print("<br/>");
+	out.print("<div style= text-align:center; >");
+	String message = request.getParameter("message");
+	if (message != null && !message.isEmpty()) {
 
-	<div class="d-grid gap-2 col-6 mx-auto">
-		<button class="btn btn-secondary" type="button">
+		out.print("<h5 style= color:blue; >" + message + "</h5>");
+	}
+	out.print("</div>");
+	%>
+	
+	
+	<%
+	
+	String validRenterEmail = Renter.getRenterEmail();
+	System.out.println(validRenterEmail);
 
-			<a href="showPropertyByRenter.jsp" style=" text-decoration:none;">
-				<div style="color: white;">Your Property</div> 
-			</a>
+	%>
 
-		</button>
+<div class="d-grid gap-2 col-6 mx-auto">
+	<button class="btn btn-secondary" type="button">
 
-	</div>
+		<a href="showPropertyByRenter.jsp?email=<%=validRenterEmail%>" style="text-decoration: none;">
+			<div style="color: white;">Your Property</div>
+		</a>
+
+	</button>
+
+</div>
 
 <br>
 
@@ -114,8 +138,10 @@ span {
 
 <body
 	style="background-image: url(bank4.jpg); width: 100%; height: auto;">
+
 	
-	
+
+
 	<%
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	response.setHeader("pragma", "no-cache");
@@ -126,8 +152,8 @@ span {
 		rd.forward(request, response);
 	}
 	%>
-	
-	
+
+
 
 	<div
 		class=" d-flex justify-content-center align-items-center container-fluid">
@@ -379,20 +405,10 @@ span {
 					<div class="d-grid gap-2 col-6 mx-auto">
 						<button class="btn btn-secondary" type="submit" value="Submit">Submit</button>
 					</div>
-
 			</form>
 
 
-			<%
-			out.print("<br/>");
-			out.print("<div style= text-align:left; >");
-			String message = request.getParameter("message");
-			if (message != null && !message.isEmpty()) {
 
-				out.print("<h6 style= color:blue; >" + message + "</h6>");
-			}
-			out.print("</div>");
-			%>
 
 
 			<!-- Optional JavaScript -->
@@ -421,7 +437,7 @@ span {
 	<br>
 	<br>
 
-<%@include file="components/footer.jsp"%>
+	<%@include file="components/footer.jsp"%>
 
 </body>
 
