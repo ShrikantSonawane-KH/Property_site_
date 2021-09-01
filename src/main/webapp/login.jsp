@@ -14,10 +14,27 @@
 	integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
 	crossorigin="anonymous"></script>
 
+ <style>
+body .bbbootstrap {
+    background-image: url('image/login2.jpg') !important;
+    background-size: cover;
+    padding: 180px 0 30px 0;
+    margin-top:0%;
+     background-size: 100% 100%;
+}
+</style> 
+
+
+
 </head>
 <body>
 
 	<%@include file="components/loginNav.jsp"%>
+	
+	
+	<div class="bbbootstrap">
+		<div class="container">
+			<div class=row>
 	
 	
 	<div style="position: absolute; top: 0px; width: 100%"></div>
@@ -27,7 +44,7 @@
 
 		<form class="col-md-4" action="login_control" method="get">
 
-			<h1 class="h3 mb-3 fw-normal">Login here</h1>
+			<h1 class="h3 mb-3 fw-normal" style="color:white"><strong>Login here</strong></h1>
 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="email"
@@ -39,9 +56,8 @@
 					placeholder="Password" name="password" required> <label
 					for="floatingPassword">Password</label>
 			</div>
-			<a href="Register.jsp">New User?Sign up</a>
-			</div>
-			<br />
+			<a href="Register.jsp" style="color:black"> <strong>New User?Sign up</strong> </a>
+		<br />
 
 			<button class="w-100 btn btn-lg btn-success" type="submit">Sign
 				in</button>
@@ -64,7 +80,9 @@
 		</form>
 
 	</main>
-
+	</div>
+	</div>
+	</div>
 	<%@include file="components/footer.jsp"%>
 	
 </body>
