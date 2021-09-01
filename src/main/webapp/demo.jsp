@@ -108,7 +108,7 @@ if(session.getAttribute("username") == null){
 			%>
 			
 			<!--show products-->
-			<div class="col-md-10">
+			<div class="col-md-10" style="padding-left: 20%;">
 
 				<!--row-->
 				<div class="row mt-4">
