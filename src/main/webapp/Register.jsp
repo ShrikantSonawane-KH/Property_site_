@@ -14,45 +14,65 @@
 	integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
 	crossorigin="anonymous"></script>
 
+<style>
+body .bbbootstrap {
+    background-image: url('image/login2.jpg') !important;
+    background-size: cover;
+    padding: 180px 0 30px 0;
+    margin-top:0%;
+     background-size: 100% 100%;
+}
+</style> 
+
+<script type="text/javascript" src="registrationValidation.js"></script>
 </head>
 <body>
 
+
 	<%@include file="components/indexNav.jsp"%>
+	
+	<div class="bbbootstrap">
+		<div class="container">
+			<div class=row>
 
 	<div style="position: absolute; top: 0px; width: 100%"></div>
 	<main
 		class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
 
-		<form class="col-md-4" action="Registration_control">
+		<form class="col-md-4" action="Registration_control" onsubmit="return validate()">
 
-			<h1 class="h3 mb-3 fw-normal">Register here</h1>
+			<h1 class="h3 mb-3 fw-normal"style="color:white"><strong>Register here</strong></h1>
 
 			<div class="form-floating mt-2">
-				<input type="text" class="form-control" id="floatingPassword"
-					placeholder="name" name="name" required> <label
+				<input type="text" class="form-control" id="floatingName"
+					placeholder="name" name="name" > <label
 					for="floatingPassword">Name</label>
+					<span style="color:red" id="username"></span>
 			</div>
 
 			<div class="form-floating mt-2">
 				<input type="email" class="form-control" id="floatingInput"
-					placeholder="Enter email... " name="username" required> <label
+					placeholder="Enter email... " name="username" > <label
 					for="floatingInput">Email</label>
+					<span style="color:red" id="eid1"></span>
 			</div>
 
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="floatingPassword"
-					placeholder="Password" name="password" required> <label
+					placeholder="Password" name="password" > <label
 					for="floatingPassword">Password</label>
+					<span style="color:red" id="pass1"></span>
 			</div>
 
 			<div class="form-floating mt-2">
-				<input type="text" class="form-control" id="floatingPassword"
-					placeholder="Mobile" name="mobile" required> <label
+				<input type="text" class="form-control" id="floatingmobile"
+					placeholder="Mobile" name="mobile" > <label
 					for="floatingPassword">Mobile</label>
+					<span style="color:red" id="mnum"></span>
 			</div>
 
 
-			<div>
+			<div style="color:black">
 				<strong>Register as</strong>
 			</div>
 			<select name="role" style="background-color: #009900;">
@@ -77,7 +97,11 @@
 
 		</form>
 	</main>
-
+</div>
+</div>
+</div>
 	<%@include file="components/footer.jsp"%>
+	
+
 </body>
 </html>
