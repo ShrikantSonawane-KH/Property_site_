@@ -25,8 +25,7 @@
 </head>
 <body>
 
-	<%@include file="components/navbar.jsp"%>
-	
+
 	<%
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	response.setHeader("pragma", "no-cache");
@@ -37,13 +36,31 @@
 		rd.forward(request, response);
 	}
 	%>
-	
-	
-	
+
+
+	<%
+	String user = request.getParameter("user");
+	if (user.equals("admin")) {
+	%>
+	<%@include file="components/adminNav.jsp"%>
+	<%
+	} else if (user.equals("tenant")) {
+	%>
+	<%@include file="components/tenantNav.jsp"%>
+	<%
+	} else {
+	%>
+	<%@include file="components/RenterNav.jsp"%>
+	<%
+	}
+	%>
+
 	<div class="container">
-		
+
 		<div class="row">
-			<div class="col-sm-3"> <strong>Category </strong>   </div>
+			<div class="col-sm-3">
+				<strong>Category </strong>
+			</div>
 			<div class="col-sm-9">
 				<div class="row">
 					<div class="col-8 col-sm-6">
@@ -53,13 +70,18 @@
 								aria-expanded="true"> Property Type </a>
 
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-							<li><a class="dropdown-item" href="demo.jsp?type_category=all">all</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?type_category=apartment">Apartment</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?type_category=villa">Villa</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?type_category=indfloor">Independent
-										Floor</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?type_category=penthouse">Penthouse</a></li>
-								<li><a class="dropdown-item" href="demo.jsp?type_category=bunglow">Bunglow</a></li>
+								<li><a class="dropdown-item"
+									href="demo.jsp?type_category=all&user=<%=user%>">all</a></li>
+								<li><a class="dropdown-item"
+									href="demo.jsp?type_category=apartment&user=<%=user%>">Apartment</a></li>
+								<li><a class="dropdown-item"
+									href="demo.jsp?type_category=villa&user=<%=user%>">Villa</a></li>
+								<li><a class="dropdown-item"
+									href="demo.jsp?type_category=indfloor&user=<%=user%>">Independent Floor</a></li>
+								<li><a class="dropdown-item"
+									href="demo.jsp?type_category=penthouse&user=<%=user%>">Penthouse</a></li>
+								<li><a class="dropdown-item"
+									href="demo.jsp?type_category=bunglow&user=<%=user%>">Bunglow</a></li>
 							</ul>
 						</div>
 
@@ -71,13 +93,20 @@
 								aria-expanded="true"> Category </a>
 
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=all">all</a></li>
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=1rk">1RK</a></li>
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=1bhk">1BHK</a></li>
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=2bhk">2BHK</a></li>
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=3bhk">3BHK</a></li>
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=4bhk">4BHK</a></li>
-								<li><a class="dropdown-item" href="propertybByCat.jsp?cat_category=5bhk">5BHK</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=all&user=<%=user%>">all</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=1rk&user=<%=user%>">1RK</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=1bhk&user=<%=user%>">1BHK</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=2bhk&user=<%=user%>">2BHK</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=3bhk&user=<%=user%>">3BHK</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=4bhk&user=<%=user%>">4BHK</a></li>
+								<li><a class="dropdown-item"
+									href="propertybByCat.jsp?cat_category=5bhk&user=<%=user%>">5BHK</a></li>
 							</ul>
 						</div>
 					</div>
@@ -91,11 +120,10 @@
 
 			<%
 			String cat_cat = request.getParameter("cat_category");
-			
+
 			RenterDao renterdao = new RenterDaoImpl();
 			List<Renter> list = null;
- 
-			 
+
 			if (cat_cat == null || cat_cat.trim().equals("all")) {
 				list = renterdao.showAll();
 
@@ -103,10 +131,9 @@
 
 				list = renterdao.getAllPropertiesByCat(cat_cat);
 
-			} 
-			
+			}
 			%>
-			
+
 			<!--show products-->
 			<div class="col-md-10">
 
@@ -135,14 +162,29 @@
 
 								<div class="card-body">
 
-									<h5 class="card-title">  <strong><%=r.getProperty().getName()%></strong>  </h5>
-									<h6 class="card-title"> <mark>Rs.<%=r.getProperty().getPrice() %></mark>  </h6>
-									<h6 class="card-title">For : <%=r.getProperty().getPro_for()%> </h6>
+									<h5 class="card-title">
+										<strong><%=r.getProperty().getName()%></strong>
+									</h5>
+									<h6 class="card-title">
+										<mark>
+											Rs.<%=r.getProperty().getPrice()%></mark>
+									</h6>
+									<h6 class="card-title">
+										For :
+										<%=r.getProperty().getPro_for()%>
+									</h6>
 									<%-- <h6 class="card-title">For : <%=r.getProperty().getPro_for()%> </h6> --%>
-									<h6 class="card-title">id : <%=r.getId() %> </h6>
-									
-									<button type="button" class="btn btn-info" > <a href="propertyData.jsp?id=<%=r.getId() %>" style="color:white" > <strong>click for more</strong> </a> </button>
-									
+									<h6 class="card-title">
+										id :
+										<%=r.getId()%>
+									</h6>
+
+									<button type="button" class="btn btn-info">
+										<a href="propertyData.jsp?id=<%=r.getId()%>&user=<%=user%>"
+											style="color: white"> <strong>click for more</strong>
+										</a>
+									</button>
+
 								</div>
 							</div>
 							<%
@@ -155,8 +197,8 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<%@include file="components/footer.jsp"%>
-	
+
 </body>
 </html>
