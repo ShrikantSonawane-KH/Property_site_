@@ -127,8 +127,6 @@ Renter.setRenterEmail(Renteremail);
 	%>
 
 
-
-
 	<div class="bbbootstrap">
 		<div class="container">
 			<div class=row>
