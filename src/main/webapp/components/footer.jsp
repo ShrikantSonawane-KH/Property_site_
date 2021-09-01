@@ -16,7 +16,7 @@
 
 	
 
-<section class="my-2" id="footer">
+<section class="my-0" id="footer">
         <!-- Footer -->
         <footer class="bg-dark text-white text-center text-md-start">
             <!-- Grid container -->
