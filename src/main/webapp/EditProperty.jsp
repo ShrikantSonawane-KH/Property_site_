@@ -99,6 +99,21 @@ span {
 <body
 	style="background-image: url(bank4.jpg); width: 100%; height: auto;">
 
+<%@include file="components/RenterNav.jsp"%>
+
+	<br> 
+	<div class="d-grid gap-2 col-6 mx-auto">
+		<button class="btn btn-secondary" type="button">
+
+			<a href="showPropertyByRenter.jsp" style="text-decoration: none">
+				<div style="color: white;">Show Property</div>
+			</a>
+
+		</button>
+
+	</div>
+	<br>
+
 	<%
 	RenterDao renterdao = new RenterDaoImpl();
 	int id = Integer.parseInt(request.getParameter("id"));
@@ -379,15 +394,9 @@ span {
 
 
 					<div class="d-grid gap-2 col-6 mx-auto">
-						<button class="btn btn-primary" type="submit" value="Submit">Submit
+						<button class="btn btn-secondary" type="submit" value="Submit">Submit
 						</button>
 					</div>
-
-
-
-					<!-- 
-					<button type="submit" class="btn btn-primary btn-lg btn-block"
-						value="Submit">Submit</button> -->
 			</form>
 
 
@@ -425,22 +434,10 @@ span {
 	</div>
 	</div>
 	<br>
-
-	<div class="d-grid gap-2 col-6 mx-auto">
-		<button class="btn btn-primary" type="button">
-
-			<a href="showPropertyByRenter.jsp" style="text-decoration: none">
-				<div style="color: white;">Show Property</div>
-			</a>
-
-		</button>
-
-	</div>
-
-
 	<br>
 	<br>
 
+<%@include file="components/footer.jsp"%>
 
 </body>
 
