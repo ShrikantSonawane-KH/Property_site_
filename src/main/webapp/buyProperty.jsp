@@ -68,7 +68,9 @@
 	} else {
 
 		list = renterdao.getAllPropertiesByTypeAndSell(property, type_cat);
-
+		/* if(list==null){
+			out.print("No property found..!");
+		} */
 	}
 	%>
 
