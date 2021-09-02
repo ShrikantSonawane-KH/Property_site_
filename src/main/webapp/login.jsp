@@ -70,7 +70,7 @@ body .bbbootstrap {
 			String message = request.getParameter("message");
 			if (message != null && !message.isEmpty()) {
 
-				out.print("<h6 style= color:red; >" + message + "</h6>");
+				out.print("<h5 style= color:red;text-align:center >" + message + "</h5>");
 			}
 			out.print("</div>");
 			
