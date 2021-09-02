@@ -39,7 +39,7 @@ body .bbbootstrap {
 	<main
 		class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
 
-		<form class="col-md-4" action="Registration_control" onsubmit="return validate()">
+		<form class="col-md-4" action="Registration_control" onsubmit="return validate()" > 
 
 			<h1 class="h3 mb-3 fw-normal"style="color:white"><strong>Register here</strong></h1>
 
@@ -51,7 +51,7 @@ body .bbbootstrap {
 			</div>
 
 			<div class="form-floating mt-2">
-				<input type="email" class="form-control" id="floatingInput"
+				<input type="email" class="form-control" id="username"
 					placeholder="Enter email... " name="username" > <label
 					for="floatingInput">Email</label>
 					<span style="color:red" id="eid1"></span>
