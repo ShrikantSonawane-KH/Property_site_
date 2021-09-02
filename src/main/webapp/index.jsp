@@ -45,7 +45,6 @@
 	crossorigin="anonymous">
 
 
-
 <!-- Bootstrap CSS -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -71,6 +70,7 @@
 <!-- JavaScript for adding 
      slider for multiple images
      shown at once-->
+     
 <script type="text/javascript">
 	$(window).load(
 			function() {
@@ -95,13 +95,14 @@
 </head>
 <body>
 
-	<%@include file="components/indexNav.jsp"%>
+	<div>
 	
+	<%@include file="components/indexNav.jsp"%>
+	</div>
 	
 	<div class="bbbootstrap">
 		<div class="container">
 			<div class=row>
-
 
 <form>
 	
@@ -163,16 +164,13 @@ function myFunction() {
 											</script>
 									
 
-									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-										<a class="dropdown-item" value="Mumbai" href="#" onclick='test(a)'>Mumbai</a> 
-										<a class="dropdown-item" value="Pune" href="#" onclick='test(b)'>Pune</a> <a
-											class="dropdown-item" value="Nasik" href="#" onclick='test(c)'>Nasik</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+										<a class="dropdown-item" value="Mumbai" href="index.jsp?city=Mumbai&id=#map"  onclick='test(a)'>Mumbai</a> 
+										<a class="dropdown-item" value="Pune" href="index.jsp?city=Pune&id=#map" onclick='test(b)'>Pune</a> 
+										<a class="dropdown-item" value="Nashik" href="index.jsp?city=Nashik&id=#map" onclick='test(c)'>Nashik</a>
 									</div>
 								</div>
-
-
 							</div>
-							
 							<div class="col-10">
 								<div class="form-inline my-2 my-lg-0">
 									<input class="form-control mr-lg-10" type="search"
@@ -180,19 +178,11 @@ function myFunction() {
 									<button class="btn btn-secondary my-2 my-sm-0"
 										type="submit">Search</button>
 								</div>
-
-
 							</div>
 						</div>
 
 						</div>
-						<!--       
-        <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-
-
+		
 					</div>
 				</form>
 			</div>
@@ -201,8 +191,6 @@ function myFunction() {
 		<br> <br>
 	</div>
 	<br>
-
-
 
 
 	<div class="container">
@@ -220,8 +208,6 @@ function myFunction() {
 					</div>
 				</div>
 			</div>
-
-
 
 
 			<div class="col-sm-4">
@@ -283,25 +269,27 @@ function myFunction() {
 					</div>
 				</div>
 			</div>
-			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br>
 			<br> <br>
 		</div>
 	</div>
 
 
+	<%
+		String mapCity= request.getParameter("city");
+		//System.out.println(mapCity);
+							
+	%>
 
-
+	<h1 style="text-align:center;" id="map">  <strong>Search for Top Localities</strong> </h1><br>
 
 	<!------------------------Google map------------------------------------------------->
+	
+	
 	<div id="map-container-google-3" class="z-depth-1-half map-container-3">
 		<iframe
-			src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+			src="https://maps.google.com/maps?q=<%=mapCity %>&t=k&z=13&ie=UTF8&iwloc=&output=embed"
 			frameborder="0" style="border: 0" allowfullscreen></iframe>
 	</div>
-<br><br>
-
-
 
 
 
@@ -309,7 +297,7 @@ function myFunction() {
 
 <!-- Post Slider -->
 		<div class="post-slider" >
-			<h1 class="slider-title " id="review">Review</h1>
+			<h1 class="slider-title " id="review"> <strong>Review</strong> </h1>
 			<i class="fas fa-chevron-left prev"></i> <i
 				class="fas fa-chevron-right next"></i>
 
