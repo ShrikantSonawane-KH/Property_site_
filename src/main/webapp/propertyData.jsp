@@ -52,7 +52,6 @@
 		}
 		%>
 
-
 		<div>
 			<h3>
 				<strong>Property Details :</strong>
@@ -80,28 +79,17 @@
 			</h3>
 			<%@include file="components/tables/description.jsp"%>
 		</div>
-
-
-		<div class="d-grid gap-2 col-6 mx-auto">
-			<button class="btn btn-secondary" type="button">
-
-				<a href="demo.jsp?user=<%=user%>" style="text-decoration: none">
+		
+		
+		<div style="text-align:center;">
+		<button type="button" class="btn btn-secondary btn-lg" ><a href="demo.jsp?user=<%=user%>" style="text-decoration: none">
 					<div style="color: white;">Back</div>
-				</a>
-
-			</button>
-		</div>
-
-		<br>
-		<div class="d-grid gap-2 col-6 mx-auto">
-			<button class="btn btn-secondary" type="button">
-				<a href="##" style="text-decoration: none">
+				</a></button>
+		<button type="button" class="btn btn-secondary btn-lg" ><a href="##" style="text-decoration: none">
 					<div style="color: white;">Buy</div>
-				</a>
-
-			</button>
+				</a></button>
 		</div>
-
+			<br>
 		<%@include file="components/footer.jsp"%>
 	</div>
 </body>
