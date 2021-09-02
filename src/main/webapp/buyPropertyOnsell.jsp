@@ -55,8 +55,6 @@
 	}
 	%>
 
-
-
 	<%
 	String property = request.getParameter("property");
 	String cat_cat = request.getParameter("cat_category");
@@ -68,9 +66,11 @@
 		list = renterdao.getOnlyBuyProperty(property);
 
 	} else {
-
+		
 		list = renterdao.getAllPropertiesByCatAndSell(property, cat_cat);
-
+		/* if(list==null){
+			out.print("No property found..!");
+		} */
 	}
 	%>
 
