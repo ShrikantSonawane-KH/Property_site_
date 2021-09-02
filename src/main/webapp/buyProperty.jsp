@@ -75,66 +75,69 @@
 	%>
 
 
+	
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-3">
-				<strong>Category </strong>
-			</div>
-			<div class="col-sm-9">
-				<div class="row">
-					<div class="col-8 col-sm-6">
-						<div class="dropdown">
-							<a class="btn btn-secondary dropdown-toggle" href="#"
-								role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-								aria-expanded="true"> Property Type </a>
 
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<li><a class="dropdown-item"
-									href="buyProperty.jsp?type_category=all&property=<%=property%>&user=<%=user%>">all</a></li>
-								<li><a class="dropdown-item"
-									href="buyProperty.jsp?type_category=apartment&property=<%=property%>&user=<%=user%>">Apartment</a></li>
-								<li><a class="dropdown-item"
-									href="buyProperty.jsp?type_category=villa&property=<%=property%>&user=<%=user%>">Villa</a></li>
-								<li><a class="dropdown-item"
-									href="buyProperty.jsp?type_category=indfloor&property=<%=property%>&user=<%=user%>">Independent
-										Floor</a></li>
-								<li><a class="dropdown-item"
-									href="buyProperty.jsp?type_category=penthouse&property=<%=property%>&user=<%=user%>">Penthouse</a></li>
-								<li><a class="dropdown-item"
-									href="buyProperty.jsp?type_category=bunglow&property=<%=property%>&user=<%=user%>">Bunglow</a></li>
-							</ul>
-						</div>
+	<div class="container" style="margin-top:2px">
+		<div class="row row-cols-auto">
+			<div class="col">
+				<div class="dropdown">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+						id="dropdownMenuLink" data-bs-toggle="dropdown"
+						aria-expanded="true"> Property Type </a>
 
-					</div>
-					<div class="col-4 col-sm-6">
-						<div class="dropdown">
-							<a class="btn btn-secondary dropdown-toggle" href="#"
-								role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-								aria-expanded="true"> Category </a>
-
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=all&property=<%=property%>&user=<%=user%>">all</a></li>
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=1rk&property=<%=property%>&user=<%=user%>">1RK</a></li>
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=1bhk&property=<%=property%>&user=<%=user%>">1BHK</a></li>
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=2bhk&property=<%=property%>&user=<%=user%>">2BHK</a></li>
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=3bhk&property=<%=property%>&user=<%=user%>">3BHK</a></li>
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=4bhk&property=<%=property%>&user=<%=user%>">4BHK</a></li>
-								<li><a class="dropdown-item"
-									href="buyPropertyOnsell.jsp?cat_category=5bhk&property=<%=property%>&user=<%=user%>">5BHK</a></li>
-							</ul>
-						</div>
-					</div>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<li><a class="dropdown-item"
+							href="buyProperty.jsp?type_category=all&property=<%=property%>&user=<%=user%>">all</a></li>
+						<li><a class="dropdown-item"
+							href="buyProperty.jsp?type_category=apartment&property=<%=property%>&user=<%=user%>">Apartment</a></li>
+						<li><a class="dropdown-item"
+							href="buyProperty.jsp?type_category=villa&property=<%=property%>&user=<%=user%>">Villa</a></li>
+						<li><a class="dropdown-item"
+							href="buyProperty.jsp?type_category=indfloor&property=<%=property%>&user=<%=user%>">Independent
+								Floor</a></li>
+						<li><a class="dropdown-item"
+							href="buyProperty.jsp?type_category=penthouse&property=<%=property%>&user=<%=user%>">Penthouse</a></li>
+						<li><a class="dropdown-item"
+							href="buyProperty.jsp?type_category=bunglow&property=<%=property%>&user=<%=user%>">Bunglow</a></li>
+					</ul>
 				</div>
 			</div>
+			<div class="col">
+				<div class="dropdown">
+					<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+						id="dropdownMenuLink" data-bs-toggle="dropdown"
+						aria-expanded="true"> Category </a>
+
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=all&property=<%=property%>&user=<%=user%>">all</a></li>
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=1rk&property=<%=property%>&user=<%=user%>">1RK</a></li>
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=1bhk&property=<%=property%>&user=<%=user%>">1BHK</a></li>
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=2bhk&property=<%=property%>&user=<%=user%>">2BHK</a></li>
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=3bhk&property=<%=property%>&user=<%=user%>">3BHK</a></li>
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=4bhk&property=<%=property%>&user=<%=user%>">4BHK</a></li>
+						<li><a class="dropdown-item"
+							href="buyPropertyOnsell.jsp?cat_category=5bhk&property=<%=property%>&user=<%=user%>">5BHK</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+	
+			
 		</div>
 	</div>
+
 
 
 	<div class="container-fluid">
