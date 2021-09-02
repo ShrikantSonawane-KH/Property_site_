@@ -5,9 +5,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Residena.com</title>
+
+
 </head>
 <body>
-<%--  <%@include file="components/navbar.jsp"%>  --%>
+<%--  <%@include file="components/adminNav.jsp"%>  --%>
 
 <!-- Tenant Navbar -->
 
@@ -22,6 +24,7 @@
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+				
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 
@@ -38,13 +41,14 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#review">Review</a>
 						</li>
+						
+						<li class="nav-item"><a class="nav-link" href="logOutController" id="login">Logout</a>
+						</li>
 	
 					</ul>
 
 				</div>
-				<!--Login Button-->
-				<a href="logOutController" class="btn btn-secondary" role="button" id="login">Logout</a>
-
+				
 			</div>
 		</nav>
 
