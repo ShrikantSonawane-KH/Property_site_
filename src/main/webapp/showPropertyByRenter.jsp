@@ -46,12 +46,16 @@
 	String message = request.getParameter("message");
 	if (message != null && !message.isEmpty()) {
 
-		out.print("<h6 style= color:red; >" + message + "</h6>");
+		out.print("<h5 style= color:red; >" + message + "</h5>");
 	}
 	out.print("</div>");
 	%>
 
 	<br>
+	
+	<h1 style="text-align:center;"> <strong>Your Properties..!</strong> </h1> <br>
+	
+	
 	<table class="table table-success table-striped table-hover">
 		<tr>
 			<th>Property Name</th>
