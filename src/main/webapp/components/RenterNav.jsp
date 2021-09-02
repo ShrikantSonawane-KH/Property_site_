@@ -1,6 +1,6 @@
 <%@page import="property.pojo.Renter"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +8,12 @@
 <title>Residena.com</title>
 </head>
 <body>
-<%--  <%@include file="components/navbar.jsp"%>  --%>
-<% String useremail = Renter.getRenterEmail(); %>
+	<%--  <%@include file="components/navbar.jsp"%>  --%>
+	<%
+	String useremail = Renter.getRenterEmail();
+	%>
 
-<!-- HEADER -->
+	<!-- HEADER -->
 	<div class="row">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-secondary m-0">
 			<div class="container-fluid">
@@ -26,25 +28,28 @@
 					<ul class="navbar-nav">
 
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="RenterHome.jsp?useremail=<%=useremail%>">Home</a></li>
+							aria-current="page"
+							href="RenterHome.jsp?useremail=<%=useremail%>">Home</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="#footer">About</a>
 						</li>
 
 						<li class="nav-item"><a class="nav-link" href="#footer">Contact</a>
-						
-						
+
+
 						</li>
-						
+
 						<li class="nav-item"><a class="nav-link" href="#review">Review</a>
 						</li>
-	
+
+							<li class="nav-item"><a class="nav-link" href="logOutController" id="login">Logout</a>
+						</li>
+
 					</ul>
 
 				</div>
-				<!--Login Button-->
-				<a href="logOutController" class="btn btn-secondary" role="button" id="login">Logout</a>
-
+				
+		
 			</div>
 		</nav>
 
