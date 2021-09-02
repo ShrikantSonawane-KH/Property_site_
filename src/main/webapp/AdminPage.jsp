@@ -91,10 +91,15 @@
 </script>
 
 
+<!-- bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 
-<%@include file="components/adminNav.jsp"%>
+	<%@include file="components/adminNav.jsp"%>
 
 	<%
 	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
@@ -152,16 +157,18 @@
 							<div class="row">
 								<div class="col-2">
 
-										<a href="buyProperty.jsp?user=admin&property=sell" button onclick="myFunction()"
-										class="btn btn-secondary btn-sm" role="button">Buy</a>
-										
-										
+									<a href="buyProperty.jsp?user=admin&property=sell" button
+										onclick="myFunction()" class="btn btn-secondary btn-sm"
+										role="button">Buy</a>
+
+
 								</div>
 								<div class="col-2">
-									
-										<a href="buyProperty.jsp?user=admin&property=rent" button onclick="myFunction()"
-										class="btn btn-secondary btn-sm" role="button">Rent</a>
-										
+
+									<a href="buyProperty.jsp?user=admin&property=rent" button
+										onclick="myFunction()" class="btn btn-secondary btn-sm"
+										role="button">Rent</a>
+
 								</div>
 								<div class="col-2">
 									<a href="AdminPage.jsp" button onclick="myFunction2()"
@@ -188,13 +195,11 @@
 										</script>
 
 
-										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-											<a class="dropdown-item" value="Mumbai" href="#"
-												onclick='test(a)'>Mumbai</a> <a class="dropdown-item"
-												value="Pune" href="#" onclick='test(b)'>Pune</a> <a
-												class="dropdown-item" value="Nasik" href="#"
-												onclick='test(c)'>Nasik</a>
-										</div>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+										<a class="dropdown-item" value="Mumbai" href="AdminPage.jsp?city=Mumbai&id=#map"  onclick='test(a)'>Mumbai</a> 
+										<a class="dropdown-item" value="Pune" href="AdminPage.jsp?city=Pune&id=#map" onclick='test(b)'>Pune</a> 
+										<a class="dropdown-item" value="Nashik" href="AdminPage.jsp?city=Nashik&id=#map" onclick='test(c)'>Nashik</a>
+									</div>
 									</div>
 
 								</div>
@@ -210,13 +215,7 @@
 							</div>
 
 						</div>
-						<!--       
-        <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-
-
+			
 					</div>
 				</form>
 			</div>
@@ -318,26 +317,34 @@
 					</div>
 				</div>
 			</div>
-			<br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br>
+
 			<br> <br>
 		</div>
 	</div>
 
-
+	<%
+	String mapCity = request.getParameter("city");
+	//System.out.println(mapCity);
+	%>
+	<h1 style="text-align: center;" id="map">
+		<strong>Search for Top Localities</strong>
+	</h1>
+	<br>
 
 	<!-- ----------------------Google map----------------------------------------------- -->
+
 	<div id="map-container-google-3" class="z-depth-1-half map-container-3">
 		<iframe
-			src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+			src="https://maps.google.com/maps?q=<%=mapCity %>&t=k&z=13&ie=UTF8&iwloc=&output=embed"
 			frameborder="0" style="border: 0" allowfullscreen></iframe>
 	</div>
-	<br>
-	<br>
+
 	<!-- ----------------------------------Review-------------------------------------- -->
 	<!-- Post Slider -->
 	<div class="post-slider">
-		<h1 class="slider-title " id="review">Review</h1>
+		<h1 class="slider-title " id="review">
+			<strong>Review</strong>
+		</h1>
 		<i class="fas fa-chevron-left prev"></i> <i
 			class="fas fa-chevron-right next"></i>
 
