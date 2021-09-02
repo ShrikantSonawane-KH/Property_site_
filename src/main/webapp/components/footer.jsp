@@ -53,10 +53,10 @@
                         
 
                         <h3>CONTACT US</h3>
-                       <p>email:residena@gmail.com</p>
-                          <p>Phone No:+917845343276</p>
-                         <p> Address:Kharghar
-                          </p>
+                       <p>residena@gmail.com</p>
+                          <p>+91 9665690458</p>
+                         <p>Raintree Marg, near Bharati Vidyapeeth, opp. Kharghar station, Sector 7, Kharghar, Navi Mumbai, Maharashtra 410210
+</p>
                     </div>
                     <!--Grid column-->
                 </div>
