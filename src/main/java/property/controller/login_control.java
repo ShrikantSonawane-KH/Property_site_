@@ -65,7 +65,7 @@ public class login_control extends HttpServlet {
 				System.out.println("Go to TenantPage");
 				break;
 			case "not_user":
-				response.sendRedirect("index.jsp?message=Sorry, Either username or password is incorrect.");
+				response.sendRedirect("login.jsp?message=Sorry, Either username or password is incorrect.");
 				break;
 			}
 
