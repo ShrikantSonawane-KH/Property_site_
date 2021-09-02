@@ -38,13 +38,14 @@
 						
 						<li class="nav-item"><a class="nav-link" href="#review">Review</a>
 						</li>
+						
+						<li class="nav-item"><a class="nav-link" href="logOutController" id="logout">Logout</a>
+						</li>
 	
 					</ul>
 
 				</div>
-				<!--Login Button-->
-				<a href="logOutController" class="btn btn-secondary" role="button" id="login">Logout</a>
-
+				
 			</div>
 		</nav>
 
