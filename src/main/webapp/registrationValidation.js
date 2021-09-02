@@ -5,6 +5,7 @@
 	    let char = /^[a-zA-Z ]*$/;
 
 	    let  user = document.getElementById('floatingName').value;
+	    
 	    console.log(user.length);
 	    if(user == ""){
 	        document.getElementById('username').innerHTML="** please fill  user name";
@@ -93,6 +94,12 @@
 	        document.getElementById('mnum').innerHTML="** mobile number must start with 9,8,7";
 	        return false;
 	    }
+	     
+	     
+	     document.getElementById('floatingName').value="";
+	     document.getElementById('floatingInput').value="";
+	     document.getElementById('floatingmobile').value="";
+	     
 	     
 	}
 	
