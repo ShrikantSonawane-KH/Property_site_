@@ -22,6 +22,7 @@ public class LoginCheckDaoImpl implements LoginCheckDao {
 		
 		String QueryString = "from User";
 		Query Query = session.createQuery(QueryString);
+		/* Query Query = session.createQuery(QueryString); */
 		List<User> UserList = Query.getResultList();
 		
 		for (User ul : UserList) {	
