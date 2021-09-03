@@ -16,27 +16,27 @@ function validateForm() {
 	clearErrors();
 
 	var namev = document.forms["myForm"]["name"].value;
-	if (namev.length == 0) {
-		seterror("namev", "*Property name should not be blank");
+	if (namev.length == 0 || !namev.match(/^[a-zA-Z ]*$/)) {
+		seterror("namev", "*This field is Mandetory and Use Characters Only");
 		returnval = false;
 	}
 	var areav = document.forms["myForm"]["area"].value;
-	if (areav.length == 0) {
-		seterror("areav", "*Property area should not be blank");
+	if (areav.length == 0 || !areav.match(/^[a-zA-Z ]*$/)) {
+		seterror("areav", "*This field is Mandetory and Use Characters Only");
 		returnval = false;
 	}
 	var lanev = document.forms["myForm"]["lane"].value;
-	if (lanev.length == 0) {
-		seterror("lanev", "*Property lane should not be blank");
+	if (lanev.length == 0 || !lanev.match(/^[a-zA-Z ]*$/)) {
+		seterror("lanev", "*This field is Mandetory and Use Characters Only");
 		returnval = false;
 	}
 	var landmarkv  = document.forms["myForm"]["landmark"].value;
-	if (landmarkv.length == 0) {
-		seterror("landmarkv", "*Property landmark should not be blank");
+	if (landmarkv.length == 0 || !landmarkv.match(/^[a-zA-Z ]*$/)) {
+		seterror("landmarkv", "*This field is Mandetory and Use Characters Only");
 		returnval = false;
 	}
 	var pincodev = document.forms["myForm"]["pincode"].value;
-	if (pincodev.length == 0) {
+	if (pincodev.length == 0 || !lanev.match(/^[a-zA-Z ]*$/)) {
 		seterror("pincodev", "*pincode should not be blank");
 		returnval = false;
 	}
@@ -47,13 +47,13 @@ function validateForm() {
 		returnval = false;
 	}
 	var heighlightv = document.forms["myForm"]["highlights"].value;
-	if (heighlightv.length == 0) {
-		seterror("heighlightv", "*Special Heighlights should not be blank");
+	if (heighlightv.length == 0 ) {
+		seterror("heighlightv", "**This field is Mandetory ");
 		returnval = false;
 	}
 	var securityv = document.forms["myForm"]["security"].value;
-	if (securityv.length == 0) {
-		seterror("securityv", "*security field should not be blank");
+	if (securityv.length == 0 ) {
+		seterror("securityv", "**This field is Mandetory");
 		returnval = false;
 	}
 
@@ -68,8 +68,8 @@ function validateForm() {
 		returnval = false;
 	}
 	var avv = document.forms["myForm"]["availableFrom"].value;
-	if (avv.length == 0) {
-		seterror("avv", "*this field should not be blank");
+	if (avv.length == 0 || !avv.match(/^[a-zA-Z ]*$/)) {
+		seterror("avv", "**This field is Mandetory and Use Characters Only");
 		returnval = false;
 	}
 	var floorv = document.forms["myForm"]["NoOfFloor"].value;
@@ -83,8 +83,8 @@ function validateForm() {
 		returnval = false;
 	}
 	var descv= document.forms["myForm"]["imagedesc"].value;
-	if ( descv.length == 0) {
-		seterror("descv", "*Img desc should not be blank");
+	if ( descv.length == 0 || !descv.match(/^[a-zA-Z ]*$/)) {
+		seterror("descv", "*This field is Mandetory and Use Characters Only");
 		returnval = false;
 	}
 	var pricev= document.forms["myForm"]["price"].value;
