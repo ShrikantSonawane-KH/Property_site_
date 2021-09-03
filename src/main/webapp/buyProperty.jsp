@@ -176,21 +176,19 @@
 										<strong><%=r.getProperty().getName()%></strong>
 									</h5>
 									<h6 class="card-title">
-										<mark>
-											Rs.<%=r.getProperty().getPrice()%></mark>
+									
+										<%float priceWithProfit= r.getProperty().getPrice()*0.05f; %>
+										
+										<mark> Rs.<%=r.getProperty().getPrice() + priceWithProfit%></mark>
 									</h6>
 									<h6 class="card-title">
 										For :
 										<%=r.getProperty().getPro_for()%>
 									</h6>
-									<%-- <h6 class="card-title">For : <%=r.getProperty().getPro_for()%> </h6> --%>
-									<h6 class="card-title">
-										id :
-										<%=r.getId()%>
-									</h6>
+								
 
 									<button type="button" class="btn btn-info">
-										<a href="propertyData.jsp?id=<%=r.getId()%>&user=<%=user%>"
+										<a href="propertyData.jsp?id=<%=r.getId()%>&user=<%=user%>&property=<%=property %>"
 											style="color: white"> <strong>click for more</strong>
 										</a>
 									</button>
