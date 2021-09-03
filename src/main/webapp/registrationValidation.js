@@ -28,7 +28,7 @@
 	     
 	     
 
-	     let id= document.getElementById('floatingInput').value;
+	     let id= document.getElementById('floatingemail').value;
 	     
 	     if(id == ""){
 	         document.getElementById('eid1').innerHTML="** please fill email Id";
@@ -53,6 +53,9 @@
 	         return false;
 	     }
 	     
+	     
+	     
+	     
 	     let pas= document.getElementById('floatingPassword').value;
 
 	    
@@ -71,6 +74,9 @@
 	         return false;
 	     
 	     }
+	     
+	     
+	     
 	     
 	     let mn= document.getElementById('floatingmobile').value; 
 	     
@@ -96,9 +102,6 @@
 	    }
 	     
 	     
-	     document.getElementById('floatingName').value="";
-	     document.getElementById('floatingInput').value="";
-	     document.getElementById('floatingmobile').value="";
 	     
 	     
 	}
