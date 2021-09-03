@@ -25,6 +25,7 @@
 	<div class="container-fluid">
 
 		<%
+		String property = request.getParameter("property");
 		String user = request.getParameter("user");
 		if (user.equals("admin")) {
 		%>
@@ -50,6 +51,11 @@
 			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 			rd.forward(request, response);
 		}
+		%>
+
+
+		<%
+		int pro_id = Integer.parseInt(request.getParameter("id"));
 		%>
 
 		<div>
@@ -79,17 +85,21 @@
 			</h3>
 			<%@include file="components/tables/description.jsp"%>
 		</div>
-		
-		
-		<div style="text-align:center;">
-		<button type="button" class="btn btn-secondary btn-lg" ><a href="demo.jsp?user=<%=user%>" style="text-decoration: none">
+
+
+		<div style="text-align: center;">
+			<button type="button" class="btn btn-secondary btn-lg">
+				<a href="buyProperty.jsp?user=<%=user%>&property=<%=property %>" style="text-decoration: none">
 					<div style="color: white;">Back</div>
-				</a></button>
-		<button type="button" class="btn btn-secondary btn-lg" ><a href="##" style="text-decoration: none">
+				</a>
+			</button>
+			<button type="button" class="btn btn-secondary btn-lg">
+				<a href="Payment.jsp?id=<%=pro_id %>&user=<%=user%>" style="text-decoration: none">
 					<div style="color: white;">Buy</div>
-				</a></button>
+				</a>
+			</button>
 		</div>
-			<br>
+		<br>
 		<%@include file="components/footer.jsp"%>
 	</div>
 </body>
