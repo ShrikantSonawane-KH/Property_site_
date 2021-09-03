@@ -15,8 +15,6 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 
-import property.dao.PropertyDao;
-import property.dao.PropertyDaoImpl;
 import property.dao.RenterDao;
 import property.dao.RenterDaoImpl;
 import property.pojo.Pro_Description;
