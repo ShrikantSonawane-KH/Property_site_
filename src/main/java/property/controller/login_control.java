@@ -7,8 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import property.dao.RenterDao;
-import property.dao.RenterDaoImpl;
+
 import property.service.LoginCheckDao;
 import property.service.LoginCheckDaoImpl;
 
