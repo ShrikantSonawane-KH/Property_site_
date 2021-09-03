@@ -15,8 +15,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 
-import property.dao.PropertyDao;
-import property.dao.PropertyDaoImpl;
+
 import property.dao.RenterDao;
 import property.dao.RenterDaoImpl;
 import property.pojo.Pro_Description;
@@ -122,7 +121,7 @@ public class PropertyUpdationController extends HttpServlet {
     		 updationhelperdao.propertyupdation(updaterenter,id);
     		
     	
-    		 response.sendRedirect("demo.jsp");
+    		 response.sendRedirect("showPropertyByRenter.jsp?user=renter&message=property is updated successfully..!");
     		 
 
               
