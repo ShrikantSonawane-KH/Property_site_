@@ -185,13 +185,19 @@ Latest compiled and minified JavaScript
 										</div>
 									</div>
 								</div>
+								
+								<form action="index.jsp?id=#map">
+								
 								<div class="col-10">
 									<div class="form-inline my-2 my-lg-0">
 										<input class="form-control mr-lg-10" type="search"
-											placeholder="Search" aria-label="Search" class="largesearch">
+											placeholder="Search" aria-label="Search" class="largesearch" name="city">
 										<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 									</div>
 								</div>
+								
+								</form>
+								
 							</div>
 
 						</div>
@@ -302,6 +308,7 @@ Latest compiled and minified JavaScript
 
 
 	<%
+	
 	String mapCity = request.getParameter("city");
 	//System.out.println(mapCity);
 	%>
