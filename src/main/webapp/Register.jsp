@@ -51,7 +51,7 @@ body .bbbootstrap {
 			</div>
 
 			<div class="form-floating mt-2">
-				<input type="email" class="form-control" id="username"
+				<input type="email" class="form-control" id="floatingemail"
 					placeholder="Enter email... " name="username" > <label
 					for="floatingInput">Email</label>
 					<span style="color:red" id="eid1"></span>
@@ -66,7 +66,7 @@ body .bbbootstrap {
 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="floatingmobile"
-					placeholder="Mobile" name="mobile" > <label
+					placeholder="Mobile" name="mobile"  > <label
 					for="floatingPassword">Mobile</label>
 					<span style="color:red" id="mnum"></span>
 			</div>
