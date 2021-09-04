@@ -16,7 +16,7 @@
 
 <style>
 body .bbbootstrap {
-    background-image: url('image/login2.jpg') !important;
+    background-image: url('image/new.jpg') !important;
     background-size: cover;
     padding: 180px 0 30px 0;
     margin-top:0%;
@@ -41,8 +41,10 @@ body .bbbootstrap {
 
 		<form class="col-md-4" action="Registration_control" onsubmit="return validate()" > 
 
-			<h1 class="h3 mb-3 fw-normal"style="color:white"><strong>Register here</strong></h1>
+			<h1 class="h3 mb-3 fw-normal"style="color:black"><strong>Register here</strong></h1>
 
+
+			<div style="text-align:left;color:#001a33;"> <strong> Name<span class="text-danger">&nbsp;*</span></strong>  </div> 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="floatingName"
 					placeholder="name" name="name" > <label
@@ -50,6 +52,7 @@ body .bbbootstrap {
 					<span style="color:red" id="username"></span>
 			</div>
 
+			<div style="text-align:left;color:#001a33;"> <strong> Email<span class="text-danger">&nbsp;*</span></strong>  </div> 
 			<div class="form-floating mt-2">
 				<input type="email" class="form-control" id="floatingemail"
 					placeholder="Enter email... " name="username" > <label
@@ -57,6 +60,7 @@ body .bbbootstrap {
 					<span style="color:red" id="eid1"></span>
 			</div>
 
+			<div style="text-align:left;color:#001a33;"> <strong> Password<span class="text-danger">&nbsp;*</span></strong>  </div> 
 			<div class="form-floating mt-2">
 				<input type="password" class="form-control" id="floatingPassword"
 					placeholder="Password" name="password" > <label
@@ -64,6 +68,8 @@ body .bbbootstrap {
 					<span style="color:red" id="pass1"></span>
 			</div>
 
+
+			<div style="text-align:left;color:#001a33;"> <strong> Mobile<span class="text-danger">&nbsp;*</span></strong>  </div> 
 			<div class="form-floating mt-2">
 				<input type="text" class="form-control" id="floatingmobile"
 					placeholder="Mobile" name="mobile"  > <label
@@ -72,7 +78,7 @@ body .bbbootstrap {
 			</div>
 
 
-			<div style="color:black">
+			<div style="color:black;color:#001a33;">
 				<strong>Register as</strong>
 			</div>
 			<select name="role" style="background-color: #009900;">
