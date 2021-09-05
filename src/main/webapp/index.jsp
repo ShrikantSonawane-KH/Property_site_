@@ -2,24 +2,6 @@
 <head>
 
 
-<!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
-
-Optional theme
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
-
-Latest compiled and minified JavaScript
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script> -->
-
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -143,19 +125,19 @@ Latest compiled and minified JavaScript
 							<div class="row">
 								<div class="col-2">
 									<a href="login.jsp" button onclick="myFunction()"
-										class="btn btn-secondary btn-sm" role="button">Buy</a>
+										class="btn btn-secondary btn-sm" role="button"> <strong>Buy</strong> </a>
 								</div>
 								<div class="col-2">
 									<a href="login.jsp" button onclick="myFunction1()"
-										class="btn btn-secondary btn-sm" role="button">Rent</a>
+										class="btn btn-secondary btn-sm" role="button"><strong>Rent</strong></a>
 								</div>
 								<div class="col-2">
 									<a href="login.jsp" button onclick="myFunction2()"
-										class="btn btn-secondary btn-sm" role="button">Sell</a>
+										class="btn btn-secondary btn-sm" role="button"><strong>Sell</strong></a>
 								</div>
 								<div class="col-2">
 									<a href="login.jsp" class="btn btn-secondary btn-sm"
-										role="button">Administration</a>
+										role="button"><strong>Administration</strong></a>
 								</div>
 							</div>
 							<br>
@@ -166,7 +148,7 @@ Latest compiled and minified JavaScript
 									<div class="dropdown show">
 										<a class="btn btn-secondary dropdown-toggle" href="#"
 											role="button" id="dropdownMenuLink" data-toggle="dropdown"
-											aria-haspopup="true" aria-expanded="false"> City </a>
+											aria-haspopup="true" aria-expanded="false"><strong> City </strong></a>
 
 										<script>
 											var a = "mumbai"
@@ -192,7 +174,7 @@ Latest compiled and minified JavaScript
 									<div class="form-inline my-2 my-lg-0">
 										<input class="form-control mr-lg-10" type="search"
 											placeholder="Search" aria-label="Search" class="largesearch" name="city">
-										<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+										<button class="btn btn-secondary my-2 my-sm-0" type="submit"> <strong>Search</strong> </button>
 									</div>
 								</div>
 								
