@@ -60,7 +60,7 @@ public class login_control extends HttpServlet {
 				session1.setAttribute("username", email);
 				session1.setAttribute("password", password);
 				
-				response.sendRedirect("TenantHome.jsp");			//home page with  buy and rent autho
+				response.sendRedirect("TenantHome.jsp");			
 				System.out.println("Go to TenantPage");
 				break;
 			case "not_user":
