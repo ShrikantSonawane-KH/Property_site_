@@ -158,7 +158,7 @@
 
 									<a href="buyProperty.jsp?user=admin&property=sell" button
 										onclick="myFunction()" class="btn btn-secondary btn-sm"
-										role="button">Buy</a>
+										role="button"> <strong>Buy</strong> </a>
 
 
 								</div>
@@ -166,16 +166,16 @@
 
 									<a href="buyProperty.jsp?user=admin&property=rent" button
 										onclick="myFunction()" class="btn btn-secondary btn-sm"
-										role="button">Rent</a>
+										role="button"><strong>Rent</strong></a>
 
 								</div>
 								<div class="col-2">
 									<a href="AdminPage.jsp" button onclick="myFunction2()"
-										class="btn btn-secondary btn-sm" role="button">Sell</a>
+										class="btn btn-secondary btn-sm" role="button"><strong>Sell</strong></a>
 								</div>
 								<div class="col-2">
 									<a href="editRenter.jsp" class="btn btn-secondary btn-sm"
-										role="button">Administration</a>
+										role="button"><strong>Administration</strong></a>
 								</div>
 							</div>
 							<br>
@@ -185,7 +185,7 @@
 									<div class="dropdown show">
 										<a class="btn btn-secondary dropdown-toggle" href="#"
 											role="button" id="dropdownMenuLink" data-toggle="dropdown"
-											aria-haspopup="true" aria-expanded="false"> City </a>
+											aria-haspopup="true" aria-expanded="false"> <strong>City</strong>  </a>
 
 										<script>
 											var a = "mumbai"
@@ -209,7 +209,7 @@
 									<div class="form-inline my-2 my-lg-0">
 										<input class="form-control mr-lg-10" type="search"
 											placeholder="Search" aria-label="Search" class="largesearch" name="city">
-										<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+										<button class="btn btn-secondary my-2 my-sm-0" type="submit"> <strong>Search</strong> </button>
 									</div>
 								</div>
 								
