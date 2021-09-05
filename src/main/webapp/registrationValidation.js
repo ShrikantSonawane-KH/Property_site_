@@ -96,7 +96,7 @@
 	        return false;
 	    }
 
-	    if((mn.charAt(0)!=9) && (mn.charAt(0)!=8) && (mn.charAt(0)!=9)) {
+	    if((mn.charAt(0)!=7) && (mn.charAt(0)!=8) && (mn.charAt(0)!=9)) {
 	        document.getElementById('mnum').innerHTML="** mobile number must start with 9,8,7";
 	        return false;
 	    }
