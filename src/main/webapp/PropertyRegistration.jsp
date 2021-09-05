@@ -176,15 +176,15 @@ span {
 						<label for="name">Name of Property</label> <input type="text"
 							class="form-control" name="name" aria-describedby="sicustid"
 							placeholder="Enter your Property Name "
-							oninvalid="return validateForm()"> <span
-							class="formerror"></span>
+							oninvalid="return validateForm()"> 
+							<span class="formerror"></span>
 					</div>
 					<div class="form-group" id="areav">
 						<label for="area">Area</label> <input type="text"
 							class="form-control" name="area" aria-describedby="sicustid"
 							placeholder="Enter your Property Area"
-							oninvalid="return validateForm()"> <span
-							class="formerror"></span>
+							oninvalid="return validateForm()"> 
+							<span class="formerror"></span>
 					</div>
 					<div class="form-group" id="lanev">
 						<label for="lane">Lane</label> <input type="text"
