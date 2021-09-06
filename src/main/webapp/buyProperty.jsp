@@ -68,16 +68,12 @@
 	} else {
 
 		list = renterdao.getAllPropertiesByTypeAndSell(property, type_cat);
-		/* if(list==null){
-			out.print("No property found..!");
-		} */
+		
 	}
 	%>
 
 
 	
-
-
 	<div class="container" style="margin-top:2px">
 		<div class="row row-cols-auto">
 			<div class="col">
@@ -142,8 +138,6 @@
 
 	<div class="container-fluid">
 		<div class="row mt-3 mx-2">
-
-
 
 			<!--show products-->
 			<div class="col-md-10" style="padding-left: 20%;">
