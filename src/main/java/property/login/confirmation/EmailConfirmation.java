@@ -32,7 +32,7 @@ public class EmailConfirmation {
 			private static void sendAttach(String message, String subject, String to, String from) {
 
 				//Variable for gmail
-				String host="smtp.gmail.com";
+				String host="smtp.gmail.com";			//SMTP Host
 				
 				//get the system properties
 				Properties properties = System.getProperties();
@@ -42,11 +42,11 @@ public class EmailConfirmation {
 				
 				//host set
 				properties.put("mail.smtp.host", host);
-				properties.put("mail.smtp.port","465");
-				properties.put("mail.smtp.ssl.enable","true");
-				properties.put("mail.smtp.auth","true");
+				properties.put("mail.smtp.port","465");			//default port (25)
+				properties.put("mail.smtp.ssl.enable","true");  //TLS Port
+				properties.put("mail.smtp.auth","true");    	//enable authentication
 				
-				//Step 1: to get the session object..
+				//Step 1: using Session.getInstance() to get the Session object by passing the Properties object
 				Session session=Session.getInstance(properties, new Authenticator() {
 					@Override
 					protected PasswordAuthentication getPasswordAuthentication() {				
@@ -70,15 +70,14 @@ public class EmailConfirmation {
 				//adding subject to message
 				m.setSubject(subject);
 		
-				//attachement..
+				//attachement..To send a file as attachment, we need to create an object of 
+				//javax.mail.internet.MimeBodyPart and javax.mail.internet.MimeMultipart.
 				
 				//file path
 				String path="C:\\Shrikant_CDAC\\Final_Project\\UML_DIA\\ResidenaLogo.jpg";
 				
 				MimeMultipart mimeMultipart = new MimeMultipart();
-				//text
-				//file
-				
+			
 				MimeBodyPart textMime = new MimeBodyPart();
 				
 				MimeBodyPart fileMime = new MimeBodyPart();
@@ -90,17 +89,18 @@ public class EmailConfirmation {
 					File file=new File(path);
 					fileMime.attachFile(file);
 
+					// Set text message part
 					mimeMultipart.addBodyPart(textMime);
+
+					// Second part is attachment
 					mimeMultipart.addBodyPart(fileMime);
 						
 				} catch (Exception e) {
 					
 					e.printStackTrace();
 				}
-				
+				//Send the complete message parts
 				m.setContent(mimeMultipart);
-				
-				//send 
 				
 				//Step 3 : send the message using Transport class
 				Transport.send(m);
@@ -174,3 +174,11 @@ public class EmailConfirmation {
 			}
 
 }
+
+
+
+
+
+
+
+//https://www.journaldev.com/2532/javamail-example-send-mail-in-java-smtp
