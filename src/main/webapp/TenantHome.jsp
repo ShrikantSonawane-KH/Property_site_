@@ -103,14 +103,14 @@
 
 <body>
 
-<%
+<%-- <%
 String Renteremail = request.getParameter("useremail");
 
 /* out.print(Renteremail+"<br>"); */
 
 Renter.setRenterEmail(Renteremail);
 %>
-
+ --%>
 
 	<%@include file="components/tenantNav.jsp"%>
 
