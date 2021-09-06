@@ -192,8 +192,6 @@
 		<br> <br>
 	</div>
 	<br>
-
-
 	<div class="container">
 		<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 			<div class="col-sm-4">
@@ -206,12 +204,9 @@
 						</h5>
 						<p class="card-text">The style of Villa is one of features of
 							the architecture of the Gallura.Villa is reside in Goa.</p>
-
 					</div>
 				</div>
 			</div>
-
-
 			<div class="col-sm-4">
 				<div class="card box-shadow">
 					<img src="image/2.jpg" class="card-img-top" alt="...">
@@ -225,9 +220,6 @@
 					</div>
 				</div>
 			</div>
-
-
-
 			<div class="col-sm-4">
 				<div class="card box-shadow">
 					<img src="image/6.jpg" class="card-img-top" alt="...">
@@ -237,12 +229,9 @@
 						</h5>
 						<p class="card-text">This is most beautiful apartment in Pune
 							which have 2 bedrooms with balcony.</p>
-
 					</div>
 				</div>
 			</div>
-
-
 			<div class="col-sm-4">
 				<div class="card box-shadow">
 					<img src="image/9.jpg" class="card-img-top" alt="...">
@@ -266,7 +255,6 @@
 						<p class="card-text">Premium private villa is located on the
 							top of the mountain. Villa has air conditioning and seating area
 						</p>
-
 					</div>
 				</div>
 			</div>
@@ -280,7 +268,6 @@
 						</h5>
 						<p class="card-text">This is apartment available in kharghar
 							with 3 bedrooms.</p>
-
 					</div>
 				</div>
 			</div>
@@ -290,7 +277,6 @@
 
 
 	<%
-	
 	String mapCity = request.getParameter("city");
 	//System.out.println(mapCity);
 	%>
@@ -301,7 +287,6 @@
 	<br>
 
 	<!------------------------Google map------------------------------------------------->
-
 
 	<div id="map-container-google-3" class="z-depth-1-half map-container-3">
 		<iframe
@@ -343,8 +328,6 @@
 						accommodation , with full information about property and real time
 						pictures of the property . The website content is also managed
 						well, even my father used it easily</h6>
-
-
 					<i class="far fa-calendar"> July 23, 2021</i>
 				</div>
 			</div>
@@ -352,21 +335,16 @@
 			<div class="post">
 				<img src="image/34.jpg" alt="" class="slider-image">
 				<div class="post-info">
-
-
 					<h6>Residena.com is one of the best service providers for
 						those who are looking for rented accommodation, I rented my place
 						with their help. Mr. Alok sharma helped me im getting a great
 						solution.Residena makes our life easy.</h6>
-
 					<i class="far fa-calendar"> May 8, 2021</i>
 				</div>
 			</div>
-
 			<div class="post">
 				<img src="image/55.jpg" alt="" class="slider-image">
 				<div class="post-info">
-
 					<h6>I listed my property on Residena.com and within a few
 						months my property was filled with tenants. I purchased a paid
 						package and Mr. Ashok Fitniss helped me alot while getting the
@@ -374,23 +352,17 @@
 					<i class="far fa-calendar"> Mar 10, 2021</i>
 				</div>
 			</div>
-
 			<div class="post">
 				<img src="image/54.jpg" alt="" class="slider-image">
 				<div class="post-info">
-
 					<h6>Looking for an accomodation for myself landed me to this
 						amazing website, where is found many renting options and that too
 						in my budget. Amazing renting options of residena gives a new
 						facility to smooth search.</h6>
-
 					<i class="far fa-calendar"> Mar 8, 2021</i>
 				</div>
 			</div>
-
-
 		</div>
-
 	</div>
 	<!-- JQuery -->
 	<script
