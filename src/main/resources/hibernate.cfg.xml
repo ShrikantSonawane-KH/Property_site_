@@ -10,14 +10,21 @@
 
 	<session-factory>
 
+		<!-- Related to the connection START -->
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://localhost:3306/property</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">cdac</property>
+		<!-- Related to the connection END -->
+		
+		<!-- Related to hibernate properties START -->
 		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- giving the version info to hibernate -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">update</property>							<!-- create,create-drop,update,validate -->
 		<property name="show_sql">true</property>								<!-- console visibility -->
-		<property name="format_sql">true</property>
+		<property name="format_sql">true</property>								<!-- We can see generated sql statements in a readable format.  -->
+		<!-- Related to hibernate properties END-->
+		
+		<!-- Related to mapping START-->
 		<mapping class="property.pojo.Pro_address" />
 		<mapping class="property.pojo.Pro_Description" />
 		<mapping class="property.pojo.Pro_image" />
@@ -25,6 +32,7 @@
 		<mapping class="property.pojo.Property" />
 		<mapping class="property.pojo.Renter" />
 		<mapping class="property.pojo.User" />
+		<!-- Related to mapping START-->
 
 	</session-factory>
 
