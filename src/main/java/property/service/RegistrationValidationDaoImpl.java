@@ -25,9 +25,8 @@ public class RegistrationValidationDaoImpl implements RegistrationValidationDao 
 		
 		for(User list : uList) {
 			if(list.getUsername().equals(email)) {
+				
 				return false;
-			}else {
-				return true;
 			}
 			
 		}
