@@ -66,15 +66,13 @@ body .bbbootstrap {
 
 			<%
 			out.print("<br/>");
-			out.print("<div style= text-align:left; >");
+			out.print("<div style= text-align:center; >");
 			String message = request.getParameter("message");
 			if (message != null && !message.isEmpty()) {
 
-				out.print("<h5 style= color:red;text-align:center >" + message + "</h5>");
+				out.print("<h5 style= color:blue;text-align:center >" + message + "</h5>");
 			}
 			out.print("</div>");
-			
-			
 			%>
 			
 		</form>
