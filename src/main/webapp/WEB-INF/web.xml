@@ -4,6 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>validatFilter</filter-name>
+  	<display-name>validatFilter</display-name>
+  	<description></description>
+  	<filter-class>property.controller.validatFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>validatFilter</filter-name>
+  	<url-pattern>/Registration_control</url-pattern>
+  </filter-mapping>
   <servlet>
   	<servlet-name>login_control</servlet-name>
   	<display-name>login_control</display-name>
