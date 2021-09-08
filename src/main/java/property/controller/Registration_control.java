@@ -34,8 +34,10 @@ public class Registration_control extends HttpServlet {
 		String role = request.getParameter("role");
 		String mobile = request.getParameter("mobile");
 
-		boolean validEmail = registrationvalidationdao.checkForRegistration(email);
+		boolean validEmail = false;
+		 validEmail = registrationvalidationdao.checkForRegistration(email);
 		
+		System.out.println(validEmail);
 	
 		if (validEmail) {
 			
@@ -46,7 +48,7 @@ public class Registration_control extends HttpServlet {
 			EmailConfirmation e = new EmailConfirmation();
 			e.sendEmailAA(name, email, password);
 			
-			response.sendRedirect("login.jsp?");
+			response.sendRedirect("login.jsp?message=Registration successful..Please log in.!");
 
 		} else {
 			
