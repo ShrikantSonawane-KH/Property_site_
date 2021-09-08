@@ -12,6 +12,7 @@ public class Renter {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
+	
 	private Property property;
 	
 	private  String validRenterEmail;
