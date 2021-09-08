@@ -24,7 +24,6 @@ public class EmailConfirmation {
 		String to = email;
 		String from = "residena12@gmail.com";
 		
-//		sendEmail(message,subject,to,from);
 		sendAttach(message,subject,to,from);
 	}
 
@@ -32,7 +31,7 @@ public class EmailConfirmation {
 			private static void sendAttach(String message, String subject, String to, String from) {
 
 				//Variable for gmail
-				String host="smtp.gmail.com";			//SMTP Host
+				String host="smtp.gmail.com";					//SMTP Host
 				
 				//get the system properties
 				Properties properties = System.getProperties();
@@ -40,10 +39,10 @@ public class EmailConfirmation {
 				
 				//setting important information to properties object
 				
-				//host set
-				properties.put("mail.smtp.host", host);
-				properties.put("mail.smtp.port","465");			//default port (25)
-				properties.put("mail.smtp.ssl.enable","true");  //TLS Port
+			
+				properties.put("mail.smtp.host", host);			//host set
+				properties.put("mail.smtp.port","465");			//default port (25)/TLS port
+				properties.put("mail.smtp.ssl.enable","true");  //enable SSL Authentication
 				properties.put("mail.smtp.auth","true");    	//enable authentication
 				
 				//Step 1: using Session.getInstance() to get the Session object by passing the Properties object
@@ -113,67 +112,13 @@ public class EmailConfirmation {
 					
 			}
 
-			//this is responsible to send email..
-			private static void sendEmail(String message, String subject, String to, String from) {
-				
-				//Variable for gmail
-				String host="smtp.gmail.com";
-				
-				//get the system properties
-				Properties properties = System.getProperties();
-				System.out.println("PROPERTIES "+properties);
-				
-				//setting important information to properties object
-				
-				//host set
-				properties.put("mail.smtp.host", host);
-				properties.put("mail.smtp.port","465");
-				properties.put("mail.smtp.ssl.enable","true");
-				properties.put("mail.smtp.auth","true");
-				
-				//Step 1: to get the session object..
-				Session session=Session.getInstance(properties, new Authenticator() {
-					@Override
-					protected PasswordAuthentication getPasswordAuthentication() {				
-						return new PasswordAuthentication("Residena12@gmail.com", "Residena@123");
-					}
-				
-				});
-				
-				session.setDebug(true);
-				
-				//Step 2 : compose the message [text,multi media]
-				MimeMessage m = new MimeMessage(session);
-				
-				try {
-				
-				//from email
-				m.setFrom(from);
-				
-				//adding recipient to message
-				m.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-				
-				//adding subject to message
-				m.setSubject(subject);
-			
-				
-				//adding text to message
-				m.setText(message);
-				
-				//send 
-				
-				//Step 3 : send the message using Transport class
-				Transport.send(m);
-				
-				System.out.println("confirmation sent...!");
-				
-				}catch (Exception e) {
-					e.printStackTrace();
-				}
-					
-			}
-
+		
 }
+
+
+
+
+
 
 
 
