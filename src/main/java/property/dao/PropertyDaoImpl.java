@@ -28,7 +28,6 @@ public class PropertyDaoImpl implements PropertyDao{
 
 	public Property deletion(int id) {
 		
-	
 		return null;
 	}
 
