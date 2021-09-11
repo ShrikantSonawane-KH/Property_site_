@@ -80,7 +80,6 @@ public class validatFilter implements Filter {
 			request.getRequestDispatcher("Register.jsp").forward(request, response);
 		}
 
-	
 		if (mobile.charAt(0) != '7' && mobile.charAt(0) != '8' && mobile.charAt(0) != '9') {
 		 
 			String mob = "Invalid Starting of Mobile Number";
