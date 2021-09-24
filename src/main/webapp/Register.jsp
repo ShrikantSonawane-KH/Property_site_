@@ -39,7 +39,7 @@ body .bbbootstrap {
 				<main
 					class="form-signin text-center container h-100 d-flex justify-content-center align-items-center">
 
-					<form class="col-md-4" action="Registration_control">
+					<form class="col-md-4" action="Registration_control" >
 						<!-- onsubmit="return validate()" -->
 
 						<h1 class="h3 mb-3 fw-normal" style="color: black">
